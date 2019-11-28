@@ -1,0 +1,2 @@
+"use strict";$(".opr-box").find("a.glyphicon-plus").click(function(){$(this).next().toggle().parent().parent().parent().siblings().find("ul.add-drop").hide()});var height=$("table").height();console.log(height),$("table").parent(".row").css("height",height+80),$(".del-box").find(".cancel").click(function(){$(".del-box").hide()}),$(".del-box").find(".icon-close").click(function(){$(".del-box").hide()});
+//# sourceMappingURL=department.js.map

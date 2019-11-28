@@ -1,0 +1,26 @@
+select * from km_keymap A left join ( select max(release_time) aa , category_id,remote_type_id  from km_keymap group by remote_type_id,category_id ) B on A.category_id = B.category_id and A.remote_type_id = B.remote_type_id and A.release_time = B.aa where (A.category_id = B.category_id and A.remote_type_id = B.remote_type_id and A.release_time = B.aa) or A.status = 'B'
+
+
+Device type sp修改
+
+sp_device_type_select_all(
+	$start_number	//从第几条开始取  传’’取所有
+	,$page_size	//每次取多少条 传''
+	,$name_en_val	//模糊查询	传’’
+	,$type_en_val	//类型查询	传’’
+	,$is_deleted	//是否删除   传’0’
+	,$category_id	//大类id	传’’
+	,$manufacture	//厂商	传’’
+)
+
+
+针对厂商的device type 
+sp_device_type_remote_type_select（	//取device type适用的遥控器系列
+	$device_id	//	device type的id
+	,$type		//	2
+	,@ret	
+）
+sp_device_type_select_one（	//取device type详情
+	$device_id	//device type id
+	,@ret
+）

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+</head>
+<body>
+<p>第<input type="text" id="pages" value="1">页</p>
+<p>每页<input type="text" id="limits" value="10">条</p>
+<p><input type="button" onclick="search()" value="点击查询"></p>
+<div id="orders_list">
+    <table>
+        <thead>
+        <th>订单ID</th>
+        <th>总价格</th>
+        <th>总面值</th>
+        <th>创建时间</th>
+        <th>支付状态</th>
+        <th>核销码</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="page-area"></p>
+</div>
+
+</body>
+<script src="static/jquery.min.js"></script>
+<script>
+    //var domain = "http://127.0.0.1:8002"
+    var domain = "http://106.75.122.206:8002"
+    function getToken() {
+        return getCookie('my_token')
+    }
+    //读取cookies
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+
+        if(arr=document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    function search()
+    {
+        var token = getToken()
+        var  pages = $("#pages").val(),limit = $("#limits").val(), offset = (pages-1)*limit;
+        $.ajax({
+            url:domain+'/api/coupon/orders',
+            type:'GET',
+            dataType:'json',
+            data:{offset:offset, limit:limit},
+            beforeSend: function(request) {
+                request.setRequestHeader("User-Token", token);
+            },
+            success: function(datas) {
+                if(datas.code==0){
+                    var data = JSON.parse(datas.data)
+                    var b = '';
+                    $.each(data.items, function (i, v) {
+                        b = b + '<tr>'
+                        b = b + '<td>'+v.id+'</td>'
+                            + '<td>'+fentoYuan(v.total_price)+'</td>'
+                            + '<td>'+fentoYuan(v.total_worth)+'</td>'
+                            + '<td>'+v.created_at+'</td>'
+
+                        switch (v.status) {
+                            case 0:
+                                b = b + '<td>未支付</td><td></td>'
+                                break
+                            case 1:
+                                b = b + '<td>已支付</td><td>'+v.code+'</td>'
+                                break
+                            case 2:
+                                b = b + '<td>已取消</td><td></td>'
+                                break
+                            case 6:
+                                b = b + '<td>已核销</td><td></td>'
+                                break
+                        }
+
+                    })
+                    b = b + '</tr>'
+                    $("#orders_list").find('table').find('tbody').empty().append(b)
+                    $("#page-area").empty().append('总共'+data.total+'条,每页'+data.limit+'条,从第'+(data.offset+1)+'条开始取')
+
+                }
+            }
+        })
+    }
+
+    function fentoYuan(v)
+    {
+        return v/100
+    }
+
+    $(function () {
+        search()
+    })
+</script>
+</html>

@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport"
+
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta name="renderer" content="webkit">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- google 机器人搜录 -->
+
+    <meta name="Keywords" content="第一视角，遥控车，第一视角开车，遥控玩具，游戏手柄、FPV、遥控、RC、遥控模型">
+
+    <meta name="googlebot" CONTENT="感玩工场,FPV体验,fpvcars,车手体验,身临其境,FPV遥控车,无人机,水下机器人,FPV遥控船,遥控相机,通用遥控器,通用遥控器,surf遥控器" >
+
+    <meta name="description" content="感玩工场致力于第一视角远程视频传输技术的研究和产品创新，并将最完备的第一视角视觉方案运用到硬件产品、AR游戏等领域，赋予更多智能硬件第一视角功能，带来无与伦比的全新视角体验。" />
+
+
+
+    <title>Navatics MITO-潜艇-感玩工场</title>
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/common/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/common/reset.css?20190328" >
+
+
+
+    <link rel="Shortcut Icon" href="http://static.senseplay.cn/www/cn/images/favicon.ico">
+
+    <!-- icon字体文件 -->
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/myfonts/iconfont.css?11118888">
+
+    <!-- 动画css -->
+
+    <link rel="stylesheet" type="text/css" href='http://static.senseplay.cn/www/cn/css/common/animate.min.css'>
+
+    <link rel="stylesheet" type="text/css" href='http://static.senseplay.cn/www/cn/css/common/swiper.min.css'>
+
+    <!-- 头部文件 -->
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/daohang.css?111221" charset="utf-8">
+
+    <!-- foot 文件 -->
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/foot.css?22" charset="utf-8">
+
+    <script type="text/javascript" src="http://static.senseplay.cn/www/cn/js/common/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="http://static.senseplay.cn/www/cn/js/common/lazyload.js"></script>
+
+    <script type="text/javascript" src='http://static.senseplay.cn/www/cn/js/common/wow.min.js'></script>
+
+    <script type="text/javascript" src='http://static.senseplay.cn/www/cn/js/imglazy.js'></script>
+
+    <script type="text/javascript" src="http://static.senseplay.cn/www/cn/js/common/swiper.min.js"></script>
+
+    <script type="text/javascript" src='http://static.senseplay.cn/www/cn/css/myfonts/iconfont.js?9999'></script>
+
+    <script type="text/javascript" src='http://static.senseplay.cn/www/cn/js/common/bootstrap.js'></script>
+
+    <script>
+
+        var _hmt = _hmt || [];
+
+        (function() {
+
+            var hm = document.createElement("script");
+
+            hm.src = "https://hm.baidu.com/hm.js?af1c28e14c0cd7913b6dc1954c4b7046";
+
+            var s = document.getElementsByTagName("script")[0];
+
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+
+    </script>
+
+</head>
+
+<body style="width:100%;height:100%">
+
+    <!-- 左侧栏目菜单 -->
+
+    <!-- 头部 -->
+
+  <!-- 头部调整 -->
+
+    <div class="container-fluid nav-box">
+        <div class="container nav daohang-view">
+            <a href="/" class='logo font_family flex-column cursor' style="margin-right:32px;">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Group"></use>
+                </svg>
+            </a>
+
+          <div class="items" >
+                <h4 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="cursor">SENSEROVER</h4>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <div class='info-pro-des'>
+                        <h6 class="product-title">FPV无人车</h6>
+                        <div class='img-product'>
+                            <a class="sl product-imgs" href="/product/senserover-s1.html">
+                                <img src="http://static.senseplay.cn/www/cn/images/s111.png" alt="">
+                                <span class="title">途 | S1</span>
+                            </a>
+
+                            <a class="sl product-imgs" href="/product/senserover-r1.html">
+                                <img src="http://static.senseplay.cn/www/cn/mobile/images/mobile/r1logo.jpg" alt="">
+                                <span class="title" >驰 | R1 </span>
+                            </a>
+                            <a class="sl product-imgs" href="/accessory/battery.html">
+                                <img src="http://static.senseplay.cn/www/cn/mobile/images/mobile/img_home_baterry@2x.png" alt="">
+                                <span class="title">专业配件</span>
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="items" >
+                <h4 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="cursor">SENSEBOT</h4>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <div class='info-pro-des'>
+                        <h6 class="product-title">FPV-AR机器人</h6>
+                        <div class='img-product'>
+                            <a class="sl product-imgs" href="/product/sensebot.html">
+                                <img src="http://static.senseplay.cn/www/cn/mobile/images/mobile/img_home_R0@2x.png" alt="">
+                                <span class="title">巡 | X1</span>
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="items" >
+                <h4 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="cursor">SENSETOUCH </h4>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                   <div class='info-pro-des'>
+                        <h6 class="product-title">FPV通用遥控器</h6>
+                        <div class='img-product'>
+                            <a class="sl product-imgs" href="/product/sensetouch-c1.html">
+                                <img src="http://static.senseplay.cn/www/cn/mobile/images/mobile/img_home_c1@2x.png" alt="">
+                                <span class="title" >触 | C1</span>
+                            </a>
+
+                            <!--   <a class="sl product-imgs" href="/product/sensetouch-c2.html">
+                                <img src="http://static.senseplay.cn/www/cn/mobile/images/mobile/img_home_C2@2x.png" alt="">
+                                <span class="title">驭 | C2</span>
+                            </a> -->
+
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="items" >
+                <h4 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="cursor">感玩工场+</h4>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <div class='info-pro-des'>
+                        <h6 class="product-title">感玩工场伙伴设备</h6>
+                        <div class='img-product'>
+                            <a class="sl product-imgs" href="/product/mito.html">
+                                <img src="http://static.senseplay.cn/www/cn/mobile/images/mobile/img_home_mito@2x.png" alt="">
+                                <span class="title">MITO 水下无人机</span>
+                            </a>
+
+                             <a class="sl product-imgs" href="/product/obsbot.html">
+                                <img src="http://static.senseplay.cn/www/en/images/obsbot.jpg" alt="">
+                                <span class="title">OBSBOT AI相机</span>
+                            </a>
+
+                            <a class="sl product-imgs"  href="/product/goovis.html">
+                                <img src="http://static.senseplay.cn/www/en/images/goovis.jpg" alt="">
+                                <span class="title" >Goovis VR眼镜</span>
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+           <!-- 语言区域 -->
+            <div class="right-lan">
+                <span class='font_family icon-language'></span>
+                <a href="http://www.senseplay.com">EN</a>
+                <i></i>
+                <a href="http://www.senseplay.cn" class='lan-active'>CN</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 产品 -->
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/detail.css?11144">
+
+    <link rel="stylesheet" type="text/css" href="http://static.senseplay.cn/www/cn/css/detailNavatics.css?1155" charset="utf-8">
+    <section class="products" id='top'>
+
+        <section class="product-1">
+
+            <!-- <div class="animate-box"> -->
+
+            <h4  class=" biaoti" style="top:9%;">Navatics  MITO</h4>
+
+            <span class="des wow fadeInUp">4K水下无人机</span>
+
+            <P style='display: flex;
+
+                width: 400px;
+
+                height: 40px;
+
+                align-items: center;
+
+                position: absolute;
+
+                top: 245px;
+
+                left: 50%;
+
+                transform: translateX(-50%);
+
+                justify-content: center;'>
+
+                <svg class="icon" aria-hidden="true" style='width:113px;height:100%;'>
+
+                    <use xlink:href="#icon-Group"></use>
+
+                </svg>
+
+                <span style="color:#fff;margin:0 15px;">|</span>
+
+                <span style="color:#fff;">伙伴设备</span>
+
+            </P>
+
+            <!-- </div> -->
+
+            <img class="lazy"  src="http://static.senseplay.cn/www/cn/images/bg-navatics-scr-01.png" alt="" style='width:100%;' >
+
+        </section>
+
+        <!-- nav -->
+
+        <section class="nav-bar clearfix">
+
+            <section class="nav-box nav-fixbox">
+
+                <a href="#top">Navatics MITO</a>
+
+                <a href="#ggcs">规格参数</a>
+
+            </section>
+
+            <div style="clear:both"></div>
+
+        </section>
+
+
+
+        <section class="product-1 product-des2" id="ggcs">
+
+            <img class="lazy"  src="http://static.senseplay.cn/www/cn/images/bg-navatics-scr-02.png" alt=""  >
+
+            <!-- 右下角文字区域 -->
+
+            <p class="des-rd sl wow fadeInUp1 animated">光滑、紧凑的机身和专业级防抖<br>
+
+                随时拍摄稳定影像
+
+            <!-- 底部图标展示区 -->
+
+            <div class="bottom-icons">
+
+                <div class="icon-wrap">
+
+                    <div class="icon-box">
+
+                        <h3 class="font_family icon-navatic01  wow fadeInUp1 animated"></h3>
+
+                        <h6 class="sl  wow fadeInUp1 animated">内置主动式防抖装置</h6>
+
+                    </div>
+
+                     <div class="icon-box">
+
+                        <h3 class="font_family icon-icon_navatics_  wow fadeInUp1 animated"></h3>
+
+                        <h6 class="sl  wow fadeInUp1 animated">45°可调倾斜锁定</h6>
+
+                    </div>
+
+                     <div class="icon-box">
+
+                        <h3 class="font_family icon-icon_navatics_1  wow fadeInUp1 animated"></h3>
+
+                        <h6 class="sl  wow fadeInUp1 animated">4K拍摄/1080P高清直播</h6>
+
+                    </div>
+
+                     <div class="icon-box">
+
+                        <h3 class="font_family icon-navatic02  wow fadeInUp1 animated"></h3>
+
+                        <h6 class="sl  wow fadeInUp1 animated">集成色彩校正功能</h6>
+
+                    </div>
+
+                    <div class="icon-box">
+
+                        <h3 class="font_family icon-icon_navatics_3  wow fadeInUp1 animated"></h3>
+
+                        <h6 class="sl  wow fadeInUp1 animated">4小时续航的可替换电池组</h6>
+
+                    </div>
+
+
+
+                    <div class="icon-box  ">
+
+                        <h3 class="font_family icon-icon_navatics_4  wow fadeInUp1 animated"></h3>
+
+                        <h6 class="sl wow fadeInUp1 animated">500米无线遥控/图传距离</h6>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- 滚动效果区域 -->
+
+        <section class="product-1 flex-column scroll-box clearfix gundong-box">
+
+            <div class="scroll-wrap">
+
+                <!-- 固定区域 -->
+
+                <div class="des-png clearfix">
+
+                    <!-- <h4  class=" biaoti wow fadeInUp animated">36mm操作空间 ， 超长触摸寿命</h4> -->
+
+                    <img class="lazy move-img"  src="http://static.senseplay.cn/www/cn/images/img-product-mito.png" alt=""  >
+
+                    <h6 class=" wow fadeInUp1 animated"  style='top:9%;'>Navatics  MITO</h6>
+
+                    <span class=" wow fadeInUp1 animated sl">完美拍摄水下稳定影像
+
+                    <br>
+
+                    带你开启水下探险之旅</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+         <!-- mito 镜头下图片展示 -->
+
+        <section class="img-wrap">
+
+            <section class="images-box">
+
+                <section class="left-img">
+
+                    <div class="xx-box flex-column sl">
+
+                        <h3 class="bt  wow fadeInUp1 animated ">稳定、自带色彩还原的移动拍摄</h3>
+
+                        <span class="description  wow fadeInUp1 animated sl">
+
+                           稳定算法和可调倾角锁定<br>让你专注于每一次水下体验
+
+                        </span>
+
+                        <img class="wow fadeInUp1 lazy"  src="http://static.senseplay.cn/www/cn/images/img_mito01.jpg">
+
+                    </div>
+
+                    <div class="xx-box flex-column sl">
+
+                        <h3 class="bt  wow fadeInUp1 animated ">4K超高清拍摄</h3>
+
+                        <span class="description  wow fadeInUp1 animated ">
+
+                            专为水下摄影而生，集成色彩校正的4K摄像机<br>
+
+                            为你带来生动逼真的色彩
+
+                        </span>
+
+                        <img class="wow fadeInUp1 lazy" src="http://static.senseplay.cn/www/cn/images/img-mito-02.png">
+
+                    </div>
+
+
+
+                </section>
+
+                <section class="right-img">
+
+                    <div class="xx-box flex-column sl">
+
+                        <h3 class="bt  wow fadeInUp1 animated sl">无线视频实时传输</h3>
+
+                        <span class="description  wow fadeInUp1 animated">
+
+                           搭载于防水浮标上的远程无线图传模块，由感玩工场提供<br>将高清视频实时传输至远达500米的SENSETOUCH遥控器屏幕
+
+                        </span>
+
+                        <img class="wow fadeInUp1 lazy"  src="http://static.senseplay.cn/www/cn/images/img-mito-03.png">
+
+                    </div>
+
+                    <div class="xx-box flex-column sl">
+
+                        <h3 class="bt  wow fadeInUp1 animated sl">4小时续航可替换电池组</h3>
+
+                        <span class="description  wow fadeInUp1 animated">
+
+                            电量无忧、轻松可换<br>MITO电池组让你随心探索深蓝之处
+
+                        </span>
+
+                        <img class="wow fadeInUp1 lazy"  src="http://static.senseplay.cn/www/cn/images/img-mito-04.png">
+
+                    </div>
+
+
+
+                </section>
+
+            </section>
+
+        </section>
+        <!-- 视频处理 -->
+
+        <section class="product-1 video-zone">
+
+            <h4  class=" biaoti wow fadeInUp">NAVATICS MITO</h4>
+
+            <span class="des wow fadeInUp">带你深入探索海洋奇观</span>
+
+            <img src="http://static.senseplay.cn/www/cn/images/bg-navatics-scr-05.png" alt="">
+
+            <div class="play-box">
+
+                <div class="play-boxa">
+
+                    <img class="play-btn" src="http://static.senseplay.cn/www/cn/images/irover-play.png" alt="" width="64px" height="64px" />
+
+                    <h6>观看产品介绍视频</h6>
+
+
+
+                    <video muted autobuffer autoloop loop autoplay="autoplay"  height="324px" width="817px" style='object-fit:cover;'>
+
+                        <source src="http://static.senseplay.cn/www/en/images/video/navatics video01.mp4">
+
+                    </video>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <script type="text/javascript" src='http://static.senseplay.cn/www/cn/js/navatics.js?22'></script>
+
+
+
+    <!-- 页脚 -->
+
+  <div class="foot-box-xx">
+
+        <footer class='container footer'>
+
+            <div class='left-box'>
+
+                <div class="foot-xx">
+
+                    <div class="btn-group dropup lan-box">
+
+                        <a style="width:100%;text-align:center;"  class="dropdown-toggle sl cursor" href='/aboutus.html' >关于感玩工场</a>
+
+                    </div>
+
+                    <span>|</span>
+
+                    <div class="btn-group dropup gz-wrap lan-box">
+
+                        <a style="width:100%;text-align:center;"  class="dropdown-toggle sl cursor" href="javascript:;">感玩达人社区</a>
+
+                    </div>
+
+                    <span>|</span>
+
+                    <div class="lan-box">
+                        <a style="width:100%;text-align:center;" class=" sl cursor" href='/news/'>感玩新闻</a>
+
+                    </div>
+
+                    <span>|</span>
+
+                    <div class="lan-box">
+
+                        <a style="width:100%;text-align:center;"  class=" sl cursor" href='/service.html'>服务与支持</a>
+
+                    </div>
+
+                </div>
+
+                <div class="copyright flex-column">
+
+                    <p>Copyright © 2017 上海感悟通信科技有限公司版权所有</p>
+
+                    <p>沪ICP备17022468号</p>
+
+                </div>
+
+            </div>
+
+            <div class="right-box">
+
+                              <div class="weixin-view">
+
+                    <img src="http://static.senseplay.cn/www/cn/images/weixingzh.png" alt="" />
+
+                    <span class='foot-des'>关注微信公众号</span>
+
+                </div>
+
+                <div class="weixin-view" style="margin-left:20px;">
+
+                    <img src="http://static.senseplay.cn/www/cn/images/appxiazai.jpg" alt="" style="height:88px;" />
+
+                    <span class='foot-des'>下载感玩APP</span>
+
+                </div>
+
+                      <!--      <div class="ganwanapp">
+
+                    <div class="app-view">
+
+                        <img src="http://static.senseplay.cn/www/cn/images/app-store-ios.png" alt="">
+
+                        <img src="http://static.senseplay.cn/www/cn/images/android-market.png" alt="">
+
+                    </div>
+
+                    <span class='foot-des'>下载感玩APP</span>
+
+
+
+                </div>
+ -->
+
+
+
+            </div>
+
+
+
+        </footer>
+
+    </div>
+
+<script type="text/javascript" src='http://static.senseplay.cn/www/cn/js/daohang.js'></script>
+</body>
+
+</html>
+

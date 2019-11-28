@@ -1,0 +1,105 @@
+/*
+* @Author: Marte
+* @Date:   2018-08-10 16:43:10
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-03-22 17:26:04
+*/
+/*成功提示*/
+.ts-box{
+    /*width: 132px;*/
+    padding: 0 27px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position:fixed;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    display:none;
+    z-index: 999;
+}
+.ts-box .ts-xx{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.ts-box .ts-xx span{
+    font-size: 20px;
+    color:#4FBE3B;
+}
+.ts-xx p{
+    margin:0;
+}
+
+/*
+失败提示
+ */
+.fail-ts{
+     /*width: 230px;*/
+    padding: 0 27px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position:fixed;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    display:none;
+    z-index: 999;
+}
+.fail-ts .ts-xx{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.fail-ts .ts-xx span{
+    font-size: 20px;
+    color:red;
+}
+.ts-xx p{
+      font-size: 14px;
+      margin-left:8px;
+}
+
+/*文本域*/
+textarea{
+    resize:none !important;
+}
+
+.none{
+    display: none;
+}
+
+/** 文件上传按钮样式 */
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+}
+.fileinput-button input{
+    position:absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/**
+ * 左边二级菜单缩进
+ */
+.treeview-menu li a{
+    padding-left:25px;
+}

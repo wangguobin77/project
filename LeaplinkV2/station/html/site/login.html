@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>近场业务平台</title>
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/tongyong.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/login/login.css">
+</head>
+<body class="hold-transition login-page">
+    <!-- 密码登录框体 -->
+    <div class="login-box sub-mm" style="display:none;">
+        <div class="header-title flex cursor">
+            <h6 class='head-bt yzm-login cursor'>验证码登录</h6>
+            <span class='fa fa-angle-right'></span>
+        </div>
+
+        <div class="bottom flex">
+            <img src="../../web/images/rigister.png" alt="">
+            <section class='right'>
+                <h3>平台管理系统</h3>
+                <span class="des">这是一段slogan这是一段slogan</span>
+                    <form sub-type='pass-form'>
+                        <section class="login-form">
+                            <div class="form-control flex noborder" style="justify-content:space-between;padding-left:0;padding:0;">
+                                <h4 class='mmlogin'>密码登录</h4>
+                                <span class='ts-des'>*信息填写错误</span>
+                            </div>
+                            <div class="form-control form-group">
+                                <span class='glyphicon glyphicon-user'></span>
+                                <input type="text" name="" placeholder="用户名" id="phone">
+                            </div>
+
+                            <div class="form-control flex">
+                                <span class='glyphicon glyphicon-lock' onclick="changepass()"></span>
+                                <input type="password" name="" placeholder="密码" id="password">
+                            </div>
+                            <div class="form-control flex noborder" style="justify-content:space-between;padding-left:0;padding:0;">
+                                <a class="reg" href=''>注册</a>
+                                <a class="forget" href='forgetpassword.html'>忘记密码</a>
+                            </div>
+
+                            <div class="form-control flex noborder" style="justify-content:flex-start;padding-left:0;">
+                                <button type="button" class="btn btn-primary submit-btn sub-pass">登录</button>
+                            </div>
+                        </section>
+                    </form>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- 验证码登录 -->
+    <div class="login-box sub-yzm">
+        <div class="header-title flex cursor">
+            <h6 class='head-bt mm-login'>密码登录</h6>
+            <span class='fa fa-angle-right'></span>
+        </div>
+        <div class="bottom flex">
+            <img src="../../web/images/rigister.png" alt="">
+            <section class='right'>
+                <h3>来客后台管理系统</h3>
+                <span class="des">这是一段slogan这是一段slogan</span>
+                    <form sub-type='code-form'>
+                        <section class="login-form">
+                            <div class="form-control flex noborder" style="justify-content:space-between;padding-left:0;padding:0;">
+                                <h4 class='yzmlogin'>验证码登录</h4>
+                                <!-- 错误提示信息 -->
+                                <span class='ts-des'>*信息填写错误</span>
+                            </div>
+                            <div class="form-control">
+                                <span class='glyphicon glyphicon-user'></span>
+                                <input type="text" name="username" id="user" placeholder="用户名">
+                            </div>
+
+                            <div class="flex">
+                                <div class="bx form-control flex" style="width:152px;overflow:hidden;">
+                                    <span class='glyphicon glyphicon-lock'></span>
+                                    <input type="text" name="code" placeholder="输入验证码" class='yzm'>
+                                </div>
+                                <button class="col-md-3 fsyym verification cursor form-control" id="code">获取验证码</button>
+                            </div>
+                            <div class="form-control flex noborder" style="justify-content:space-between;padding-left:0;padding:0;">
+                                <a class="reg cursor" onclick="reg()">注册</a>
+                                <a class="forget"></a>
+                            </div>
+
+                            <div class="form-control flex noborder" style="justify-content:flex-start;padding-left:0;">
+                                <button type="button" class="btn btn-primary submit-btn">登录</button>
+                            </div>
+                        </section>
+                    </form>
+            </section>
+        </div>
+    </div>
+    <div class="reg-con none">
+         <div class="reg-type-box ">
+            <!-- 选择注册类型 -->
+            <section class="reg-type flex">
+                <section class='title-type flex'>
+                    <span>注册类型</span>
+                    <span class="glyphicon glyphicon-remove close-icon cursor"></span>
+                </section>
+                <section class="btn-zone">
+                    <a  href="shopreg.html" class='submit cursor'>我是商家</a>
+                    <a  href="../partner/reg.html" class='submit cursor'>我是合作商</a>
+                </section>
+            </section>
+        </div>
+    </div>
+<!-- jQuery 3 -->
+<script src="../../web/js/public/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../web/js/public/bootstrap.min.js"></script>
+<script src='../../web/js/public/common.js'></script>
+<script src='../../web/js/public/ts.js'></script>
+<script src='../../web/js/login/login.js'></script>
+<script>
+    var glo = {
+        'is_true':true
+    };
+
+    /**
+     * 密码登录提交用户信息
+     * @param  {[type]} ){                     var phone [description]
+     * @return {[type]}     [description]
+     */
+    $('.sub-pass').unbind('click').click(function(){
+        var phone=$('#phone').val(),
+            password=$('#password').val();
+        if(!glo.is_true){
+            return false;
+        }
+        if(phone==''){
+            tips('*手机号码不能为空');
+            return false
+        }
+        if(!fun.isMobile(phone)){
+            tips('*手机格式不正确');
+            return false
+        }else{
+             $('.ts-des').hide()
+        }
+        if(password==''){
+            tips('*密码不能为空');
+            return false
+        }
+        glo.is_true = false;
+
+        // $.ajax({
+        //     url:'',
+        //     type:'post',
+        //     dataType:'json',
+        //     data:data,
+        //     success:function (data) {
+        //         glo.is_true = true;
+        //     }
+        // })
+    });
+
+
+    // 发送验证码计时器
+    $('button.fsyym').click(function() {
+        var m=document.querySelector('#code');
+        var T=60;
+        $('#code').attr('disabled', 'true');
+        var t=setInterval(function(){
+            T--;
+            m.innerHTML=T;
+            if(T===0){
+                $('#code').removeAttr('disabled', 'true');
+                clearInterval(t);
+                $('#code').html('重新发送');
+            }else {
+                $('#code').html('重新发送(' + T + ')s');
+            }
+        },1000)
+    })
+
+    /**
+     * 验证码登录
+     */
+
+    $('.submit-btn').unbind('click').click(function(){
+        var phone=$('#user').val(),
+            yzm=$('.yzm').val();
+        if(!glo.is_true){
+            return false;
+        }
+        if(phone==''){
+            tips('*手机号码不能为空');
+            return false
+        }
+        if(!fun.isMobile(phone)){
+            tips('*手机格式不正确');
+            return false
+        }else{
+             $('.ts-des').hide()
+        }
+
+        if(yzm.length!==6){
+             tips('*验证码不正确');
+             return false;
+        }
+
+        glo.is_true = false;
+
+        // $.ajax({
+        //     url:'',
+        //     type:'post',
+        //     dataType:'json',
+        //     data:data,
+        //     success:function (data) {
+        //         glo.is_true = true;
+        //     }
+        // })
+    });
+
+</script>
+
+
+</body>
+</html>

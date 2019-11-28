@@ -1,0 +1,123 @@
+CREATE TABLE IF NOT EXISTS `manufacture` (
+  `id` varchar(32) NOT NULL DEFAULT '' COMMENT '主键',
+  `name` varchar(128) NOT NULL COMMENT '生产厂商名',
+  `name_en` varchar(128) NOT NULL COMMENT '生产厂商英文名',
+  `login_name` varchar(32) NOT NULL COMMENT '登陆名',
+  `password` varchar(32) NOT NULL DEFAULT '' COMMENT '登陆密码',
+  `logo` varchar(128) NOT NULL DEFAULT '' COMMENT 'logo',
+  `address` varchar(128) NOT NULL DEFAULT '' COMMENT '地址',
+  `contact_info` varchar(128) NOT NULL DEFAULT '' COMMENT '联系方式',
+  `home_page` varchar(255) NOT NULL DEFAULT '' COMMENT '主页',
+  `salt` varchar(32) NOT NULL DEFAULT '' COMMENT '加密的盐',
+  `is_deleted` smallint(6) NOT NULL DEFAULT '0' COMMENT '是否已经删除(0：没有删除；1：已经删除；)',
+  `add_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `tag` varchar(128) DEFAULT NULL COMMENT 'Language Tag',
+  `status` smallint(2) NOT NULL COMMENT '0未激活，1激活，2封停',
+  `email` varchar(255) NOT NULL COMMENT '邮箱',
+  `mobile` varchar(255) NOT NULL COMMENT '手机',
+  `reg_type` smallint(2) NOT NULL DEFAULT '0' COMMENT '0用户名，1手机，2邮箱',
+  `ip` varchar(255) NOT NULL COMMENT 'Ip地址',
+  `linkman` varchar(128) DEFAULT NULL COMMENT '联系人',
+  `common` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `name_en` (`name_en`),
+  UNIQUE KEY `login_name` (`login_name`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `mobile` (`mobile`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='厂商表';
+
+CREATE TABLE IF NOT EXISTS `remote_type` (
+  `id` varchar(32) NOT NULL COMMENT '遥控器系列guid',
+  `name` varchar(128) NOT NULL COMMENT '遥控器系列名',
+  `name_en` varchar(128) NOT NULL COMMENT '遥控器系列英文名',
+  `type` varchar(128) NOT NULL COMMENT '型号',
+  `type_en` varchar(128) NOT NULL COMMENT '型号英文名',
+  `manufacture_id` varchar(32) NOT NULL COMMENT '生产厂商id',
+  `key` varchar(32) NOT NULL COMMENT 'key',
+  `code` varchar(4) NOT NULL COMMENT 'Code',
+  `screen` varchar(32) NOT NULL COMMENT 'screen（remote_category的key）',
+  `screen_code` varchar(4) NOT NULL COMMENT 'screen code',
+  `carry_type` varchar(32) NOT NULL COMMENT 'carry_type（remote_category的key）',
+  `carry_type_code` varchar(4) NOT NULL COMMENT 'carry type code',
+  `description` text COMMENT '备注',
+  `is_deleted` smallint(6) NOT NULL DEFAULT '0' COMMENT '是否已经删除(0：没有删除；1：已经删除；)',
+  `add_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次修改时间',
+  `tag` varchar(128) DEFAULT NULL COMMENT 'Language Tag',
+  `status` smallint(6) NOT NULL DEFAULT '0' COMMENT '0研发中，1发布，2停产',
+  `publish_time` timestamp NULL DEFAULT NULL COMMENT '发布时间',
+  `out_time` timestamp NULL DEFAULT NULL COMMENT '下架时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `key` (`key`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `name_en` (`name_en`),
+  UNIQUE KEY `type` (`type`),
+  UNIQUE KEY `type_en` (`type_en`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='遥控器表';
+
+CREATE TABLE IF NOT EXISTS `device_type` (
+  `id` varchar(32) NOT NULL COMMENT '被控终端guid',
+  `type` varchar(128) NOT NULL COMMENT '被控终端型号',
+  `type_en` varchar(128) NOT NULL COMMENT '终端型号英文名',
+  `name` varchar(128) NOT NULL COMMENT '被控终端名',
+  `name_en` varchar(128) NOT NULL COMMENT '被控终端英文名',
+  `category_id` varchar(32) NOT NULL COMMENT '终端分类',
+  `manufacture_id` varchar(32) NOT NULL COMMENT '生产厂商id',
+  `description` text COMMENT '描述',
+  `is_deleted` smallint(6) NOT NULL DEFAULT '0' COMMENT '是否已经删除(0：没有删除；1：已经删除；)',
+  `add_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '添加时间',
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `tag` varchar(128) DEFAULT NULL COMMENT 'Language Tag',
+  `status` smallint(6) DEFAULT '0' COMMENT '0研发中，1发布，2停产',
+  `publish_time` timestamp NULL DEFAULT NULL COMMENT '发布时间',
+  `out_time` timestamp NULL DEFAULT NULL COMMENT '下架时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `name_en` (`name_en`),
+  UNIQUE KEY `type` (`type`),
+  UNIQUE KEY `type_en` (`type_en`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='终端表';
+
+CREATE TABLE IF NOT EXISTS `sn_batch_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `m_id` varchar(32) NOT NULL COMMENT '所属厂商id',
+  `h_id` varchar(32) NOT NULL COMMENT '设备 id',
+  `h_type` smallint(1) NOT NULL DEFAULT '0' COMMENT '生产产品类型类型：1 device 终端,2 遥控器',
+  `is_delete` smallint(1) NOT NULL DEFAULT '0' COMMENT '是否删除 0 可使用状态 1 删除状态',
+  `batch_year` varchar(128) NOT NULL COMMENT '18(2018) 代表年份',
+  `batch_no` int(11) NOT NULL COMMENT '批次号',
+  `batch_count` int(11) NOT NULL COMMENT '生产数量',
+  `upc_code` varchar(20) NOT NULL COMMENT 'upc code码 商品码',
+  `check_status` smallint(1) NOT NULL DEFAULT '1' COMMENT '批次号审核状态 1 等待审批 2(审核不通过)作废 3 通过审批',
+  `check_ts` int(11) DEFAULT '0' COMMENT '审批时间',
+  `created_ts` int(11) DEFAULT '0' COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='批次表';
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL COMMENT '终端大类名',
+  `name_en` varchar(128) NOT NULL COMMENT '终端大类英文名',
+  `key` varchar(32) NOT NULL COMMENT 'key',
+  `code` varchar(4) NOT NULL COMMENT '十六进制code值',
+  `description` text COMMENT '描述',
+  `is_deleted` smallint(2) NOT NULL DEFAULT '0' COMMENT '是否已经删除(0：没有删除；1：已经删除；)',
+  `add_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `tag` varchar(128) DEFAULT NULL COMMENT 'Language Tag',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='终端大类表';
+
+CREATE TABLE IF NOT EXISTS `adminLog`.`working` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `act` varchar(32) NOT NULL DEFAULT '' COMMENT '操作',
+  `description` text COMMENT '描述',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `admin_id` int(10) NOT NULL DEFAULT '0'  COMMENT '用户id',
+  `ip` varchar(32) NOT NULL DEFAULT '' COMMENT '客户端ip',
+  `params` text COMMENT '请求参数json',
+  `sql` text COMMENT '整个生命周期发起的所有sql请求，一行一个',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='后台操作日志';

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+       <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+
+
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/header.css">
+    <link rel="stylesheet" href="../../web/css/public/main-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/partner/reg.css">
+    <!-- 日期控件 -->
+    <link rel="stylesheet"  href="../../web/css/public/jeDate-test.css">
+    <link rel="stylesheet"  href="../../web/css/public/jedate.css">
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+    <style type="text/css">.jeinput{margin-left:0!important;}.info{background:#fff;padding:24px;}</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti'>来客</span>
+                <span class='biaotides'>后台管理系统</span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class=" treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li class="active treeview">
+                           <a href="#">
+                                <i class="fa fa-gear"></i> <span>商品管理</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 添加商品</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+        </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- 导航下标注 -->
+                <div class="right-box p-b-20 row head-nav" style="height:70px;">
+                     <a style="line-height: 26px;margin:0;float:right;" href="" class="btn btn-primary  mid-button">
+                        返回
+                    </a>
+                </div>
+                <!-- Main content -->
+                 <section class="content container-fluid" style="padding:30px;">
+                    <div class='info col-md-12'>
+                        <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;margin-top:10px;">
+                            <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;">
+                                <div class="row col-md-12">
+                                   <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>推送标题</label>
+                                            <input type="text" class="form-control " autocomplete="off" placeholder="请输入推送标题">
+                                            <span class="ts-des tishi"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row col-md-12">
+                                   <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i></i>有效日期:</label>
+                                            <input type="text" class="jeinput form-control" id="testblue" placeholder="有效日期" timeattr='YYYY-MM-DD' name="date" autocomplete="off">
+                                            <span class="ts-des tishi"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                   <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i></i>推送日期:</label>
+                                            <select class="form-control  select2 yyzz_selsct" multiple name='day' autocomplete="off">
+                                                <option value='0'>周一</option>
+                                                <option value='1'>周二</option>
+                                                <option value='2'>周三</option>
+                                                <option value='3'>周四</option>
+                                                <option value='4'>周五</option>
+                                                <option value='5'>周六</option>
+                                                <option value='6'>周日</option>
+                                            </select>
+                                            <span class="ts-des tishi"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+
+                                            <label class="col-md-4 title"><i></i>推送时间:</label>
+                                            <input type="text" class="jeinput form-control" id="pushtime" placeholder="推送时间"  timeattr='hh-mm-ss' name='time' autocomplete="off">
+                                            <span class="ts-des tishi"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+
+                                            <label class="col-md-4 title"><i></i>推送间隔:</label>
+                                             <input  type="text" class="form-control name" autocomplete="off"  placeholder="推送间隔(s)" name="delaytime">
+                                            <span class="ts-des tishi"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                   <!-- 提交操作区域 -->
+                                 <div class="row col-md-12" style="padding-left:200px !important;margin-top:40px;">
+                                     <div class="form-group col-md-3 input-xx" style="margin-right:16px;"">
+                                        <button type="button" class="btn btn-block btn-back" onclick="back()">返回</button>
+                                    </div>
+                                    <div class="form-group col-md-3 input-xx">
+                                        <button type="button" class="btn btn-block btn-primary submit-btn">提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+        <!-- ./wrapper -->
+         <!-- 成功提示 -->
+        <div class="succ" >
+            <div class="ts-box">
+                <div class="ts-xx ">
+                    <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                    <p>保存成功</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 失败提示 -->
+        <div class="fail" >
+            <div class="fail-ts">
+                <div class="ts-xx">
+                    <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                    <p>保存失败，请重新尝试！</p>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery 3 -->
+        <script src="../../web/js/public/jquery.min.js"></script>
+        <script src="../../web/js/public/ts.js"></script>
+        <script src="../../web/js/public/common.js"></script>
+        <!-- Select2 -->
+        <script   src="../../web/js/public/select2.full.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../web/js/public/bootstrap.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../web/js/public/adminlte.min.js"></script>
+</body>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.select2').select2()
+        $(".select2").val(['0','1']).trigger('change')//设置默认的选中值
+    });
+    $(".jeinput").each(function(){
+        var mat = $(this).attr("timeattr");
+        jeDate(this,{
+            format: mat,
+             range:"/",
+        multiPane:false,
+        minDate: jeDate.nowDate({DD:0}), //0代表今天，-1代表昨天，-2代表前天，以此类推
+        donefun:function(obj) {
+            console.log(obj)
+        },
+        theme:{bgcolor:"#3367FF",pnColor:"#3367FF"},
+        });
+    });
+
+</script>
+
+
+
+
+

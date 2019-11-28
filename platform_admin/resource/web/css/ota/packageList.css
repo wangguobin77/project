@@ -1,0 +1,565 @@
+/*
+* @Author: Marte
+* @Date:   2018-07-02 11:04:59
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-31 10:25:20
+*/
+/*设置input 中 placeholder字体的大小*/
+/* 设置滚动条的样式 */
+::-webkit-input-placeholder{ font-size:14px; color: rgba(0, 0, 0, 0.25);}
+
+::-webkit-scrollbar {
+    width:0px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    border-radius:0px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius:0px;
+    background:#0C1121;
+    -webkit-box-shadow:#8C85E6;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(175, 190, 255, 0.4);
+}
+body,html{
+    overflow:hidden;
+    max-width:1920px;
+    height:100% !important;
+    display:flex;
+    flex-direction:column;
+    overflow-y: scroll;
+}
+.nav-header{
+    height:100%;
+    border:0;
+    line-height:64px;
+    padding:0 24px 0 24px;
+    background-color: #1890ff;
+    height:64px;
+    position:relative;
+}
+.nav-header h3{
+    margin:0;
+    padding:0;
+    line-height:64px;
+    display:flex;
+    flex-wrap:nowrap;
+}
+.nav-header .left-logo{
+    float:left;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:no-wrap;
+    margin-right:6%;
+
+}
+.nav-header .icon-menu{
+
+    color:#fff;
+    font-size: 32px;
+    line-height:64px;
+}
+.nav-header .m-menu{
+    display:flex;
+    height:100%;
+    width:auto;
+}
+.nav-header .m-menu .items{
+    min-width:96px;
+    height:100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 64px;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align:center;
+  cursor: pointer;
+}
+.items-active{
+    background-color: #096dd9;
+    border-bottom:4px solid #69C0FF;
+
+}
+.right-menu{
+    float:right;
+    height:100%;
+    overflow:hidden;
+    position: absolute;
+    right:24px;
+    top:0;
+}
+.right-menu span{
+    color:#fff;
+    font-size:24px;
+    color:#fff;
+    line-height:64px;
+    width:24px;
+}
+.right-menu h4{
+    flex-grow:1;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+    padding-right:1%;
+    box-sizing:border-box;
+    line-height:64px;
+}
+.right-menu  .drap-box{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+}
+.right-menu .drap-menu{
+    position:absolute;
+    top:64px;
+    right:0;
+    background:#ddd;
+}
+.drop-select{
+    border-radius:2px;z-index: 9999999999999999;width:100%;height:100px;overflow:auto;background:#fff;box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);text-align: left;display:none;
+}
+.drop-select li{
+    box-sizing:border-box;
+}
+.drop-select li:hover{
+    background:#1890ff;
+    color:#fff;
+}
+.drop-select .active-ss{
+    background:#1890ff;
+    color:#fff;
+}
+
+/*
+导航结束
+ */
+.bottom-menu{
+    width:100%;
+    height:64px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    padding:0 24px 0 24px;
+    display:flex;
+    flex-wrap:nowrap;
+    align-items: center;
+    margin-bottom:24px;
+    justify-content:space-between;
+}
+.bottom-menu h4{
+    height:24px;
+    line-height:24px;
+    color:#fff;
+    border-left:2px solid #1890ff;
+    padding-left:14px;
+    box-sizing:border-box;
+    color: rgba(0, 0, 0, 0.65);
+    font-size:14px;
+}
+  /*顶部搜索 部分*/
+.bottom-menu .right-box{
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap:nowrap;
+
+}
+.bottom-menu .right-box .search-box {
+      width: 208px;
+      height: 32px;
+      border-radius: 4px;
+      border: solid 1px rgba(0, 0, 0, 0.15);
+      padding-left:10px;
+}
+.bottom-menu .right-box .search-box input{
+    border:0;
+    outline:none;
+}
+.bottom-menu .right-box .search-box{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap:nowrap;
+}
+.right-box .btn-ss,.add-btn{
+    width:112px;
+    height: 32px;
+    border-radius: 4px;
+    border: solid 1px #1890ff;
+    color:#fff;
+    margin:0 2% 0 0;
+    color: #1890ff;
+    text-align:center;
+    line-height:32px;
+}
+.right-box .add-btn{
+    background:#1890ff;
+    color:#fff;
+}
+.right-box .add-btn a{
+    display:block;
+    width:100%;
+    height:100%;
+    color:#fff;
+}
+/*
+导航小搜索完
+ */
+/*列表处理*/
+.drop-down-box{
+    position:relative;
+}
+.drop-dowmn-box .drop-select{
+    width:100%;
+    height:200px;
+    overflow:auto;
+    position:absolute;
+    top:39px;
+    left:0;
+}
+.container-fluid {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+table{
+    border:1px solid rgba(0, 0, 0, 0.15);
+
+
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 0px solid #ddd;
+}
+table tr{
+    height:40px;
+    box-sizing:border-box;
+}
+bordered>thead>tr>th {
+    border-bottom-width: 0px;
+}
+.table-bordered>tbody>tr{
+    border-bottom:1px solid rgba(0, 0, 0, 0.15);
+}
+.table-bordered>tbody>tr:last-child{
+    border:0;
+}
+nav.footer{
+    flex-grow:0;
+}
+.container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+table tbody>tr:hover{
+     background-color: rgba(0, 0, 0, 0.09);
+
+}
+
+/*页码 样式*/
+nav.footer{
+    padding-right:24px !important;
+}
+nav.footer .pagination{
+    float:right !important;
+}
+.pagination li>a{
+    margin-left:8px;
+}
+.pagination>.active>a{
+    border: 1px solid #1890ff;
+    background-color: #ffffff;
+    color:#fff;
+
+}
+.pagination>li>a:hover {
+    background-color:#1890ff;
+    color:#fff;
+
+}
+.pagination>.active>a{
+    background-color:#1890ff;
+
+}
+/*
+页码样式 end
+ */
+.edit-pancel{
+    font-size:24px;
+}
+/**
+ * 导航下搜索框
+ */
+.bottom-menu .right-box .sousuo-rq {
+    min-width: 220px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+    margin-right:56px;
+}
+
+.bottom-menu .right-box .sousuo-rq h6.biaoti{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.85);
+    padding:0;
+    line-height:32px;
+    white-space: nowrap;
+    text-align:left;
+    width:25%;
+}
+.bottom-menu .right-box .sousuo-rq .drop-boxa{
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    line-height:32px;
+    position:relative;
+    flex-grow:1;
+    padding-left:10px;
+}
+.bottom-menu .right-box .sousuo-rq .drop-boxa .arrow-down{
+    position:absolute;
+    right:16px;
+
+}
+.bottom-menu .right-box .sousuo-rq .drop-boxa .drop-select{
+    width:100%;
+    height:160px;
+    overflow-y:scroll;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    left:0;
+    right:0;
+    position:absolute;
+    top:110%;
+
+}
+.bottom-menu .right-box .sousuo-rq .drop-boxa .drop-select li{
+    line-height:40px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 40px;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.65);
+}
+.bottom-menu .right-box .sousuo-rq .drop-boxa .drop-select li:hover{
+    background-color: rgba(0,0,0,.04)
+}
+
+.search-box span.glyphicon-search{
+    color: rgba(0,0,0,.25);
+}
+/*表格样式*/
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding:0px;
+    line-height: 40px;
+    box-sizing:border-box;
+}
+table thead tr th{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.85);
+}
+table thead tr th:nth-child(1){
+    padding-left:24px;
+    box-sizing:border-box;
+}
+table tbody tr td{
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.65);
+}
+table tbody tr td:nth-child(1){
+    padding-left:24px;
+}
+tbody td.zz-box{
+    height:100%;
+}
+tbody td span.zaizhi,.lizhi{
+    display:block;
+    color:#fff;
+    width: 64px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #52c41a;
+    line-height:24px;
+    text-align:center;
+    margin-top:8px;
+
+}
+tbody td span.lizhi{
+     background-color: rgba(0, 0, 0, 0.25);
+}
+.table-responsive .table thead tr th:nth-child(1){
+    max-width:160px;
+}
+.table-responsive .table thead tr th:nth-child(2),.table-responsive .table thead tr th:nth-child(3),{
+    max-width:320px;
+}
+
+.table-responsive .table thead tr th:nth-child(4),.table-responsive .table thead tr th:nth-child(5),.table-responsive .table thead tr th:nth-child(6),.table-responsive .table thead tr th:nth-child(7),.table-responsive .table thead tr th:nth-child(8),.table-responsive .table thead tr th:nth-child(9){
+    max-width:160px;
+}
+
+
+.table-responsive .table tbody tr td:nth-child(2){
+    max-width:320px;
+}
+.table-responsive .table tbody tr td:nth-child(3){
+    max-width:320px;
+}
+.table-responsive .table tbody tr td:nth-child(1),.table-responsive .table tbody tr td:nth-child(4),.table-responsive .table tbody tr td:nth-child(5),.table-responsive .table tbody tr td:nth-child(6),.table-responsive .table tbody tr td:nth-child(7),.table-responsive .table tbody tr td:nth-child(8),.table-responsive .table tbody tr td:nth-child(9){
+    max-width:160px;
+}
+
+tbody td.zz-box span {
+    display: block;
+    color: #fff;
+    width: 64px;
+    height: 24px;
+    border-radius: 12px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+tbody td.zz-box span.rk,.yrk{
+    background-color: #52c41a;
+}
+tbody td.zz-box span.caogao{
+    background-color: #69c0ff;
+}
+tbody td.zz-box span.yzf{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+tbody td.zz-box span.dqr{
+    background-color: #faad14;
+}
+
+tbody td.zz-box span.yjj{
+    background-color: #f5222d;
+}
+/*操作盒子*/
+
+
+span.xian{
+    display: inline-block;
+    height:14px;
+    width:2px;
+    font-size:14px;
+    margin:0 8px;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+tbody tr td.opr-box{
+    height: 40px;
+    line-height: 35px;
+}
+tbody tr td.opr-box a{
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    color: #1890ff;
+    cursor:pointer;
+}
+.table .opr-box .czuo-box{
+    /*width:280px;*/
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    height:100%;
+}
+.czuo-box span.del-btn{
+      color: #1890ff;
+}
+tbody tr td.opr-box a.forbidden{
+    color:red;
+}
+/*table end*/
+.none-info{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.none-info img{
+    margin:0 auto;
+}
+.non-message{
+    font-size: 24px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.25);
+      margin-top:5px;
+}
+.cursor{
+    cursor:pointer;
+}
+
+/*添加入库时弹框*/
+.del-box h4{
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.85);
+}
+.del-box .input-shuru{
+    width: 336px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    outline:none;
+    margin:24px 0 32px 0;
+    padding:0 16px;
+}
+.add-putStorage .operate-del div:nth-child(1) {
+    border: 1px solid #1890ff;
+    color:#1890ff;
+}
+.add-putStorage .sl-input{
+    position:relative;
+}
+.add-putStorage span.ts{
+    position: absolute;
+    font-size:10px;
+    color:red;
+    top:70px;
+    left:0;
+    display:none;
+}

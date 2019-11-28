@@ -1,0 +1,33 @@
+{{each data as item index}}
+<ul class='tree1'>
+    <li>
+        {{each item as level2 index2}}
+             {{if level2.level == 2}}
+            <a class='parent' href="#">
+                    {{level2.geo}}
+            </a>
+             {{/if}}
+        {{/each}}
+        <ul>
+         {{each item as level3 index3}}
+             {{if level3.level == 3}}
+            <li class='tree-child-box' data-parent-index='<%=index%>'
+                    data-index='<%=index3%>'>
+                    {{if level3.select}}
+                        <a  class='tree-child color' href="javascript:;">
+                            {{level3.geo}}
+                        </a>
+                    {{else}}
+                        <a  class='tree-child' href="javascript:;">
+                             {{level3.geo}}
+                        </a>
+                    {{/if}}
+                
+            </li>
+            {{/if}}
+          {{/each}}    
+         
+        </ul>
+    </li>
+</ul>
+{{/each}}

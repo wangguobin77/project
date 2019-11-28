@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/header.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/main-layout.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti'>来客</span>
+                <span class='biaotides'>后台管理系统</span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="active treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o text-red"></i> <span>商品</span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- 导航下标注 -->
+            <div class="right-box p-b-20 row head-nav">
+                <section class='row'>
+                    <span class='yj'>设置</span><span class='yj'>/</span><span class='yj'>商户设置</span>
+                </section>
+                <h5 class="zhubt">商户设置</h5>
+
+            </div>
+            <!-- Main content -->
+             <section class="content container-fluid" style="background: #F0F2F5;padding:24px;">
+                <div class='info ' style="background:#fff;padding:24px;flex-grow: 1;">
+                    <div class="right-box p-b-20 row" style="margin-bottom: 20px;">
+                        <a href='add.html' class="btn  btn-primary btn-back-call">
+                            创建代金券
+                        </a>
+                    </div>
+                    <div class="">
+                        <table class="table">
+                            <thead>
+                            <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                                <th width="320px"  class="sl">名称 </th>
+                                <th width="160px"  class="sl">价格</th>
+                                <th width="160px"  class="sl">价值</th>
+                                <th width="320px"  class="sl">有效期</th>
+                                <th width="320px"  class="sl" >不可用日期</th>
+                                <th width="160px"  class="sl" >操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sl">100元代金券</td>
+                                    <td class="sl">￥5</td>
+                                    <td class="sl">￥100</td>
+                                    <td class="sl">2019-07-01至2019-08-30</td>
+                                    <td class="sl">周日</td>
+                                    <td class="sl">
+                                        <a class="label label-success cursor" href="detail.html">查看</a>
+                                        <a class="label  cursor btn-danger" onclick="del(id)">删除</a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 页码 开始 -->
+                <!--     <div class="box-footer clearfix">
+                        <?= LinkPager::widget([
+                            'pagination'    =>  $pages,
+                            'nextPageLabel' =>  '下一页',
+                            'prevPageLabel' =>  '上一页',
+                            'options'   =>  ['class' => 'pagination-sm no-margin pull-right pagination'],
+                            'hideOnSinglePage' => false,
+                            'maxButtonCount' => 10
+                        ]);?>
+                    </div> -->
+                    <!-- 页码end -->
+                </div>
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+     </div>
+    <!-- ./wrapper -->
+    <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <img class="font_family icon-close" src="../../web/images/close.png"/>
+            <h6 class="del-title">提交确认</h6>
+            <span class='warrning-des'>是否确认删除?</span>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default min-button"> 取消</div>
+                <div class="cursor confirm  btn btn-primary min-button">确认</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <script src="../../web/js/public/ts.js"></script>
+    <script src="../../web/js/coupon/list.js"></script>
+</body>
+
+
+

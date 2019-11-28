@@ -1,0 +1,58 @@
+.radio-inline{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left:0px !important;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+.m-l-5{
+    margin-left: 5px;
+}
+.m-r-5{
+    margin-right: 5px;
+}
+
+.address-select span{
+   width:10%
+}
+
+.title-center
+{
+    font-size: 14px;
+    line-height: 34px;
+    text-align: right;
+    color: rgba(0,0,0,.85);
+    font-weight: normal;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+.title-right
+{
+    font-size: 14px;
+    line-height: 34px;
+    text-align: right;
+    color: rgba(0,0,0,.85);
+    font-weight: normal;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+.check_box_label{
+    padding-top:10px;
+    padding-bottom:10px;
+
+}
+.no-break{
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: nowrap
+}
+span.form-control{
+    border: none !important;
+}
+

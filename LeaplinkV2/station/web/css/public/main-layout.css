@@ -1,0 +1,7 @@
+/*
+* @Author: Marte
+* @Date:   2019-10-15 09:37:08
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-10-17 16:24:53
+*/
+.content-wrapper{display:flex;flex-direction:column;}.container-fluid{flex-grow:1;display:flex;background: #F0F2F5;padding:24px;} .container-fluid.info{flex-grow:1;background:#fff;min-width:880px;padding-top:44px;}.info-wrap{min-width:850px;width:850px;margin:0 auto;}

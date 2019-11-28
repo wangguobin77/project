@@ -1,0 +1,2 @@
+"use strict";$("#add_form").toggle(),$(".add-save").toggle(),$(".add-cancel").toggle(),$(".add-btn").click(function(d){$(this).toggle(),$("#add_form").toggle(),$(".add-save").toggle(),$(".add-cancel").toggle()}),$(".add-save").click(function(){$(this).toggle(),$("#add_form").toggle(),$(".add-cancel").toggle(),$(".add-btn").toggle()}),$(".add-cancel").click(function(){$(this).toggle(),$("#add_form").toggle(),$(".add-save").toggle(),$(".add-btn").toggle()});
+//# sourceMappingURL=admin-position.js.map

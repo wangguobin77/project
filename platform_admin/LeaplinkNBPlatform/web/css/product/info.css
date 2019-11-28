@@ -1,0 +1,189 @@
+/*
+* @Author: Marte
+* @Date:   2019-08-09 14:15:52
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-08-12 15:40:22
+*/
+.info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.info-wrap{
+    display:flex;
+    flex-direction:column;
+}
+.info-wrap .step{
+    display:flex;
+    margin-bottom:20px;
+}
+.step .step-box{
+    width:242px;
+    height:60px;
+    display:flex;
+    justify-content:space-around;
+}
+.step-num{
+    width:33px;
+    height:33px;
+    border:1px solid #ccc;
+    color:#ccc;
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+    line-height:30px;
+    border-radius:50%;
+}
+.step-num-active{
+    background:#0079FE;
+    color:#fff;
+    border:1px solid #0079FE;
+}
+.step-des{
+    display: flex;
+     flex: 1;
+    flex-direction:column;
+    padding-left:3px;
+}
+.step-des span{
+    color:#ccc;
+}
+.step-des span:first-child{
+    font-size:14px;
+
+}
+.step-des span:nth-child(2){
+    font-size:12px;
+}
+.step-des-active{
+    color:#999 !important;
+}
+.input-xx i{
+    font-size:12px;
+    color:red;
+    padding-right: 5px
+}
+.tp-view{
+    height:88px;
+
+}
+.tp-view .form-control{
+    border:none !important;
+}
+.bg-icon{
+    width:108px;
+    height:108px;
+    position:relative;
+}
+.bg-icon input[name='picurl']{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.bg-icon i{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+
+/*
+上传图片显示框
+ */
+/*.sc-wrap{
+    margin-left:0;
+    margin-right:0;
+    padding-left:16%;
+    box-sizing:border-box;
+}
+.sc-wrap .sc-box{
+    width:55%;
+}*/
+.bg-icon{
+    float:left;
+    margin-right:16px;
+}
+/*商品详情图片
+ */
+.bg-icon{
+    position: relative;
+    background:#ccc;
+    margin-bottom:24px;
+}
+ .bg-icon input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.bg-icon i{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index:9999999;
+}
+/*
+    关闭按钮
+ */
+span.close-icon{
+    width:16px;
+    height:16px;
+    display:inline-block;
+    position: absolute;
+    top:0;
+    right:0;
+    cursor:pointer;
+    background:url(../../images/close_small.png) no-repeat center center;
+}
+
+.del-box-look {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 9999999999999999;
+    display: none;
+}
+
+
+.tp-yl{
+    transform:translateY(-50%);
+    width:41.666666666%;
+    top:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    height: 800px;
+}
+.tp-yl img{
+    display:block;
+    height:100%;
+    width:100%;
+    background:#fff;
+}
+.del-box-look .close-btn{
+    position:absolute;
+    top:6%;
+    right:4%;
+    font-size:48px;
+    color:#fff;
+    font-weight:normal;
+}

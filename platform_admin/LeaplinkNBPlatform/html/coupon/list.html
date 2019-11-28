@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/coupon/list.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+
+            <section class="content container-fluid">
+                <div class="right-box p-b-20 row">
+                    <a href='add.html' class="btn  btn-primary btn-back-call" style="float:right;">
+                        创建代金券
+                    </a>
+                </div>
+                <div class="">
+                    <table class="table">
+                        <thead>
+                        <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                            <th width="320px"  class="sl">名称 </th>
+                            <th width="160px"  class="sl">价格</th>
+                            <th width="160px"  class="sl">价值</th>
+                            <th width="320px"  class="sl">有效期</th>
+                            <th width="320px"  class="sl" >不可用日期</th>
+                            <th width="160px"  class="sl" >操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sl">100元代金券</td>
+                                <td class="sl">￥5</td>
+                                <td class="sl">￥100</td>
+                                <td class="sl">2019-07-01至2019-08-30</td>
+                                <td class="sl">周日</td>
+                                <td class="sl">
+                                    <a class="label label-success cursor" href="detail.html">查看</a>
+                                    <a class="label  cursor btn-danger" onclick="del(id)">删除</a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 页码 开始 -->
+            <!--     <div class="box-footer clearfix">
+                    <?= LinkPager::widget([
+                        'pagination'    =>  $pages,
+                        'nextPageLabel' =>  '下一页',
+                        'prevPageLabel' =>  '上一页',
+                        'options'   =>  ['class' => 'pagination-sm no-margin pull-right pagination'],
+                        'hideOnSinglePage' => false,
+                        'maxButtonCount' => 10
+                    ]);?>
+                </div> -->
+                <!-- 页码end -->
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+
+         <!-- Main Footer -->
+        <footer class="main-footer">
+          <!-- To the right -->
+            <div class="pull-right hidden-xs"></div>
+            <!-- Default to the left -->
+            <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+        </footer>
+     </div>
+    <!-- ./wrapper -->
+    <!-- 成功提示 -->
+    <div class="succ" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="ts-box" style="z-index:10000;display:block;">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail-ts" style='z-index:10000'>
+        <div class="ts-xx">
+            <span class='font_family icon-warning_large'></span>
+            <p>保存失败，请重新尝试！</p>
+        </div>
+    </div>
+
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+            <img src="../../web/images/warning-large.png" alt="">
+            <h6>是否确认删除?</h6>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default"> 取消</div>
+                <div class="cursor btn btn-primary confirm">确认</div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--tishi-->
+
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <script src="../../web/js/public/ts.js"></script>
+    <script src="../../web/js/coupon/list.js"></script>
+</body>
+
+
+

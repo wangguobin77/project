@@ -1,0 +1,47 @@
+/*
+* @Author: Marte
+* @Date:   2019-07-18 11:00:04
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-11-13 16:42:14
+*/
+.coupon-dialog{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:none;}
+.coupon-dialog .coupon-div{width:100%;height:100%;display:flex;justify-content:center;align-items: center;flex-direction:column;}
+.coupon-div .table{width:800px;background:#fff;overflow-y: scroll;margin-bottom:0;}
+input{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+.caozuo{width:800px;padding-top:20px;padding-bottom:20px;display: flex;justify-content:center;align-item: center;background:#fff;}
+.caozuo button{
+    margin-right:20px;
+    min-width: 92px;
+    outline:none;
+}
+.btn{
+    min-width:80px;
+    margin-left:10px;
+    outline:none !important;
+    box-shadow:none !important;
+}
+.operate-zone{
+    margin-bottom:15px;
+}
+.shoplist-title th{font-size: 18px;text-align:left;padding-left: 20px}
+.detail .detail-title {
+    font-size: 14px;
+    color: #99a9bf;
+    width: 100px;
+    margin-right: 25px}
+.detail .detail-con {
+    font-size: 14px;
+    color: #000;
+}
+   .detail .detail-con{
+        width:100%;border:0 !important;flex-grow:1;background:none;padding-left:10px;
+    }
+    .detail-box .detail-title{width:130px;}
+table .detail-info {
+    background: #F5F5F5;
+}

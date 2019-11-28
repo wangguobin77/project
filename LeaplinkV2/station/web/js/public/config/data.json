@@ -1,0 +1,18 @@
+[
+  {
+    "type": 0,
+    "title": {
+      "核销码": "code",
+      "品名": "name",
+      "原价": "ori_price",
+      "售价": "price"
+  },
+    "data": {
+      "code":0,
+      "name": "",
+      "ori_price": "",
+      "price": ""
+    }
+  }
+
+]

@@ -1,0 +1,33 @@
+/*
+* @Author: Marte
+* @Date:   2018-11-19 16:48:59
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-11-19 16:57:38
+*/
+/*表格样式*/
+.table-responsive .table thead tr th{
+    box-sizing: border-box;
+}
+.table-responsive .table thead tr th:nth-child(1){
+    max-width:160px;
+}
+.table-responsive .table thead tr th:nth-child(2),.table-responsive .table thead tr th:nth-child(3),{
+    max-width:320px;
+}
+
+.table-responsive .table thead tr th:nth-child(4),.table-responsive .table thead tr th:nth-child(5),.table-responsive .table thead tr th:nth-child(6),.table-responsive .table thead tr th:nth-child(7),.table-responsive .table thead tr th:nth-child(8),.table-responsive .table thead tr th:nth-child(9){
+    max-width:160px;
+}
+
+.table-responsive .table tbody tr td{
+    box-sizing:border-box;
+}
+.table-responsive .table tbody tr td:nth-child(2){
+    max-width:320px;
+}
+.table-responsive .table tbody tr td:nth-child(3){
+    max-width:320px;
+}
+.table-responsive .table tbody tr td:nth-child(1),.table-responsive .table tbody tr td:nth-child(4),.table-responsive .table tbody tr td:nth-child(5),.table-responsive .table tbody tr td:nth-child(6),.table-responsive .table tbody tr td:nth-child(7),.table-responsive .table tbody tr td:nth-child(8),.table-responsive .table tbody tr td:nth-child(9){
+    max-width:160px;
+}

@@ -1,0 +1,14 @@
+
+{{each data as ipData index}}
+   <div class="message_table_box <%=ipData.tip%>">
+        <div class="message_tip">
+                {{ipData.tip}}    
+        </div>
+        <div class="message_operate ">
+                {{if ipData.read==0}}  <button
+                 data-id='<%=ipData.ip%>' style='margin-right: 10px' class='mint-button mint-button--default mint-button--small check' ><label for="">查看</label></button>
+                <button data-id='<%=ipData.gid%>' class='mint-button mint-button--danger mint-button--small cancel_message'><label for="">忽略</label></button>
+                {{/if}}
+        </div>
+    </div> 
+{{/each}}

@@ -1,0 +1,7 @@
+/*
+* @Author: Marte
+* @Date:   2019-10-10 15:40:57
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-10-12 15:01:29
+*/
+.content-wrapper{display:flex;flex-direction:column;}.container-fluid{flex-grow:1;}.info{flex-grow:1;}.tips-box{margin-top:139px;display:flex;}.right-tips{height:368px;display:flex;align-items:flex-start;flex-direction:column;justify-content:center;margin-left:104px;}.right-tips b{font-size:80px;color:#434E59;font-weight:bold;line-height:73px;}.right-tips span{font-weight:400;color:rgba(0,0,0,0.45);line-height:28px;font-size:20px;margin:24px 0;}.right-tips button{margin:0;color:#fff;}.left-tips{margin-left:40px;}

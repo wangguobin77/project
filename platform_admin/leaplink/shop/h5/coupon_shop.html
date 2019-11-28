@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是优惠券列表</title>
+    <style>
+        td{
+            border-right: 1px solid #00a7d0;
+        }
+        #my-cart{
+            border: 1px solid #78a94d;
+        }
+        #my-cart span{
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+<p id="my-title">我是商户<font></font>的优惠券类表</p>
+<p>用户token<input type="text" id="my_token">(商户后台首页复制一个用户 token 到这里)<input type="button" value="点击更新 token" onclick="upToken()"></p>
+<p>商户ID<input type="text" id="shop_id"></p>
+<p>第<input type="text" id="pages">页</p>
+<p>每页<input type="text" id="limits">条</p>
+<p><input type="button" onclick="search()" value="点击查询"></p>
+
+
+<div id="coupon_list">
+    <table style="border: 1px solid green;">
+        <thead>
+            <th>id</th>
+            <th>标题</th>
+            <th>价格</th>
+            <th>价值</th>
+            <th>简单描述</th>
+            <th>使用规则</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <p id="page-area"></p>
+    <div id="my-cart">
+
+    </div>
+    <div><input type="button" value="提交订单" onclick="createOrders()"></div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <a href="orders.html">订单列表</a>
+    <div>下面一片空白</div>
+</div>
+</body>
+<script src="static/jquery.min.js"></script>
+<script>
+    //var domain = "http://127.0.0.1:8002"
+    var domain = "http://106.75.122.206:8002"
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    $(function () {
+        var token
+        token = getToken()
+        if(token){
+            $("#my_token").val(token)
+        }
+    })
+
+    function getToken() {
+        return getCookie('my_token')
+    }
+    //读取cookies
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+
+        if(arr=document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    //更新 token
+    function upToken() {
+        if(token == ""){
+            alert("请输入登录的 token 信息")
+        }
+        var token = $("#my_token").val()
+        //缓存到 cookie 其他页面方便使用
+        setCookie('my_token', token)
+    }
+
+    function setCookie(name,value)
+    {
+        var Days = 30;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+
+    function search()
+    {
+        var id = $("#shop_id").val(), pages = $("#pages").val(),limit = $("#limits").val(), offset = (pages-1)*limit;
+
+        var token = getToken()
+        //显示列表
+        $.ajax({
+            url:domain+'/api/coupon/coupons',
+            type:'GET',
+            dataType:'json',
+            data:$.param({shop_id:id, offset:offset, limit:limit}, true),
+            beforeSend: function(request) {
+                request.setRequestHeader("User-Token", token);
+            },
+            success: function(datas) {
+                if(datas.code==0){
+                    var data = datas.data
+
+                    var b = '';
+                    $.each(data.items, function (i, v) {
+                        b = b + '<tr>'
+                        b = b + '<td><a href="coupon_detail.html?id='+v.id+'">'+v.id +'</a></td>'
+                            + '<td>'+v.title+'</td>'
+                            + '<td>'+fentoYuan(v.price)+'</td>'
+                            + '<td>'+fentoYuan(v.worth)+'</td>'
+                            + '<td>'+v.scope+'</td>'
+                            + '<td>'+v.info+'</td>'
+                            + '<td><span onclick="addCart(\''+v.id+'\')" style="color: blue;cursor: pointer">加入购物车</span></td>'
+                    })
+                    b = b + '</tr>'
+                    $("#coupon_list").find('table').find('tbody').empty().append(b)
+                    $("#page-area").empty().append('总共'+data.total+'条,每页'+data.limit+'条,从第'+(data.offset+1)+'条开始取')
+                    $("#my-title").find('font').val(id)
+                }
+            },
+            fail:function (data) {
+
+            }
+        })
+
+        //显示购物车
+        $.ajax({
+            url:domain+'/api/coupon/carts/'+id,
+            type:'GET',
+            dataType:'json',
+            beforeSend: function(request) {
+                request.setRequestHeader("User-Token", getToken());
+            },
+            success: function(datas) {
+                if(datas.code==0){
+                    var data = datas.data,carts = data.carts,items = data.items
+                    var tmp = {}
+                    $.each(items, function (i, v) {
+                        tmp[v.id] = v
+                    })
+
+                    $("#my-cart").empty().append($('<p>我的购物车</p>'))
+                    $.each(carts, function (id, v) {
+                        var info = tmp[id]
+                        addCartsDom(id,v,info)
+                    })
+
+                }
+            }
+        })
+    }
+
+    function fentoYuan(v)
+    {
+        return v/100
+    }
+
+    function addCartsDom(id, quantity, info){
+        var p = $("#my-cart")
+        var carts_dom = $("#carts_"+id);
+        if(carts_dom.length > 0){ //节点存在,直接加数量
+            var q_dom = carts_dom.find('.quantity').find('font')
+            quantity = parseInt(q_dom.text())+parseInt(quantity)
+            if (quantity<=0){
+                carts_dom.remove()
+                return
+            }
+            q_dom.text(quantity)
+
+        }else{
+            var html = '<div id="carts_'+id+'" data-id="'+id+'">' +
+                '            <span>ID:'+id+'</span>' +
+                '            <span>标题:'+info.title+'</span>' +
+                '            <span class="quantity">数量:<font style="color: #00A680">'+quantity+'</font></span>' +
+                '            <span>价格:<font>'+info.price+'</font></span>' +
+                '            <span>价值:<font>'+info.worth+'</font></span>' +
+                '            <span style="color: blue;cursor:pointer" class="add">增加</span>' +
+                '            <span style="color: blue;cursor:pointer" class="reduce">减少</span>' +
+                '        </div>'
+            p.append($(html))
+        }
+    }
+
+
+    $('#my-cart').on('click', '.add', function () {
+        var id = $(this).parent().data('id')
+        addCart(id, 'add')
+    })
+    $('#my-cart').on('click', '.reduce', function () {
+        var id = $(this).parent().data('id')
+        addCart(id, 'reduce')
+    })
+
+    //加入购物车
+    function addCart(id, type='add') {
+        var quantity
+        if(type != 'add'){
+            quantity = -1
+        }else {
+            quantity = 1
+        }
+        var cart = [
+            {coupon_id: id, quantity: quantity}
+        ]
+        $.ajax({
+            url: domain+'/api/coupon/carts',
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({cart: cart, shop_id:$("#shop_id").val()}),
+            beforeSend: function (request) {
+                request.setRequestHeader("User-Token", getToken());
+            },
+            success: function (datas) {
+                if(datas.code==0){
+                    var data = datas.data,carts = data.carts,items = data.items
+                    var tmp = {}
+                    $.each(items, function (i, v) {
+                        tmp[v.id] = v
+                    })
+
+                    $.each(carts, function (id, v) {
+                        var info = tmp[id]
+                        addCartsDom(id,v,info)
+                    })
+                }
+            }
+        })
+    }
+
+    function createOrders() {
+        var shop_id = $('#shop_id').val()
+        var items = [], c = $('#my-cart').find('div')
+        $.each(c, function (i, v) {
+            var item = {}
+            item['coupon_type_id'] = $(v).data('id')
+            item['quantity'] = parseInt($(v).find('.quantity').find('font').text())
+            items.push(item)
+        })
+
+
+        $.ajax({
+            url: domain+'/api/coupon/orders',
+            type: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({shop_id:shop_id,items:items}),
+            beforeSend: function (request) {
+                request.setRequestHeader("User-Token", getToken());
+            },
+            success: function (datas) {
+                if(datas.code==0){
+                    $("#my-cart").empty()
+                }
+            }
+        })
+    }
+</script>
+</html>

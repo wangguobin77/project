@@ -1,0 +1,22 @@
+.large_line_btn,.large_line_btn_blue{border-radius:4px;letter-spacing:normal}.large_line_btn,.large_line_btn_blue,.large_line_btn_disabled,/*// 按钮 样式*/ .large_btn_default{height:40px;font-size:14px;font-weight:500;font-style:normal;font-stretch:normal;line-height:100%;text-align:center}.float_left{float:left}.float_right{float:right}.flex{display:-ms-flexbox;display:flex}/*// 按钮 样式*/ .large_btn_default{width:120px;background-color:#1890ff;color:#fff;border-radius:4px}.btn:hover{background-color:#69c0ff}.btn_disabled{background-color:rgba(0,0,0,.25)}.large_line_btn{width:120px;border:1px solid #58666e;color:#58666e}.large_line_btn_blue{width:120px;border:1px solid #1890ff;color:#1890ff}.large_line_btn_disabled{idth:120px;border-radius:4px;border:1px solid rgba(0,0,0,.25);letter-spacing:normal;color:rgba(0,0,0,.25)}.middle_btn{width:120px;height:32px}/*// 背景相关颜色*/ .link{color:#1890ff;background:#1890ff}.warning{color:#faad14;background:#faad14}.error{color:#f5222d;background:#f5222d}.disabled{background:rgba(0,0,0,.25);color:rgba(0,0,0,.25)}.hover{background:#69c0ff;color:#69c0ff}.selected{background:#e6f7ff;color:#e6f7ff}.success{background:#52c41a;color:#52c41a}.left-logo{float:left}.left-logo .icon-menu{font-size:24px;line-height:64px;color:#fff}.sl{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.cursor{cursor:pointer}
+/*# sourceMappingURL=all.css.map */
+
+
+.user-info-xx .userinfo-box h4{
+    font-size:14px;
+}
+input[type="text"]:disabled{
+    background:none!important;
+}
+input[type="date"]{
+    padding-left:16px;
+}
+
+::-webkit-clear-button {    /*控制清除按钮*/
+  visibility: hidden;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none !important;
+}

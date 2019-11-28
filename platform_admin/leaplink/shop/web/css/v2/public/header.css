@@ -1,0 +1,7 @@
+/*
+* @Author: Marte
+* @Date:   2019-09-06 14:52:57
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-09-06 15:49:00
+*/
+.main-header .logo{display:flex;color:#F54E91;justify-content:flex-start;flex-wrap:nowrap;align-items:center;}.logo .biaoti{margin-right: 16px;width:50px;font-size:24px;font-weight:600;color:rgba(245,78,145,1);line-height:32px;}.logo .biaotides{font-size:12px;font-weight:400;color:rgba(0,0,0,1);line-height:20px;}.head-nav{height:96px;padding:16px 24px;}.head-nav .yj{font-size:14px;font-weight:400;color:rgba(0,0,0,.45);line-height:22px;}.head-nav .yj:nth-child(2n){margin:0 8px;}.zhubt{height:28px;font-size:20px;font-weight:600;color:rgba(0,0,0,1);line-height:28px;margin-top:16px;}

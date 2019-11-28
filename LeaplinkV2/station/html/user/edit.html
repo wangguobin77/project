@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jedate.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/partner/reg.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/header.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/main-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/merchant/set.css">
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+    <style type="text/css">.select-input>span.select2{
+       width:34% !important;
+    }</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti'>来客</span>
+                <span class='biaotides'>后台管理系统</span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="active treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o text-red"></i> <span>商品</span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 560px;">
+            <!-- 导航下标注 -->
+            <div class="right-box p-b-20 row head-nav">
+                <section class='row'>
+                    <span class='yj'>用户</span><span class='yj'>/</span><span class='yj'>用户管理</span>
+                </section>
+                <h5 class="zhubt">编辑</h5>
+
+            </div>
+            <!-- Main content -->
+            <section class="content container-fluid" style="background: #F0F2F5;padding:24px;">
+                <div class='info col-md-12' style="background:#fff;min-width:880px;padding-top:44px;justify-content:flex-start;">
+                    <form class="info-form">
+                        <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;margin-top:10px;">
+                            <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;margin-top:10px;">
+                                 <div class="row col-md-12">
+                                   <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>登录密码:</label>
+                                            <input type="password" name="pwd" id='pwd' class="form-control " autocomplete="off" placeholder="请输入密码">
+                                            <span class="ts-des tishi">* 密码格式错误</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row col-md-12">
+                                   <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>确认密码:</label>
+                                            <input id="rpassword" name='password' type="password" class="form-control rpassword" autocomplete="off" placeholder="请再次输入密码">
+                                            <span class="ts-des tishi">* 两次密码输入不一致</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                   <div class="col-md-9">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>状态:</label>
+                                            <select class="form-control select2 class" name="status" style="width:100%;height:40px;border-radius:4px;">
+                                                <option selected="selected">身份证</option>
+                                                <option>护照</option>
+                                            </select>
+                                            <span class="ts-des tishi">* 商户类型不能为空</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 提交操作区域 -->
+                                <div class="row col-md-12" style="padding-left:200px !important;">
+                                    <div class="form-group col-md-3 input-xx">
+                                        <button type="button" class="btn btn-block btn-primary submit-btn">确定</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+                     <!-- 点击提交以后出现已提交资质审核 -->
+                    <div class='checkbox' >
+                        <div class='sec-step flex'>
+                            <img src="../../web/images/okstep.png" alt="">
+                            <h4 class='sec-title'>已提交审核</h4>
+                            <span class="sec-des">信息已提交审核，请耐心等待</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!-- Select2 -->
+    <script   src="../../web/js/public/select2.full.min.js"></script>
+    <script   src="../../web/js/user/edit.js"></script>
+</body>
+<script>
+      var glo = {
+        'istrue':true, //为false 时不可以再次请求手机验证码
+        'preventRepeat':false
+    }
+    $(document).ready(function(){
+        $('.select2').select2();
+        if($(".yyzz_selsct").find("option:selected").text()=='自定义'){
+            $('#test03').removeAttr('disabled');
+            $('#test03').attr('placeholder','请选择有效期的截止日期')
+            $('#test03').css('opacity',1)
+        }else{
+            $('#test03').attr('disabled',true);
+            $('#test03').attr('placeholder','');
+            $('#test03').val('');
+            $('#test03').css('opacity',0)
+        }
+
+    });
+
+    var data='',
+        reg_flag=false;
+    // function reg(){
+    //     var pwd=$('#pwd').val(),
+    //         rpwd=$('#rpassword').val(),
+    //         classify=$(".class").find("option:selected").text();
+    //         if(pwd==''){
+    //             $(this).next().html('密码不能为空').show()
+    //             // fail('密码不能为空')
+    //             return
+    //         }
+    //         if(!fun.pwd(pwd)){
+    //             fail('密码格式不正确')
+    //             return
+    //         }
+    //         if(!fun.repeatpwd(pwd,rpwd)){
+    //               fail('两次密码输入不一致')
+    //             return
+    //         }
+    //         if(classify=='请选择'){
+    //             fail('请输入商户类别');
+    //             return
+    //         }
+    //         data =JSON.stringify($('#sub-form').serializeObject());
+    //         reg_flag=true;
+
+    // }
+
+    /**
+     * 信息提交
+     */
+
+    // $('.submit-btn').unbind('click').click(function(event) {
+    //     if(glo.preventRepeat){
+    //         return
+    //     }
+    //     reg()
+    //     if(reg_flag==false){
+    //         glo.preventRepeat = false;
+    //         return false
+    //     }
+    //     var data =JSON.stringify($('.info-form').serializeObject());
+    //     console.log(data)
+    //     glo.preventRepeat=true;
+    // });
+
+
+    /**
+     * submit
+     */
+
+
+
+</script>
+
+

@@ -1,0 +1,11 @@
+.sn-td-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3px;
+}
+.sn-td-input{
+    width: 50%;
+    margin-right: 5px;
+    height: 25px;
+}

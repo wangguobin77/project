@@ -1,0 +1,12 @@
+.treegrid-indent {width:16px; height: 16px; display: inline-block; position: relative;}
+
+.treegrid-expander {width:16px; height: 16px; display: inline-block; position: relative; cursor: pointer;}
+
+.treegrid-expander-expanded{margin-right: 16px;background-image: url(../images/collapse.png); }
+.treegrid-expander-collapsed{margin-right: 16px;background-image: url(../images/expand.png);}
+ul>li{
+    list-style: none
+}
+.add-drop{
+    padding-left: 0 !important;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+</head>
+<body>
+    <p>选择文件: <input type="file" id="file" name="file"/></p>
+    <p><input type="submit" value="提交" onclick="commit()"/></p>
+</body>
+</html>
+<script src='../web/js/public/jquery.min.js'></script>
+<script>
+
+
+    // 每个文件切片大小定为1M(1024*1024字节)(需要跟服务器协商好).
+    var BYTES_PER_SLICE = 1024*1024;
+    // 已发送的数量
+    var  hasSendNum = 0;
+    // 总切片数
+    var totalSlices;
+
+    // 提交方法
+    function commit() {
+        // 拿出选中的第一个文件
+        var file = document.getElementById("file").files[0];
+        // 文件的总字节数
+        var totalSize = file.size;
+        // 当前片数
+        var index = 0;
+        // 分片的开始、结束（不含）
+        var start,end;
+        // 文件名
+        var fileName = file.name;
+        // 已经发送num
+        hasSendNum = 0;
+
+        // 文件切片总数（向上取整）
+        totalSlices = Math.ceil(file.size / BYTES_PER_SLICE);
+        // 不断循环将切片上传
+        while(index < totalSlices) {
+
+            start = index*BYTES_PER_SLICE;
+            end = start + BYTES_PER_SLICE;
+
+            var slice =file.slice(start,end);//切割文件 {’size‘:124521,type:''}
+            console.log(slice)
+            uploadFile(slice, index++,fileName);
+        }
+    }
+
+    //上传文件
+    function uploadFile(slice,index,fileName) {
+        var retry = 1;
+        var formDate = new FormData();
+        formDate.append("slice", slice);
+        formDate.append("fileName",fileName);
+        formDate.append("index",index);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'sliceUpload', true);//false指同步上传，因为我的服务器内存较小，选择同步，如果追求速度，可以选择 //ture，异步上传
+        xhr.onreadystatechange = ()=>uploadCallBack(xhr,slice,index,fileName);
+        xhr.send(formDate);
+
+    }
+
+    /**
+     * @desc 上传回调
+     * @param xhr
+     */
+    function uploadCallBack(xhr,slice,index,fileName) {
+        if(xhr.readyState==4) {
+            if(xhr.status==200) {
+                if(xhr.responseText==1) {
+                    hasSendNum++;
+                    console.log("第"+index+"片，完成度"+parseInt(hasSendNum/totalSlices*100)+"%");
+                    if(hasSendNum==totalSlices) {
+                        console.log("上传完毕");
+                    }
+                }
+            } else {
+                console.log("上传失败，重试");
+                // 上传失败  继续重新上传文件
+                uploadFile(slice, index,fileName);
+            }
+        }
+    }
+
+
+
+
+    /**
+     * [BYTES_PER_CHUNK description]
+     * @type {[type]}
+     */
+//     const BYTES_PER_CHUNK = 512*1024; // 每个文件切片大小定为0.5MB .
+//     var slices,totalSlices,start=0,end=BYTES_PER_CHUNK,index = 0,stop = 0;
+
+//     $("ele").click(function(){
+//         var file=$("#file");
+//         if($.trim(file.val())==''){
+//            console.log('请选择文件')
+//             return false;
+//         }
+//         //发送请求函数
+//         sendRequest()
+//     });
+
+//     //发送请求
+//     sendRequest =  function () {
+//         var blob = document.getElementById('file').files[0];
+//         // 计算文件切片总数
+//         slices = Math.ceil(blob.size / BYTES_PER_CHUNK);
+//         totalSlices= slices;
+//         if(stop==1){
+//             alert("停止上传");
+//             return false
+//         }
+//         if(start < blob.size) {
+//             if(end > blob.size) end = blob.size;
+//             uploadFile(blob, index, start, end);
+//             start = end;
+//             end = start + BYTES_PER_CHUNK;
+//             index++;
+//         }
+//     };
+//     //上传文件
+//     uploadFile =   function (blob, index, start, end) {
+//         var xhr,fd,chunk;
+//         xhr = new XMLHttpRequest();
+//         xhr.onreadystatechange = function() {
+//             if(xhr.readyState == 4) {
+//                 if(xhr.responseText) alert(xhr.responseText);
+
+//                 if(slices>1) slices--;
+
+//                 var percent=100*index/slices;//文件上传进度
+//                 if(percent>100){
+//                     percent=100;
+//                 }else if(percent==0&&slices==1){
+//                     percent=100;
+//                 }
+//                 // 如果所有文件切片都成功发送，发送文件合并请求。
+//                 if(percent == 100) {
+//                     mergeFile(blob);
+//                     start=0;
+// //                    alert('文件上传完毕');
+//                 }else{
+//                     if(stop!=1) sendRequest();
+//                 }
+//             }
+//         };
+
+//         chunk =blob.slice(start,end);//切割文件
+//         //构造form数据
+//         fd = new FormData();
+//         fd.append("file", chunk);
+//         fd.append("name", blob.name);
+//         fd.append("index", index);
+//         xhr.open("POST", "/upload/fileupload", true);
+//         //设置二进制文边界件头
+//         xhr.setRequestHeader("X_Requested_With", location.href.split("/")[3].replace(/[^a-z]+/g, '$'));
+//         xhr.send(fd);
+//     };
+
+//     mergeFile = function (blob) {
+//         var xhr,fd;
+//         xhr = new XMLHttpRequest();
+//         fd = new FormData();
+//         fd.append("name", blob.name);
+//         fd.append("index", totalSlices);
+//         xhr.open("POST", "/upload/meradd", true);
+//         xhr.setRequestHeader("X_Requested_With", location.href.split("/")[3].replace(/[^a-z]+/g, '$'));
+//         xhr.send(fd);
+
+//         xhr.onreadystatechange = function(){
+//             if(xhr.readyState == 4)
+//             {
+//                 if(xhr.status == 200)
+//                 {
+//                     var result = JSON.parse(xhr.responseText);
+//                     if(result.code == 0)
+//                     {
+//                        // 上传成功
+//                        console.log(result.data);
+//                     }else{
+//                         //fail
+//                         alert(result.data);
+//                     }
+//                 }else{
+//                     alert('failed!');
+//                 }
+//             }
+//         }
+//     };
+    /**
+     * end
+     */
+</script>

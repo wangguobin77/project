@@ -1,0 +1,21 @@
+/*
+* @Author: Marte
+* @Date:   2018-12-05 14:19:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-12-05 14:37:55
+*/
+body {
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box, .register-box {
+    width: 360px;
+    margin: 0;
+}

@@ -1,0 +1,64 @@
+/*
+* @Author: Marte
+* @Date:   2019-07-17 14:57:02
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-07-18 11:06:42
+*/
+.bg-icon{
+    width:96px;
+    height:96px;
+    position:relative;
+}
+.bg-icon img{
+    width:96px;
+    height:100%;
+}
+.bg-icon i {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position:absolute:
+}
+.bg-icon i img{
+    position:absolute;
+     z-index: 3;
+}
+.bg-icon input {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    position:absolute;
+    z-index:4;
+}
+.add-img{
+    position:absolute;top:0;
+}
+.dianpu-img{
+    margin-right:20px;
+}
+.box-code{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-code input{
+    height:80%;
+    width:60%;
+}
+.jeinpbox{
+    display:flex;
+    align-items: center;
+}
+.jeinpbox input{
+    height:90%;
+    border:0;
+}
+.T1RRTittle{
+    white-space:nowrap;
+}
+.cursor{cursor:pointer;}

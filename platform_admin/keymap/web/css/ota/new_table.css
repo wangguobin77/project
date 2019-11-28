@@ -1,0 +1,30 @@
+/*
+* @Author: Marte
+* @Date:   2018-11-14 14:32:40
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-11-14 14:33:10
+*/
+.table thead tr{
+    height:32px;
+    line-height:30px;
+    margin:0;
+    padding:0;
+}
+.table>thead>tr>th {
+    height:32px;
+    line-height:30px;
+ }
+.table tbody tr{
+    height:32px;
+    line-height:30px;
+    overflow:hidden;
+}
+.table tbody tr td{
+    height:32px;
+    line-height:30px;
+}
+
+
+.table .opr-box .czuo-box{
+    height:32px;
+}

@@ -1,0 +1,60 @@
+/*
+* @Author: Marte
+* @Date:   2018-12-05 14:19:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-12-05 15:37:26
+*/
+body {
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursor{
+    cursor:pointer;
+}
+.login-box{
+    min-width:360px;
+}
+.login-box, .register-box {
+    width: 360px;
+    margin: 0;
+}
+.fsyym {
+    border: 1px solid #367fa9;
+    background: #fff;
+    color: #367fa9;
+    height: 32px;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: 0;
+}
+.form-group{
+    padding:0;
+    position:relative;
+    margin-bottom: 20px;
+}
+.info{
+    display:flex;
+    justify-content:space-between;
+}
+.fsyym{
+    white-space:nowrap;
+    padding:0;
+}
+.submit-btn{
+    padding:0;
+}
+.form-group .warning{
+    position:absolute;
+    left:10px;
+    color: #f5222d;
+    font-size: 10px;
+    top:110%;
+    display:none;
+}

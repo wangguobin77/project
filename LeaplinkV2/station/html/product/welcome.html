@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+    <link rel="stylesheet" href="../../web/css/public/main-layout.css">
+    <link rel="stylesheet" href="../../web/css/public/header.css">
+    <link rel="stylesheet" href="../../web/css/product/list.css">
+
+    <style type="text/css">.select-input>span.select2{
+       width:34% !important;
+    }</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti' style='width:100%;'>近场业务平台</span>
+                <span class='biaotides'></span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class=" treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li class="active treeview">
+                           <a href="#">
+                                <i class="fa fa-gear"></i> <span>商品管理</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 添加商品</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+        </aside>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-width:870px;">
+            <!-- 导航下标注 -->
+            <div class="right-box p-b-20 row head-nav">
+                <div>
+                    <section class='row'>
+                        <span class='yj'></span><span class='yj'></span><span class='yj'></span>
+                    </section>
+                    <h5 class="zhubt">welcome</h5>
+                </div>
+            </div>
+        </div>
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <img class="font_family icon-close" src="../../web/images/close.png"/>
+            <h6 class="del-title">提交确认</h6>
+            <span class='warrning-des'>是否确认删除?</span>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default min-button"> 取消</div>
+                <div class="cursor confirm  btn btn-primary min-button">确认</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 导入文件 上传文件 -->
+    <div class="del-box lead-box none">
+        <div class="lead">
+             <div class="lead-wrap">
+                <header class="lead-head">
+                    批量导入
+                    <img class='lead-close cursor' src="../../web/images/close.png">
+                </header>
+                <!-- 二级导航显示 -->
+                <div class="lead-nav">
+                    <div class='items'>
+                        <span class="num num-active one">1</span>
+                        <span class='des'>上传文件</span>
+                    </div>
+                    <div class='items'>
+                        <span class="num two">2</span>
+                        <span class='des'>数据预览</span>
+                    </div>
+                    <div class='items'>
+                        <span class="num three">3</span>
+                        <span class='des'>导入数据</span>
+                    </div>
+                </div>
+                <!-- 上传文件显示区域 -->
+                <div class='lead-content lead-first'>
+                    <section class='download'>
+                        <span class='left-model'>
+                            <img src="../../web/images/xiazai.png">
+                        </span>
+                        <section class="right-view">
+                            <h4 class='title'>填写导入数据信息</h4>
+                            <span class='des'>请按照数据模板的格式准备导入数据，模板中的表头名称不可更改，表头行不能删除</span>
+                            <a href="#" download class='cursor'><img src="../../web/images/xzicon.png" width="16px" height="16px">下载模板</a>
+                        </section>
+                    </section>
+                    <section class='download'>
+                        <span class='left-model'>
+                            <img src="../../web/images/shangchuan.png">
+                        </span>
+                        <section class="right-view">
+                            <h4 class='title'>填写导入数据信息</h4>
+                            <span class='des'>文件后缀名必须为xls或xlsx（即Excle格式），文件大小不得大于10M，最多支持导入3000条数据</span>
+                            <a  class='cursor upfile'><img src="../../web/images/xsshangchuan.png">上传文件
+                                <input type="file" name="" class='cursor myfile' accept=".xls,.xlsx"  id="FileInput"  onchange="importfile(this)">
+                                <!-- 上传文件后显示文件信息 -->
+                            </a>
+                            <a class='fileinfo none'>
+                                <img src="../../web/images/xlsicon.png" class="cursor" width="16px" height="16px">
+                                <span class='filename'></span>
+                                <span class='filesize'></span>
+                                <img class='clear cursor' src="../../web/images/close.png" class="cursor" width="16px" height="16px" onclick="clear_info()">
+                            </a>
+                        </section>
+                    </section>
+                    <!-- 提示信息 -->
+                    <section class='download tips'>
+                        <img src="../../web/images/tipsicon.png">
+                        <section class='wenzi'>
+                            <span class='des'>特别提示</span>
+
+                            <span class="des">导入过程中如发现相同核销码的优惠券，则更新这条优惠券数据</span>
+                        </section>
+                    </section>
+
+                    <!-- 确认取消按键 -->
+                    <div class="box-footer clearfix button-zone">
+                        <ul class="pagination-sm no-margin pull-right pagination">
+                            <li class="cancel-data"><span class='cursor' onclick="cancel_lead()">取消</span></li>
+                            <li class="next"><span class='cursor next' onclick='see_data()'>下一步</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 数据预览 -->
+                <div class="lead-content lead-content-table none lead-second" style="width:592px;margin:0 auto;">
+
+                    <table class="table table-bordered" id="tb_table">
+                    </table>
+
+                    <div class="box-footer clearfix button-zone">
+                        <ul class="pagination-sm no-margin pull-right pagination">
+                            <li class="cancel-data"><span class='cursor ' onclick="see_data_back()">上一步</span></li>
+                            <li class="next"><span class='cursor next' id="btn_get">导入</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 上传数据不合法 -->
+                <div class='lead-content lead-format none'>
+                    <!-- 提示信息 -->
+                    <section class='download tips'>
+                        <img src="../../web/images/error.png">
+                        <section class='wenzi'>
+                            <span class='des'>出现异常</span>
+                            <span class="des">
+                                <span class="des">异常数量条数：</span><span class='des error_num'>100条</span>
+                                <span class="des">正常数量条数：</span><span class='des normal_num'>100条</span>
+                            </span>
+                        </section>
+                    </section>
+
+                    <section class='download error-log' style='height:278px;'>
+                        <h4>异常提示</h4>
+                        <ul class='log-box'>
+                            <li>
+                                第1行：已存在核销码为【 0000000000000 】的优惠券，如果继续导入将会更新这条优惠券的数据
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 确认取消按键 -->
+                    <div class="box-footer clearfix button-zone">
+                        <ul class="pagination-sm no-margin pull-right pagination">
+                            <!-- <li class="cancel-data"><span class='cursor' onclick="lead_again()">重新上传</span></li> -->
+                            <li class="cancel-data"><span class='cursor' onclick="upload_again()">重新上传</span></li>
+
+                            <li class="next"><span class='cursor next' onclick='goon_lead()'>继续上传</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 正在上传数据 -->
+                <div class="loading none">
+                    <div class="lead-content leading clearfix">
+                        <span>正在上传中</span>
+                        <img src='../../web/images/loading.gif' alt="">
+                    </div>
+                </div>
+
+                <!-- 导入成功 -->
+                <div class="leadsuccess none">
+                    <div class="lead-content leading clearfix">
+                        <img src='../../web/images/greeb-succ.png' alt="">
+                        <h4>批量导入完成</h4>
+                        <span class='des'>您已成功导入<span class='des lead-num'>1000</span>条数据</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/shim.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/xlsx.full.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!--  -->
+    <script src="../../web/js/public/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="../../web/js/public/bootstarp-table/bootstrap-table.min.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/bootstrap-table-editable.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/utils.js"></script>
+</body>
+

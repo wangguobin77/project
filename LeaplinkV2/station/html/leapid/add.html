@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jedate.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/product/info.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/header.css">
+     <link rel="stylesheet" type="text/css" href="../../web/css/public/main-layout.css">
+    <style type="text/css">.select-input>span.select2{
+       width:34% !important;
+    }</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti'>来客</span>
+                <span class='biaotides'>后台管理系统</span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class=" treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li  class=" active treeview menu-open">
+                            <a href="#"><i class="fa fa-circle-o text-red"></i> <span>商品</span><span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span></a>
+                             <ul class="treeview-menu">
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>添加商品</a></li>
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>编辑商品</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 560px;">
+            <!-- 导航下标注 -->
+            <div class="right-box p-b-20 row head-nav">
+                <section class='row'>
+                    <span class='yj'>商品</span><span class='yj'>/</span><span class='yj'>商品管理</span><span class='yj'>/</span><span class='yj'>添加</span>
+                </section>
+                <h5 class="zhubt">添加</h5>
+
+            </div>
+            <!-- Main content -->
+            <section class="content container-fluid" style="background: #F0F2F5;padding:24px;">
+                <div class='info col-md-12' style="background:#fff;min-width:880px;padding-top:44px;">
+                    <div class='col-md-12 info-wrap' style="min-width:790px;width:790px;margin:0 auto;">
+                        <ul class='step'>
+                            <li class='step-box step-fir'  style="width:223px;">
+                                <span class='step-num step-num-active'>1</span>
+                                <a class='step-des'>
+                                    <span class='step-des-active'>进行中</span>
+                                    <span class='xt xt-zctive'></span>
+                                </a>
+                            </li>
+                            <li class='step-box step-sec' style="width:240px;">
+                                <span class='step-num '>2</span>
+                                <a class='step-des'>
+                                    <span>信息审核</span>
+                                    <span class='xt'></span>
+                                </a>
+                            </li>
+                            <li class='step-box step-third'>
+                                <span class='step-num'>3</span>
+                                <a class='step-des'>
+                                    <span>登记成功</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form class="info-form">
+                        <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;margin-top:10px;">
+                            <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;margin-top:10px;">
+                                <div class="row col-md-12">
+                                   <div class="col-md-7 info-input">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>核销码:</label>
+                                            <input type="text" id="code_num" class="form-control " autocomplete="off" placeholder="请输入核销码" name='code'>
+                                            <span class="ts-des tishi">* 核销码不能为空</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                 <div class="row col-md-12">
+                                   <div class="col-md-7">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>品名:</label>
+                                            <input type="text" id='name' class="form-control " autocomplete="off" placeholder="请输入品名" name='name'>
+                                            <span class="ts-des tishi">* 品名不能为空</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row col-md-12">
+                                   <div class="col-md-7">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>原价:</label>
+                                            <input id="ori_price" type="text" class="form-control " autocomplete="off" placeholder="请输入原价" name='ori_price'>
+                                            <span class="ts-des tishi">* 原价不能为空</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                   <div class="col-md-7">
+                                        <div class="form-group col-md-12 input-xx">
+                                            <label class="col-md-3 title"><i>*</i>售价:</label>
+                                            <input id="price" type="text" class="form-control " autocomplete="off" placeholder="请输入售价" name='price'>
+                                            <span class="ts-des tishi">* 售价不能为空</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                   <div class="col-md-7">
+                                        <div class="form-group col-md-12 input-xx tp-view">
+                                            <label class="col-md-3 title"><i>*</i>商品图片:</label>
+                                            <div class="form-control tpimg-box dianpu-img" style="height:88px;width:88px;">
+                                                <div class="bg-icon">
+                                                    <i class='close_box'>
+                                                        <span class="close-icon"></span>
+                                                        <img id="shop_img" style="width:88px;height:88px" src="" align="top">
+                                                    </i>
+                                                    <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" >
+                                                    <input type="hidden" name="plate">
+                                                    <img src="../../web/images/scicon.png" class='add-img' alt="">
+                                                </div>
+                                            </div>
+                                            <div class='des'></div>
+                                        </div>
+                                        <span class="ts-des tishi" >* 请上传商品图片</span>
+                                    </div>
+                                </div>
+
+                                <!-- 提交操作区域 -->
+                                <div class="row col-md-12" style="padding-left:200px !important;">
+                                    <button type="button" class="btn  btn-primary submit-btn min-button">提交</button>
+                                    <button type="button" class="btn  btn-primary save-btn min-button" onclick="save()">保存</button>
+                                    <button type="button" class="btn  btn-primary again-btn max-button" onclick="again()">保存后继续创建</button>
+                                    <button type="button" class="btn rep-btn min-button back" onclick="resetall()">重置</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                     <!-- 点击提交以后出现已提交资质审核 -->
+                    <div class='checkbox'>
+                        <div class='sec-step flex'>
+                            <img src="../../web/images/okstep.png" alt="">
+                            <h4 class='sec-title'>已提交审核</h4>
+                            <span class="sec-des">信息已提交审核，请耐心等待</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ" >
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <img class="font_family icon-close" src="../../web/images/close.png"/>
+            <h6 class="del-title">提交确认</h6>
+            <span class='warrning-des'>是否确认删除?</span>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default min-button"> 取消</div>
+                <div class="cursor confirm  btn btn-primary min-button">确认</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!-- upload js -->
+    <script   src="../../web/js/public/upload.js"></script>
+    <script   src="../../web/js/product/add.js"></script>
+</body>
+<script>
+      var glo = {
+        'istrue':true, //为false 时不可以再次请求手机验证码
+        'preventRepeat':false
+    }
+
+
+    /**
+     * 信息提交
+     */
+
+    // $('.submit-btn').unbind('click').click(function(event) {
+
+    //     if(glo.preventRepeat){
+    //         return
+    //     }
+    //     reg()
+    //     if(reg_flag==false){
+    //         glo.preventRepeat = false;
+    //         return false
+    //     }
+    //     glo.preventRepeat=true;
+    //     var data =JSON.stringify($('.info-form').serializeObject());
+    //     console.log(data)
+
+    //     tips_warning('提交确认','确定将商品提交审核吗？');
+    //     // 点击确认提示框中的确认按键
+    //     $('.confirm').click(function(){
+    //         $('.delete').hide();
+    //         $('.info-form').hide();
+    //         $('.checkbox').show();
+    //         // 第二部信息审核高亮
+    //         sec_stepactive()
+    //         // 第三步登记成功高亮
+    //         // third_stepactive()
+
+    //     })
+
+    // });
+    /**
+     * 保存
+     */
+    const save=()=>{
+        if(glo.preventRepeat){
+            return
+        }
+        reg()
+        if(reg_flag==false){
+            glo.preventRepeat = false;
+            return false
+        }
+        glo.preventRepeat=true;
+        var data =JSON.stringify($('.info-form').serializeObject());
+
+    }
+    /**
+     * 保存后继续创建
+     */
+    const again=()=>{
+         if(glo.preventRepeat){
+            return
+        }
+        reg()
+        if(reg_flag==false){
+            glo.preventRepeat = false;
+            return false
+        }
+        glo.preventRepeat=true;
+        var data =JSON.stringify($('.info-form').serializeObject());
+
+    }
+    /**
+     * 重置
+     */
+    const resetall=()=>{
+        $('.close_box').hide();
+        $('input.form-control').val('');
+        $('.bg-icon').find('input').val('');
+        $('#shop_img').attr('src','');
+        $('input[name="plate"]').val('');
+
+    }
+</script>
+
+

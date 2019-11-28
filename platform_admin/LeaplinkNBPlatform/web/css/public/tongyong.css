@@ -1,0 +1,44 @@
+/*公司logo*/
+.tpimg-b{
+    padding:0;
+    display:flex;
+    align-items:center;
+}
+.tpimg-box{
+    padding:0;
+
+}
+.tpimg-b .img-des{
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(0, 0, 0, 0.25);
+    padding-right:0;
+}
+.bg-icon input{
+  width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer
+}
+.T1RRTittle{
+    font-size: 14px;
+    line-height: 88px;
+    text-align: right;
+    color: rgba(0,0,0,.85);
+    font-weight: normal;
+}
+
+// 引用第三方的字体库
+@font-face{
+    font-family: myFirstFont;
+    src: url('../fonts/iconfont.eot'),
+         url('../fonts/iconfont.ttf'); /* IE9+ */
+}
+
+body{
+    font-family: myFirstFont,"Microsoft YaHei","微软雅黑"
+}
+.select2-container .select2-selection--single .select2-selection__rendered{font-size: 14px;}

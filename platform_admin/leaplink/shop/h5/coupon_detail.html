@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优惠券详情</title>
+</head>
+<body>
+    <p>我是优惠券详情</p>
+    <div id="detail">
+
+    </div>
+
+</body>
+<script src="static/jquery.min.js"></script>
+<script>
+    //var domain = "http://127.0.0.1:8002"
+    var domain = "http://106.75.122.206:8002"
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    function getToken() {
+        return getCookie('my_token')
+    }
+    //读取cookies
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+
+        if(arr=document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    $(function () {
+        var id = getUrlParam('id'), detail = $('#detail')
+        if (!id) return
+        var token = getToken()
+        $.ajax({
+            url:domain+'/api/coupon/coupons/'+id,
+            type:'GET',
+            dataType:'json',
+            beforeSend: function(request) {
+                request.setRequestHeader("Token", token);
+            },
+            success:function (data) {
+                if (data.code == 0) {
+                    $.each(data.data, function (i, v) {
+                        detail.append('<p><font>' + i + '</font>&nbsp;&nbsp;->&nbsp;' + v + '</p>')
+                    })
+                }
+            }
+
+        })
+    })
+</script>
+</html>

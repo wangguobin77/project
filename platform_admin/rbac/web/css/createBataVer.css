@@ -1,0 +1,143 @@
+/*
+* @Author: Marte
+* @Date:   2018-08-27 10:26:48
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-11-22 15:32:53
+*/
+#factory-list{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:912px;
+    margin:0 auto;
+}
+#factory-list h3{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.85);
+    width:265px;
+    margin-bottom:24px;
+}
+#factory-list p{
+    width:265px;
+    line-height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+}
+#factory-list p span{
+    width:50%;
+    font-size: 14px;
+    text-align: right;
+}
+#factory-list p span:nth-child(1){
+    width:45%;
+    text-align:right;
+}
+#factory-list p span:nth-child(2){
+    width:50%;
+    text-align:left;
+    color: rgba(0, 0, 0, 0.45);
+}
+#factory-list p.zdlx{
+    margin-bottom:40px;
+}
+.sel-ver-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    padding:0;
+    width: 864px;
+}
+.sel-ver-box .ver-num{
+    width:272px;
+    height:320px;
+    flex-direction:column;
+    padding:74px 0 32px 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    box-sizing:border-box;display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    /* // cursor:pointer; */
+}
+
+.ver-num h5{
+    line-height:32px;
+    color: rgba(0, 0, 0, 0.85);
+}
+.ver-num img{
+    height:40px;
+    width:40px;
+}
+.sel-ver-box .ver-box-num{
+    /* width: 192px;
+    height: 40px; */
+    /* background-color:black; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: black;
+    position:relative;
+    cursor:pointer;
+}
+/*选择版本时的类*/
+.ver-active{
+    border: solid 2px #3c8dbc;
+}
+/* 开始设置*/
+ .setting{
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #3c8dbc;
+    color: #fff;
+    margin: 0 2% 0 2%;
+    text-align: center;
+    line-height: 32px;
+    background:#3c8dbc;
+    width:160px;
+
+    margin-top:40px;
+    outline:none;
+}
+
+.sel-ver-box .ver-box-num input{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    z-index:9;
+    outline:none;
+    opacity:0;
+    cursor: pointer;
+}
+.add-box{
+    justify-content: space-around;
+}
+#factory-list .creat-form{
+    display:flex;flex-direction:column;align-items: center;
+    justify-content: center;width:100%;
+}
+.check_version_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    outline: none;
+    opacity: 0;
+    cursor: pointer
+}

@@ -1,0 +1,231 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+
+<div class="bottom">
+    <div class="bottom-right">
+        <form id="mymessage-form" accept-charset="utf-8" >
+            <div class="grid-box" style="border:0" id="grid-box">
+                <div class="logo" >
+                    <div class="logo-box clearfix">
+
+                        <input name="logo" type="hidden" id="logo" value="">
+                        <span style="float:left">*</span>
+                        <div class="logo-nav touxiang profile-pic img-list"></div>
+                    </div>
+                </div>
+
+                <div class="select-nav">
+                    <div class="xz">
+                        <input id="choose" type="file" name="imgurl" accept="image/*"  multiple>
+                        <a id="uploadimg">上传</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src='../web/js/public/jquery.min.js'></script>
+<script src='upload.js'></script>
+
+<script type="text/javascript">
+//     //支持多图片上传
+//     //var img_js = 0;//图片计数器
+//     /*图片处理*/
+//     var filechooser = document.getElementById("choose");
+//     //    用于压缩图片的canvas
+//     var canvas = document.createElement("canvas");
+//     var ctx = canvas.getContext('2d');
+//     //    瓦片canvas
+//     var tCanvas = document.createElement("canvas");
+//     var tctx = tCanvas.getContext("2d");
+//     var maxsize = 500 * 1024;
+
+//     filechooser.onchange = function() {
+//         if (!this.files.length) return;
+//         var files = Array.prototype.slice.call(this.files);
+//        /* if (files.length > 9) {*/ //上传头像属于单图片 所以只能是1 后期会为配置参数
+//         if (files.length > 1) {
+//             alert("最多同时只可上传1张图片");
+//             return;
+//         }
+//         files.forEach(function(file, i) {
+//             if (!/\/(?:jpeg|png|gif)/i.test(file.type)) return;
+//             var reader = new FileReader();
+//             var li = document.createElement("li");
+//             // 获取图片大小
+//             var size = file.size / 1024 > 1024 ? (~~(10 * file.size / 1024 / 1024)) / 10 + "MB" : ~~(file.size / 1024) + "KB";
+//             li.innerHTML = '<div class="progress"><span></span></div><div class="size">' + size + '</div>';
+
+//             $(".img-list").html("");//先置为空
+//             $(".img-list").append($(li));
+//             reader.onload = function() {
+//                 var result = this.result;
+//                 console.log(result)
+//                 var img = new Image();
+//                 img.src = result;
+//                 $(li).css("background-image", "url(" + result + ")");
+//                 //如果图片大小小于100kb，则直接上传
+//                 if (result.length <= maxsize) {
+//                     img = null;
+//                     upload(result, file.type, $(li));
+//                     return;
+//                 }
+//                 //    图片加载完毕之后进行压缩，然后上传
+//                 if (img.complete) {
+//                     callback();
+//                 } else {
+//                     img.onload = callback;
+//                 }
+//                 function callback() {
+//                     var data = compress(img);
+//                     upload(data, file.type, $(li));
+//                     img = null;
+//                 }
+//             };
+//             reader.readAsDataURL(file);
+//         })
+//     };
+
+
+
+// //    图片上传，将base64的图片转成二进制对象，塞进formdata上传
+//     function upload(basestr, type, $li) {
+//         // $("#uploadimg").click(function(){
+//             var text = window.atob(basestr.split(",")[1]);
+//             var buffer = new Uint8Array(text.length);
+//             var pecent = 0, loop = null;
+//             for (var i = 0; i < text.length; i++) {
+//                 buffer[i] = text.charCodeAt(i);
+//             }
+//             var blob = getBlob([buffer], type);
+//             var xhr = new XMLHttpRequest();
+//             var formdata = getFormData();
+//             console.log('blob:_'+blob);
+//             formdata.append('imagefile', blob);
+//             console.log(formdata);
+//             // 上传接口
+//             xhr.open('post', 'upload.txt');
+
+//             xhr.onreadystatechange = function() {
+//                 if (xhr.readyState == 4 && xhr.status == 200) {
+//                     var jsonData = JSON.parse(xhr.responseText);
+//                     var text = jsonData['path'] ? '上传成功' : '上传失败';
+//                     console.log(text + '：' + jsonData['name']);
+//                     clearInterval(loop);
+//                     //当收到该消息时上传完毕
+//                     $li.find(".progress span").animate({'width': "100%"}, pecent < 95 ? 200 : 0, function() {
+//                         $(this).html(text);
+//                     });
+//                     if (!jsonData['path']) return;
+
+//                    // $(".pic-list").append('<input name="img[]" type="hidden" value="'+jsonData['name']+'">');
+//                 }
+//             };
+//           /*  //数据发送进度，前50%展示该进度
+//             xhr.upload.addEventListener('progress', function(e) {
+//                 if (loop) return;
+//                 pecent = ~~(100 * e.loaded / e.total) / 2;
+//                 $li.find(".progress span").css('width', pecent + "%");
+//                 if (pecent == 50) {
+//                     mockProgress();
+//                 }
+//             }, false);
+//             //数据后50%用模拟进度
+//             function mockProgress() {
+//                 if (loop) return;
+//                 loop = setInterval(function() {
+//                     pecent++;
+//                     $li.find(".progress span").css('width', pecent + "%");
+//                     if (pecent == 99) {
+//                         clearInterval(loop);
+//                     }
+//                 }, 100)
+//             }*/
+//             xhr.send(formdata);
+//         // })
+//     }
+
+
+
+
+
+//图片上传，将base64的图片转成二进制对象，塞进formdata上传
+    function upload(basestr, type, $li) {
+
+        var text = window.atob(basestr.split(",")[1]);
+        var buffer = new Uint8Array(text.length);
+        var pecent = 0,
+            loop = null;
+        for (var i = 0; i < text.length; i++) {
+            buffer[i] = text.charCodeAt(i);
+        }
+        var blob = getBlob([buffer], type);
+        var xhr = new XMLHttpRequest();
+        var formdata = getFormData();
+        formdata.append('imagefile', blob);
+        formdata.append('_csrf', "<?= Yii::$app->request->csrfToken ?>");
+        // 上传接口
+        xhr.open('post', '/upload.txt');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var jsonData = JSON.parse(xhr.responseText);
+
+
+                var text = jsonData.data.path ? "<?= Yii::t('app','UPLOAD_SUCCESS')?>" : "<?= Yii::t('app','UPLOAD_DEFEATED')?>";
+                console.log(text + '：' + jsonData.data.name);
+                clearInterval(loop);
+                //当收到该消息时上传完毕
+                $li.find(".progress span").animate({
+                    'width': "100%"
+                }, pecent < 95 ? 200 : 0, function() {
+                    $(this).html(text);
+                });
+                if (!jsonData.data.path) return;
+                $("#logo").attr('value',jsonData.data.name);
+            }
+        };
+         xhr.send(formdata);
+    }
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>File(s) size</title>
+<script>
+function updateSize() {
+  let nBytes = 0,
+      oFiles = document.getElementById("uploadInput").files,
+      nFiles = oFiles.length;
+  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+    nBytes += oFiles[nFileId].size;
+  }
+  let sOutput = nBytes + " bytes";
+  // optional code for multiples approximation
+  for (let aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
+    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
+  }
+  // end of optional code
+  document.getElementById("fileNum").innerHTML = nFiles;
+  document.getElementById("fileSize").innerHTML = sOutput;
+}
+</script>
+</head>
+
+<body onload="updateSize();">
+<form name="uploadForm">
+<p><input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
+<p><input type="submit" value="Send file"></p>
+</form>
+</body>
+</html>

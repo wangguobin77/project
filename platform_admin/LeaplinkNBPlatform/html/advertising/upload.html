@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="file" style="display: block;">
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+
+
+    file.onchange = function (event) {
+        let file = event.target.files[0]
+        upload(file)
+    }
+
+    function upload(file) {
+        let xhr = new XMLHttpRequest()
+        xhr.open('post', './upload/images/', true)
+        let formData = new FormData()
+        formData.set('filename', file)
+        console.log(formData)
+        xhr.send(formData)
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                alert('success')
+            }
+        }
+    }
+</script>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<form enctype="multipart/form-data" method="post" name="fileinfo">
+    <label>Your email address:</label>
+    <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32"
+           maxlength="64"/><br/>
+    <label>Custom file label:</label>
+    <input type="text" name="filelabel" size="12" maxlength="32"/><br/>
+    <label>File to stash:</label>
+    <input type="file" name="file" required/>
+    <input type="submit" value="Stash the file!"/>
+</form>
+<script src="../../web/js/public/jquery.min.js"></script>
+<script>
+    var form = document.forms.namedItem("fileinfo");
+    form.addEventListener('submit', function (ev) {
+        ev.preventDefault()
+        // 文件元素
+        var fd = new FormData(document.querySelector("form"));
+        fd.append("CustomField", "This is some extra data");
+        console.log(fd)
+        $.ajax({
+            url: "./file.php",
+            type: "POST",
+            data: fd,
+            processData: false,  // 不处理数据
+            contentType: false   // 不设置内容类型
+        });
+    })
+</script>
+</body>

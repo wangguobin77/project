@@ -1,0 +1,31 @@
+<div class="x-toast-container">
+        <!-- {{if data.length }}  <div class="show">
+                <div class="show-unreadmessage">共有 <span class='showred'> </span> 条未读消息</div>
+                <div class="cancel-all"> <mt-button size="small" type='primary' @click='closeAll'>全部忽略</mt-button>
+                </div>
+        </div>
+        {{/if}} -->
+     
+     {{each data as item index}}
+        {{if item.display}}
+        <div  class="x-toast-box <%=item.class%> ">
+            <div class="x-toast-title">
+                {{ item.title }}
+            </div>
+        <div class="x-toast-content">
+             {{ item.content }}
+        </div>
+         <div class="x-toast-operate">
+                <!-- <button data-id='<%=item.ip%> '  class='mint-button mint-button--default mint-button--small open_check'><label for="">查看</label>
+                </button> -->
+             
+                <button style='margin-left: 10px'  class='mint-button mint-button--danger mint-button--small cancel_all'><label for="">全部忽略</label>
+              </button>
+        </div>
+                
+        <i  class="x-toast-box-close">x</i>
+    </div>
+            {{/if}}
+        {{/each}}
+		
+	</div>

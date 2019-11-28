@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+
+    <link rel="stylesheet" href="../../web/css/login/login.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/public/ts.css">
+
+
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="javascript:;"><b>LeapFone</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">欢迎使用后台管理系统</p>
+        <!-- 账户名称 -->
+        <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="用户名" autocomplete="off" id="phone">
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+
+        <!-- 密码 -->
+        <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="密码" autocomplete="off" id='password'>
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 " >
+                <span class='mm-ts' style="color:red;font-size:12px;display:none;">*用户名不能为空</span>
+            </div>
+        </div>
+        <div class="row">
+             <div class="form-group has-feedback register-group">
+                <a href="register.html">用户注册</a>
+                <a href="findpwd.html">忘记密码</a>
+            </div>
+        </div>
+        <div class="row">
+              <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat submit-btn">登录</button>
+              </div>
+              <!-- /.col -->
+        </div>
+    </div>
+</div>
+
+<!-- jQuery 3 -->
+<script src="../../web/js/public/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../web/js/public/bootstrap.min.js"></script>
+<script src='../../web/js/public/common.js'></script>
+<script src='../../web/js/public/ts.js'></script>
+<script>
+    var glo = {
+        'is_true':true
+    };
+
+    //提交用户信息表单
+    $('.submit-btn').click(function(){
+        var phone=$('#phone').val(),
+            password=$('#password').val();
+        if(!glo.is_true){
+            return false;
+        }
+        console.log(phone);
+        if(phone==''){
+            $('.mm-ts').html('手机号码不能为空').show().delay('2000').hide(0);
+            return false
+        }
+        if(!fun.isMobile(phone)){
+            $('.mm-ts').html('手机格式不正确').show()
+            return false
+        }else{
+             $('.mm-ts').hide()
+        }
+        if(password==''){
+            $('.mm-ts').html('密码不能为空').show().delay('2000').hide(0);
+            return false
+        }
+        glo.is_true = false;
+
+        // $.ajax({
+        //     url:'',
+        //     type:'post',
+        //     dataType:'json',
+        //     data:data,
+        //     success:function (data) {
+        //         glo.is_true = true;
+        //     }
+        // })
+    });
+</script>
+
+
+</body>
+</html>

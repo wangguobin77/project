@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+       <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/header.css">
+    <link rel="stylesheet" href="../../web/css/public/main-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/partner/reg.css">
+    <!-- 日期控件 -->
+    <link rel="stylesheet"  href="../../web/css/public/jeDate-test.css">
+    <link rel="stylesheet"  href="../../web/css/public/jedate.css">
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+    <style type="text/css">.jeinput{margin-left:0!important;}.info{background:#fff;padding:24px;}input[readonly]{background:#fff!important;}.select2-container .select2-selection--single .select2-selection__rendered {color: #555;}.select2-container--default .select2-selection--multiple{border-radius:4px;}</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti'>来客</span>
+                <span class='biaotides'>后台管理系统</span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class=" treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li class="active treeview">
+                           <a href="#">
+                                <i class="fa fa-gear"></i> <span>商品管理</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 添加商品</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- 导航下标注 -->
+            <div class="right-box p-b-20 row head-nav" style="height:70px;">
+                 <a style="line-height: 26px;margin:0;float:right;" href="" class="btn btn-primary  mid-button">
+                    返回
+                </a>
+            </div>
+            <!-- Main content -->
+
+                <section class="content container-fluid" style="padding:30px;">
+
+                    <div class='info col-md-12'>
+                        <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;margin-top:10px;">
+                            <form id="sub-form">
+                                <div class='col-md-12 info-wrap' style="min-width:850px;width:850px;margin:0 auto;">
+                                    <div class="row col-md-12">
+                                       <div class="col-md-9">
+                                            <div class="form-group col-md-12 input-xx">
+                                                <label class="col-md-3 title"><i>*</i>推送标题</label>
+                                                <input type="text" class="form-control push-title" autocomplete="off" placeholder="请输入推送标题">
+                                                <span class="ts-des tishi"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row col-md-12">
+                                       <div class="col-md-9">
+                                            <div class="form-group col-md-12 input-xx">
+                                                <label class="col-md-3 title"><i>*</i>有效日期:</label>
+                                                <input type="text" class="jeinput jeinput1 form-control push-date" placeholder="开始日期" timeattr='YYYY-MM-DD hh:mm:ss' name="date" autocomplete="off" readonly >
+                                                <span class="ts-des tishi">*有效日期不能为空</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                           <!--           <div class="row col-md-12">
+                                       <div class="col-md-9">
+                                            <div class="form-group col-md-12 input-xx">
+                                                <label class="col-md-3 title" style="opacity:0;"><i>*</i>有效日期:</label>
+                                                <input type="text" class="jeinput jeinput1 form-control push-date" placeholder="结束日期" timeattr='YYYY-MM-DD-hh:mm:ss' name="date" autocomplete="off" readonly >
+                                                <span class="ts-des tishi">*有效日期不能为空</span>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="row col-md-12">
+                                       <div class="col-md-9">
+                                            <div class="form-group col-md-12 input-xx">
+                                                <label class="col-md-3 title"><i>*</i>推送日期:</label>
+                                                <select class="form-control  select2 selsctday push-day" multiple name='day' autocomplete="off">
+                                                    <option value='0'>周一</option>
+                                                    <option value='1'>周二</option>
+                                                    <option value='2'>周三</option>
+                                                    <option value='3'>周四</option>
+                                                    <option value='4'>周五</option>
+                                                    <option value='5'>周六</option>
+                                                    <option value='6'>周日</option>
+                                                </select>
+                                                <span class="ts-des tishi tishi-day">*推送日期不能为空</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row col-md-12">
+                                        <div class="col-md-9">
+                                            <div class="form-group col-md-12 input-xx">
+                                                <label class="col-md-3 title"><i>*</i>是否重复:</label>
+                                               <div class="box-code form-control" style="border:0;">
+                                                    <select class="form-control select2 selsct_rep">
+                                                        <option selected="selected">单次</option>
+                                                        <option>重复</option>
+                                                    </select>
+
+                                                </div>
+                                                <span class="ts-des tishi"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rep_box" style="display:none;">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-9">
+                                                <div class="form-group col-md-12 input-xx">
+
+                                                    <label class="col-md-4 title"><i>*</i>推送时间:</label>
+                                                    <input type="text" class="jeinput  form-control reptime"  placeholder="推送时间"  timeattr='hh:mm:ss' name='time' autocomplete="off" readonly>
+                                                    <span class="ts-des tishi">*推送时间不能为空</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <div class="col-md-9">
+                                                <div class="form-group col-md-12 input-xx">
+
+                                                    <label class="col-md-4 title"><i>*</i>推送间隔:</label>
+                                                     <input  type="text" class="form-control name delaytime delay" autocomplete="off"  placeholder="推送间隔(1-600s)" name="delaytime" >
+                                                     <span class="ts-des tishi">*推送间隔不能为空</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="once_box">
+                                        <div class="row col-md-12">
+                                            <div class="col-md-9">
+                                                <div class="form-group col-md-12 input-xx">
+                                                    <label class="col-md-4 title"><i>*</i>推送时间:</label>
+                                                    <input type="text" class="form-control oncejeinput oncetime" placeholder="推送时间"  name='time' autocomplete="off" readonly>
+                                                    <span class="ts-des tishi">*推送时间不能为空</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 提交操作区域 -->
+                                    <div class="row col-md-12" style="padding-left:200px !important;margin-top:40px;">
+                                         <div class="form-group col-md-3 input-xx" style="margin-right:16px;"">
+                                            <button type="button" class="btn btn-block btn-back" onclick="back()">返回</button>
+                                        </div>
+                                        <div class="form-group col-md-3 input-xx">
+                                            <button type="button" class="btn btn-block btn-primary submit-btn">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                             </form>
+                        </div>
+
+                    </div>
+
+                </section>
+
+        </div>
+        <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+     <!-- 成功提示 -->
+    <div class="succ" >
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <script src="../../web/js/public/ts.js"></script>
+    <script src="../../web/js/public/common.js"></script>
+    <!-- Select2 -->
+    <script   src="../../web/js/public/select2.full.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <script src="../../web/js/plan/plan.js"></script>
+</body>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.select2').select2({
+            placeholder: "请选择日期",
+            allowClear: true
+        });
+        // console.log($('.push-date').attr('placeholder'))
+        var tt=$(".selsct_rep").find("option:selected").text()
+        if($(".selsct_rep").find("option:selected").text()=='单次'){
+            $('.once_box').show()
+            $('.rep_box').hide()
+            $('.selsctday').removeAttr('multiple')
+        }else{
+            $('.once_box').hide()
+            $('.rep_box').show()
+            $('.selsctday').attr('multiple',true)
+        }
+    });
+    $(".selsct_rep").change(function(event) {
+        if($(".selsct_rep").find("option:selected").text()=='单次'){
+            $('.once_box').show()
+            $('.rep_box').hide()
+            $('.selsctday').removeAttr('multiple')
+
+        }else{
+            $('.once_box').hide()
+            $('.rep_box').show()
+              $('.selsctday').attr('multiple',true)
+        }
+    });
+    // $(".jeinput").each(function(){
+    var mat = $('.push-date').attr("timeattr"),
+        datearr=[];
+    jeDate('.push-date',{
+        isinitVal:true,
+        format: mat,
+        range:"/",
+        multiPane:false,
+        minDate: jeDate.nowDate({DD:"0"}),
+        donefun:function(obj) {
+            console.log(obj.date)
+            datearr=obj.date
+        },
+        theme:{bgcolor:"#3367FF",pnColor:"#3367FF"},
+    }).setValue('2019-10-31-17:06:58/2019-11-21-00:00:00')
+    // });
+    // 有效期参数
+    var push_date=$('.push-date').val(),//y有效期
+        starttime=push_date.split("/")[0], // 截取有效期开始时间
+        endtime=push_date.split("/")[1];   // 截取有效期结束时间
+        console.log(starttime+'````'+endtime)
+    jeDate(".oncejeinput",{
+        format: 'hh:mm:ss',
+        minDate:starttime, //最小日期
+        maxDate:"2020-06-16 20:50:50" ,//最大日期
+        theme:{bgcolor:"#3367FF",pnColor:"#3367FF"},
+        zIndex:3000
+    }).setValue("10:11:12");
+
+    // 重复推送的推送时间
+    jeDate(".reptime",{
+        isinitVal:true,
+        multiPane:false,
+        format:"hh:mm:ss",
+        range:"/",
+        minDate:"2012-06-16 08:05:05", //最小日期
+        maxDate:"2020-06-16 20:50:50" ,//最大日期
+        theme:{bgcolor:"#3367FF",pnColor:"#3367FF"},
+        zIndex:3000
+    })
+
+    jeDate.timeStampDate('"2017-11-16 10:35:22"')
+    console.log(datearr)
+
+    /**
+     * 提交规则设置信息
+     */
+    // 截取字符串
+    // var dataval=$('.push-date').val();  //有效日期
+    // console.log(dataval.split("/")[0])  //截取/前面的字符
+    // console.log(dataval.split("/")[1])  //截取/后面的字符
+    // var date1=new Date()
+    // var year=date1.getFullYear(),
+    //     mouth=date1 .getMonth()+1, //获取当前月份(0-11,0代表1月)
+    //     date=date1 .getDate();
+    // var full=year+'-'+mouth+'-'+date,
+    //     once=$('.oncetime').val(),
+    //     oncetimeval=full+' '+once;
+    // var oncetimedate = new Date(oncetimeval);
+    // var time1 = oncetimedate.valueOf();
+    // console.log(full)
+
+
+</script>
+
+
+
+
+

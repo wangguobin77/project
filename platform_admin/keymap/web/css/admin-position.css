@@ -1,0 +1,153 @@
+.right-box{
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.btn-width{
+    width: 96px;
+    margin-top: 0 !important;
+}
+.m-l-10{
+    margin-left: 10px
+}
+.p-b-20{
+    padding-bottom: 20px;
+}
+.add_position_box{
+    background-color: rgba(0, 0, 0, 0.09);
+
+   /*display:none;*/
+   opacity:0;
+   border:0;
+   border-top: 1px solid #f4f4f4;
+
+}
+.add_position td:nth-child(1){
+  position:relative;
+
+}
+.add_position_box .div-textarea{
+  width:136px;
+   height:28px;
+   border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  outline:none;
+   line-height:26px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  padding-left:5px;
+  position:relative;
+}
+.add_position .add-td{
+  display:flex;
+  align-items:center;
+  height:40px;
+  line-height:26px;
+  position:relative;
+
+}
+.add-td .bc-pos{
+  outline:none;
+  border:0;
+  background:none;
+  margin-left:24px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1890ff;
+}
+.add_position:hover{
+    background-color: rgba(0, 0, 0, 0.09);
+}
+.error-ts{
+    margin-right: 10px;
+  position:absolute;
+  right:0;
+  top:0;
+  color:red;
+  font-size:10px;
+  line-height:40px;
+  display:none;
+}
+.add_position>td{
+  /* border-top:0 !important; */
+}
+.sl .div-textarea{
+  height:28px;
+  line-height:28px;
+  width:136px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+
+}
+.div-textarea-active{
+   border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+}
+.edit-active{
+    background-color: rgba(0, 0, 0, 0.09);
+  /* background-color: #e6f7ff; */
+}
+.edit-pancel{
+    color: #3c8dbc;
+}
+
+/* 行内修改input*/
+tr td.zhiwei-name{
+  position:relative;
+}
+tr td.zhiwei-name .div-textarea{
+  width:136px;
+  height:28px;
+  position:absolute;
+  left:0px;
+  top:50%;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  transform:translate(0,-50%);
+}
+
+
+/*
+保存 取消按钮
+*/
+.cursor{
+    cursor:pointer;
+}
+
+
+.caozuo-box{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+.btn-opr{
+  display:none;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1890ff;
+
+}
+table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #ddd !important;
+}
+

@@ -1,0 +1,39 @@
+/*
+* @Author: Marte
+* @Date:   2019-08-13 15:03:20
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-08-14 17:12:00
+*/
+.box-code{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    padding:6px 0;
+}
+.box-code input{
+    height:98%;
+    border:0 !important;
+}
+.input-xx .title{
+    min-width:180px;
+}
+.tp-view{
+    height:108px;
+}
+.tp-view .des{
+    flex-grow:1;
+    height:108px;
+    padding-left: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+.info-title{
+    line-height:60px;
+}
+.des span{
+    font-size: 12px;
+}
+.submit-btn{
+    margin-top: 0;
+}

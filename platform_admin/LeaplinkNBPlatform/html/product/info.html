@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/product/info.css">
+    <!-- 日期控件 -->
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jedate.css">
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+    <style type="text/css">.select-input>span.select2{
+       width:34% !important;
+    }</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 560px;">
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+            <!-- 导航下标注 -->
+                <div class="right-box p-b-20 row">
+                    <button type="button" class="btn  btn-default">
+                        返回
+                    </button>
+                </div>
+
+                <!--商品信息-->
+                <div class='info col-md-12'>
+                    <div class='col-md-8 col-md-offset-2 info-wrap' style="min-width:850px;width:850px;">
+                        <ul class='step'>
+                            <li class='step-box'>
+                                <span class='step-num step-num-active'>1</span>
+                                <a class='step-des'>
+                                    <span class='step-des-active'>进行中    ——————————</span>
+                                    <span class='step-des-active'>这里是描述的步骤</span>
+                                </a>
+                            </li>
+                            <li class='step-box'>
+                                <span class='step-num'>2</span>
+                                <a class='step-des'>
+                                    <span>提交信息审核   ————————</span>
+                                    <span>这里是描述的步骤</span>
+                                </a>
+                            </li>
+                            <li class='step-box'>
+                                <span class='step-num'>3</span>
+                                <a class='step-des'>
+                                    <span>登记成功            </span>
+                                    <span>这里是描述的步骤</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title">状态:</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">草稿</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title"><i>*</i>核销码:</label>
+                                    <input type="text" class="form-control my-colorpicker1 colorpicker-element name" autocomplete="off" placeholder="请输入核销码">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title"><i>*</i>商品名:</label>
+                                    <input type="text" class="form-control my-colorpicker1 colorpicker-element name" autocomplete="off" placeholder="请输入商品名">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title"><i>*</i>原价:</label>
+                                    <input type="text" class="form-control my-colorpicker1 colorpicker-element name" autocomplete="off" placeholder="请输入原价">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title"><i>*</i>售价:</label>
+                                    <input type="text" class="form-control my-colorpicker1 colorpicker-element name" autocomplete="off" placeholder="请输入售价">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx tp-view">
+                                    <label class="col-md-3 title"><i>*</i>商品图片:</label>
+                                    <div class="form-control tpimg-box dianpu-img">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:108px;height:108px" src="" align="top">
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="plate">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 提交操作区域 -->
+                        <div class="row col-md-12">
+                            <div class="form-group col-md-2 input-xx">
+                                <button type="button" class="btn btn-block btn-primary submit-btn" onclick="save()">保存</button>
+                            </div>
+                             <div class="form-group col-md-2 input-xx">
+                                <button type="button" class="btn btn-block btn-primary submit-btn" onclick="save_creat()">保存后继续创建</button>
+                            </div>
+                             <div class="form-group col-md-2 input-xx">
+                                <button type="button" class="btn btn-block btn-primary submit-btn" onclick="submit()">提交</button>
+                            </div>
+                            <div class="form-group col-md-2 input-xx">
+                                <button type="button" class="btn btn-block btn-primary submit-btn" onclick="reset()">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs"></div>
+        <!-- Default to the left -->
+         <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="ts-box" style="z-index:10000;display:block;">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small"></span>
+                <p>保存成功</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large'></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script src="../../web/js/public/common.js"></script>
+    <script src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!-- Select2 -->
+    <script src="../../web/js/public/select2.full.min.js"></script>
+
+    <script src="../../web/js/public/iCheck/icheck.min.js"></script>
+    <script src="../../web/js/public/iCheck/icheck.min.js"></script>
+    <!-- upload js -->
+    <script src="../../web/js/public/upload.js"></script>
+
+    <script src='../../web/js/product/edit.js'></script>
+
+
+</body>
+<script>
+    /** 保存 */
+    const save = () =>{
+
+    }
+
+
+</script>
+
+

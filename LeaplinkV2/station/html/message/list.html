@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+    <link rel="stylesheet" href="../../web/css/public/bootstrap-table-expandable.css">
+    <link rel="stylesheet" href="../../web/css/public/header.css">
+    <link rel="stylesheet" href="../../web/css/product/list.css">
+    <style type="text/css">.select-input>span.select2{
+       width:34% !important;
+    }</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header ">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo flex ">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class='biaoti'>来客</span>
+                <span class='biaotides'>后台管理系统</span>
+                <!-- logo for regular state and mobile devices -->
+                <!-- <span class="logo-lg"><img src="../../web/images/logo_head.png"></span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class=" treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>设置</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class=""><a  href="javascript:;"><i class="fa fa-circle-o"></i>商户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 结算账户设置</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                            </ul>
+                        </li>
+                        <li class="active treeview">
+                           <a href="#">
+                                <i class="fa fa-gear"></i> <span>商品管理</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a  href="javascript:;"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o"></i> 添加商品</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa  fa-file-text-o text-yellow"></i>
+                                <span>报表</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+        </aside>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-width:870px;">
+            <!-- 导航下标注 -->
+            <div class="right-box p-b-20 row head-nav">
+                <div>
+                    <section class='row'>
+                        <span class='yj'>消息</span><span class='yj'>/</span><span class='yj'>消息管理</span>
+                    </section>
+                    <h5 class="zhubt">消息列表</h5>
+                </div>
+            </div>
+            <!-- Main content -->
+            <section class="content container-fluid" style="background: #F0F2F5;padding:24px;">
+                 <div class='info ' style="background:#fff;padding:24px;">
+
+                    <form style="display:flex;flex-wrap:wrap;" class='operate-zone'>
+                        <div class="min-input">
+                            <div class="form-group col-md-12 input-xx" style="padding-left:0;">
+                                <input  type="text" class="form-control message" autocomplete="off"  placeholder="消息标题" name="message">
+                            </div>
+                        </div>
+                        <div class="min-input">
+                            <div class="form-group col-md-12 input-xx">
+                                 <select class="form-control select2 yyzz_selsct">
+                                    <option value="0" selected="selected">全部</option>
+                                    <option value="1">草稿</option>
+                                    <option value="2">已生效</option>
+                                    <option value="3">已删除</option>
+                                    <option value="4">审核中</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button type="button"  class="btn btn-primary min-button">查询</button>
+                        </div>
+                        <div class="">
+                            <button type="button"  class="btn btn-primary min-button back" onclick="reset_search()">重置</button>
+                        </div>
+                    </form>
+
+                    <div class="">
+                         <div class="operate-btn" style="margin-bottom:20px">
+                            <button type="button" class="btn btn-primary mid-button">消息创建</button>
+                        </div>
+                        <div class="table-con ">
+                            <table class="table table-expandable">
+                                <thead>
+                                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                                        <th width="320px"  class="sl">核销码 </th>
+                                        <th width="270px"  class="sl">品名</th>
+                                        <th width="270px"  class="sl"> 原价</th>
+                                        <th width="320px"  class="sl">售价</th>
+                                        <th width="320px"  class="sl">状态</th>
+                                        <th width="320px"  class="sl">更新时间</th>
+                                        <th width="300px"  class="sl" >操作</th>
+                                        <th width="100px"  class="sl" ></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td>United States of America</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                        <td class="sl status-box"><span class='shenhe'></span>审核中</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn' href="edit.html">编辑</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='del()'>删除</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="sub_commit()">提交</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="8" class='detail'>
+                                        这里显示具体的详细信息
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>United States of America</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                          <td class="sl status-box"><span class='caogao'></span>草稿</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn'>编辑</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='del()'>删除</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="sub_commit()">提交</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="8" class='detail'>
+                                        这里显示具体的详细信息
+
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>United States of America</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                        <td class="sl status-box"><span class='shanchu'></span>已删除</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn' >编辑</a>
+                                                <div class='xian'></div>
+                                                 <a  class='set-btn  del-btn' onclick='del()'>删除</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="sub_commit()">提交</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr colspan="8" class='detail'>
+                                        <td colspan="8" class='detail'>
+                                            这里显示具体的详细信息
+                                        </td>
+                                    </tr>
+
+                                     <tr>
+                                        <td>United States of America</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                        <td class="sl status-box"><span class='shengxiao'></span>已生效</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn'>编辑</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='del()'>删除</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="sub_commit()">提交</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="8" class='detail'>
+                                        这里显示具体的详细信息
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                            </table>
+                            <div class="box-footer clearfix">
+                                <ul class="pagination pagination-sm no-margin pull-right">
+                                    <li><a>«</a></li>
+                                    <li><a>1</a></li>
+                                    <li><a>2</a></li>
+                                    <li><a>3</a></li>
+                                    <li><a>»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <section class='search-none flex none'>
+                        <img src="../../web/images/searchnone.png" alt="">
+                        <h4>暂无商品</h4>
+                    </section>
+
+                </div>
+            </section>
+        </div>
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+      <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <img class="font_family icon-close" src="../../web/images/close.png"/>
+            <h6 class="del-title">提交确认</h6>
+            <span class='warrning-des'>是否确认删除?</span>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default min-button"> 取消</div>
+                <div class="cursor confirm  btn btn-primary min-button">确认</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/shim.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/xlsx.full.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <script   src="../../web/js/public/select2.full.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!--  -->
+    <script src="../../web/js/public/bootstarp-table/bootstrap-table.min.js"></script>
+    <script src="../../web/js/public/bootstrap-table-expandable.js"></script>
+    <script src="../../web/js/public/bootstarp-table/js/utils.js"></script>
+</body>
+
+<script>
+    $(document).ready(function(){
+        $('.select2').select2()
+    });
+    var glo={
+        'sub_flag':true,
+    }
+
+   const reset_search=()=>{
+        $('.message').val('')
+        $(".yyzz_selsct").select2('val','0')
+    }
+    /**
+     * 提交审批
+     */
+    const sub_commit=()=>{
+        stopPropagation()
+        if(!glo.sub_flag){ //防点击多次提交
+            return false;
+        }
+        tips_warning('提交确认','确定提交吗？')
+
+    }
+    /**
+     * 删除商品
+     */
+    const del=()=>{
+        stopPropagation()
+        if(!glo.sub_flag){ //防点击多次提交
+            return false;
+        }
+        tips_warning('删除提示','确定要将商品删除吗？')
+    }
+
+    /**
+     * 导出函数
+     */
+    const daochu=()=>{
+    }
+</script>
+
+

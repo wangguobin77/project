@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <!-- 日期控件 -->
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jedate.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/coupon/add.css">
+
+
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+                <!-- Logo -->
+                <a href="javascript:;" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    LeapFone
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+                </a>
+
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- User Account Menu -->
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span >用户名</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+
+                                    <!-- Menu Body -->
+                                  <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="../site/resetphone.html">修改手机</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="../user/rsetpwd.html">修改密码</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">退出登录</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                  <!-- Sidebar Menu -->
+                  <ul class="sidebar-menu" data-widget="tree">
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                    <li class="treeview">
+                      <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                      </a>
+                      <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+
+                <section class="content container-fluid">
+                    <div class="right-box p-b-20 row">
+                        <button type="button" class="btn  btn-default btn-back-call" onclick='javascript:history.back();'>
+                            返回
+                        </button>
+                    </div>
+                    <form id="sub-form">
+                        <div class='row'>
+                            <div class="col-md-6 col-xs-12  col-sm-12">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class='col-md-3 title'>名称:</label>
+                                    <input  type="text" class="form-control name" autocomplete="off"  placeholder="请输入名称" name="name">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xs-12  col-sm-12">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class='col-md-3 title'>价格:</label>
+                                    <input  type="number" class="form-control price" autocomplete="off"  placeholder="请输入价格" name='price'>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12  col-sm-12">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class='col-md-3 title'>价值:</label>
+                                    <input  type="number" class="form-control val" autocomplete="off"  placeholder="请输入价值" name='val'>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xs-12 col-sm-12">
+                                <div class=" form-group col-md-12 input-xx" style="width:100%;display:flex;">
+                                    <label class="col-md-3 title">有效期:</label>
+                                    <div class="jeinpbox form-control" style="margin-right:0">
+                                        <input type="text" class="jeinput date" name="date"  id="testblue" placeholder="起始日期 至 结束日期" readonly>
+                                        <input type="hidden" class="validity" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title">不可用日期(选填):</label>
+                                    <div class='radio-inline form-control data-box'>
+                                        <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周一" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周一
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周二" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周二
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周三" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周三
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周四" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周四
+                                            </label>
+                                        </div>
+                                         <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周五" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周五
+                                            </label>
+                                        </div>
+                                         <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周六" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周六
+                                            </label>
+                                        </div>
+                                         <div class="col-md-1">
+                                            <input type="checkbox" name="disabled"  value="周日" >
+                                            <label class='m-l-5 m-r-5 check_box_label'>
+                                                周日
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title">适用范围(选填):</label>
+                                    <textarea style="height:200px" type="text" name="scope" class="des form-control my-colorpicker1 colorpicker-element beizhu" autocomplete="off" placeholder="请输入备注信息"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group col-md-12 input-xx">
+                                    <label class="col-md-3 title">使用规则(选填):</label>
+                                    <textarea style="height:200px" type="text" name="regular" class="des form-control my-colorpicker1 colorpicker-element beizhu" autocomplete="off" placeholder="请输入备注信息"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row col-md-12">
+                                <div class="row col-md-12">
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <div class="form-group col-md-6 input-xx">
+                                            <button type="button" class="btn btn-block btn-primary" onclick="put()">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+
+          <!-- Main Footer -->
+          <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs"></div>
+            <!-- Default to the left -->
+             <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+          </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- 成功提示 -->
+        <div class="succ" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+            <div class="ts-box" style="z-index:10000;display:block;">
+                <div class="ts-xx ">
+                    <span class="font_family icon-judge_success_small"></span>
+                    <p>保存成功</p>
+
+                </div>
+            </div>
+        </div>
+       <!-- 失败提示 -->
+        <div class="fail" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+            <div class="fail-ts">
+                <div class="ts-xx">
+                    <span class='font_family icon-warning_large'></span>
+                    <p>保存失败，请重新尝试！</p>
+                </div>
+            </div>
+        </div>
+        <!--tishi-->
+        <!-- jQuery 3 -->
+        <script src="../../web/js/public/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../web/js/public/bootstrap.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../web/js/public/adminlte.min.js"></script>
+        <script src="../../web/js/public/ts.js"></script>
+         <script src="../../web/js/public/common.js"></script>
+        <!-- Select2 -->
+        <script   src="../../web/js/public/select2.full.min.js"></script>
+
+        <script   src="../../web/js/public/iCheck/icheck.min.js"></script>
+        <script   src="../../web/js/public/iCheck/icheck.min.js"></script>
+        <script   src="../../web/js/advertising/advertising.js"></script>
+
+</body>
+<script>
+    // var date=$('.validity').val();
+    $(document).ready(function(){
+        $('.select2').select2()
+    });
+    jeDate("#testblue",{
+        theme:{bgcolor:"#367fa9",pnColor:"#367fa9"},
+        multiPane:false,
+        range:"-",
+        format: "YYYY-MM-DD",
+        donefun:function(obj) {
+        },
+    });
+
+    /**
+     * 信息提交
+     */
+    const put = () =>{
+        var name=$('.name').val(),
+            price=$('.price').val(),
+            val=$('.val').val(),
+            date=$('.date').val();
+        if(name==''){
+            fail('名称不能为空')
+            return false;
+        }
+        if(!fun.isMc(name)){
+            fail('名称长度不符合规范')
+            return false;
+        }
+        if(price==''){
+            fail('价格不能为空')
+            return false;
+        }
+        if(!fun.isNum(price)){
+            fail('价格格式不正确')
+            return false;
+        }
+         if(val==''){
+            fail('价值不能为空')
+            return false;
+        }
+        if(!fun.isNum(val)){
+            fail('价值格式不正确')
+            return false;
+        }
+        if(date==''){
+            fail('请选择有效期')
+            return false;
+        }
+        var data =JSON.stringify($('#sub-form').serializeObject());
+        console.log(data);
+         $.ajax({
+            url:'',
+            type:'post',
+            dataType:'json',
+            data:data,
+            success:function (data) {
+
+            }
+        })
+
+
+
+     };
+
+
+
+</script>
+
+

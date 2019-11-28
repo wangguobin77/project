@@ -1,0 +1,24 @@
+/*
+* @Author: Marte
+* @Date:   2018-11-14 14:36:01
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-11-21 10:00:13
+*/
+ol, ul {
+    margin-bottom:0;
+}
+/*头部导航下的索引*/
+.bottom-menu{
+    min-height:40px;
+    height:40px;
+}
+// .nav-header {
+//     line-height: 48px;
+//     height: 48px;
+// }
+
+// 头部导航  调整高度  48px
+.menu{
+    height:100%;
+    line-height:100%;
+}

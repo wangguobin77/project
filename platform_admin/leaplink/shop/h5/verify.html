@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商户核销</title>
+</head>
+<body>
+<p><input type="text" placeholder="请输入商户 token" id="shop_token">(注意:这里是商户 token,在商户后台首页可看到)</p>
+<p><input type="text" placeholder="请输入核销码" id="code"></p>
+<p><input type="button" value="点击核销" id="verify"></p>
+</body>
+<script src="static/jquery.min.js"></script>
+<script>
+    var domain = "http://127.0.0.1:8002"
+    //var domain = "http://106.75.122.206:8002"
+
+
+    $('#verify').on('click', function () {
+        var code = $('#code').val()
+        if(code == ""){
+            alert("请输入核销码")
+            return
+        }
+        var token = $("#shop_token").val()
+        if(token == ""){
+            alert("请输入商家的 token")
+            return
+        }
+
+        $.ajax({
+            url:domain+'/api/coupon/orders/' + code,
+            type:'PUT',
+            dataType:'json',
+            beforeSend: function(request) {
+                request.setRequestHeader("Shop-Token", token);
+            },
+            success: function(datas) {
+                if(datas.code==0){
+                    alert('核销成功')
+                }else {
+                    alert(datas.message)
+                }
+            }
+        })
+    })
+</script>
+</html>

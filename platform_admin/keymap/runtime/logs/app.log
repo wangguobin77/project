@@ -1,0 +1,364 @@
+2019-01-21 07:09:30 [127.0.0.1][-][-][error][yii\base\ErrorException:1] yii\base\ErrorException: Class 'common\core\BaseCore' not found in /Applications/senseplay/platform_admin/keymap/controllers/base/BaseController.php:13
+Stack trace:
+#0 /Applications/senseplay/platform_admin/keymap/controllers/base/KeymapBaseController.php(15): yii\BaseYii::autoload()
+#1 /Applications/senseplay/platform_admin/keymap/controllers/base/KeymapBaseController.php(15): ::spl_autoload_call()
+#2 /Applications/senseplay/vendor/yiisoft/yii2/BaseYii.php(292): yii\BaseYii->unknown()
+#3 /Applications/senseplay/platform_admin/keymap/controllers/KeymapController.php(17): yii\BaseYii::autoload()
+#4 /Applications/senseplay/platform_admin/keymap/controllers/KeymapController.php(17): ::spl_autoload_call()
+#5 /Applications/senseplay/vendor/yiisoft/yii2/BaseYii.php(292): yii\BaseYii->unknown()
+#6 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(633): yii\BaseYii::autoload()
+#7 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(633): ::spl_autoload_call()
+#8 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(633): ::class_exists()
+#9 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(591): yii\web\Application->createControllerByID()
+#10 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(517): yii\web\Application->createController()
+#11 /Applications/senseplay/vendor/yiisoft/yii2/web/Application.php(102): yii\web\Application->runAction()
+#12 /Applications/senseplay/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#13 /Applications/senseplay/platform_admin/keymap/web/index.php(31): yii\web\Application->run()
+#14 {main}
+2019-01-21 07:09:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'keymap/keymap_list'
+]
+
+$_COOKIE = [
+    'global_access_token' => 'cbce38182919045460234a6e3bbbfb49c892d33e'
+]
+
+$_SERVER = [
+    'USER' => 'localuser1'
+    'HOME' => '/Users/localuser1'
+    'HTTP_COOKIE' => 'global_access_token=cbce38182919045460234a6e3bbbfb49c892d33e'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://local.a2.senseplay.cn/rbac/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'local.a2.senseplay.cn'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'local.a2.senseplay.cn'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50466'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Applications/senseplay/platform_admin'
+    'DOCUMENT_URI' => '/keymap/web/index.php'
+    'REQUEST_URI' => '/keymap/web/index.php?r=keymap/keymap_list'
+    'SCRIPT_NAME' => '/keymap/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=keymap/keymap_list'
+    'SCRIPT_FILENAME' => '/Applications/senseplay/platform_admin/keymap/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/keymap/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1548054570.7946
+    'REQUEST_TIME' => 1548054570
+]
+2019-01-21 07:13:28 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\controllers\KeymapController::allowUrl in /Applications/senseplay/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /Applications/senseplay/platform_admin/keymap/controllers/base/BaseController.php(217): yii\base\Component->__get('allowUrl')
+#1 /Applications/senseplay/platform_admin/keymap/controllers/base/BaseController.php(35): app\controllers\base\BaseController->getMenuId(Array)
+#2 /Applications/senseplay/vendor/yiisoft/yii2/base/Controller.php(154): app\controllers\base\BaseController->beforeAction(Object(yii\base\InlineAction))
+#3 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('keymap_list', Array)
+#4 /Applications/senseplay/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('keymap/keymap_l...', Array)
+#5 /Applications/senseplay/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/senseplay/platform_admin/keymap/web/index.php(31): yii\base\Application->run()
+#7 {main}
+2019-01-21 07:13:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'keymap/keymap_list'
+]
+
+$_COOKIE = [
+    'global_access_token' => 'cbce38182919045460234a6e3bbbfb49c892d33e'
+]
+
+$_SESSION = [
+    'uid' => [
+        'uid' => '1'
+        'username' => '13952354147'
+        'client_id' => '523D3B1F64BE05AFD50DE46FCE34297A'
+        'real_name' => '系统管理员'
+        'id' => '1'
+        'work_number' => '1'
+        'position_id' => '0'
+        'img_path' => ''
+        'mobile' => '13952354147'
+        'birthday' => '93-12-26'
+        'sex' => '1'
+        'email' => ''
+        'des' => ''
+        'updated_at' => '0'
+    ]
+]
+
+$_SERVER = [
+    'USER' => 'localuser1'
+    'HOME' => '/Users/localuser1'
+    'HTTP_COOKIE' => 'global_access_token=cbce38182919045460234a6e3bbbfb49c892d33e'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://local.a2.senseplay.cn/rbac/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'local.a2.senseplay.cn'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'local.a2.senseplay.cn'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51989'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Applications/senseplay/platform_admin'
+    'DOCUMENT_URI' => '/keymap/web/index.php'
+    'REQUEST_URI' => '/keymap/web/index.php?r=keymap/keymap_list'
+    'SCRIPT_NAME' => '/keymap/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=keymap/keymap_list'
+    'SCRIPT_FILENAME' => '/Applications/senseplay/platform_admin/keymap/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/keymap/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1548054806.17
+    'REQUEST_TIME' => 1548054806
+]
+2019-01-21 07:13:57 [127.0.0.1][-][-][error][Error] Error: Class 'app\models\app\Keymap' not found in /Applications/senseplay/platform_admin/keymap/controllers/KeymapController.php:52
+Stack trace:
+#0 [internal function]: app\controllers\KeymapController->actionKeymap_list()
+#1 /Applications/senseplay/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Applications/senseplay/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('keymap_list', Array)
+#4 /Applications/senseplay/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('keymap/keymap_l...', Array)
+#5 /Applications/senseplay/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/senseplay/platform_admin/keymap/web/index.php(31): yii\base\Application->run()
+#7 {main}
+2019-01-21 07:13:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'keymap/keymap_list'
+]
+
+$_COOKIE = [
+    'global_access_token' => 'cbce38182919045460234a6e3bbbfb49c892d33e'
+]
+
+$_SESSION = [
+    'uid' => [
+        'uid' => '1'
+        'username' => '13952354147'
+        'client_id' => '523D3B1F64BE05AFD50DE46FCE34297A'
+        'real_name' => '系统管理员'
+        'id' => '1'
+        'work_number' => '1'
+        'position_id' => '0'
+        'img_path' => ''
+        'mobile' => '13952354147'
+        'birthday' => '93-12-26'
+        'sex' => '1'
+        'email' => ''
+        'des' => ''
+        'updated_at' => '0'
+    ]
+]
+
+$_SERVER = [
+    'USER' => 'localuser1'
+    'HOME' => '/Users/localuser1'
+    'HTTP_COOKIE' => 'global_access_token=cbce38182919045460234a6e3bbbfb49c892d33e'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://local.a2.senseplay.cn/rbac/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'local.a2.senseplay.cn'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'local.a2.senseplay.cn'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51989'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Applications/senseplay/platform_admin'
+    'DOCUMENT_URI' => '/keymap/web/index.php'
+    'REQUEST_URI' => '/keymap/web/index.php?r=keymap/keymap_list'
+    'SCRIPT_NAME' => '/keymap/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=keymap/keymap_list'
+    'SCRIPT_FILENAME' => '/Applications/senseplay/platform_admin/keymap/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/keymap/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1548054835.6086
+    'REQUEST_TIME' => 1548054835
+]
+2019-01-21 07:14:48 [127.0.0.1][-][-][error][Error] Error: Class 'app\models\app\Keymap' not found in /Applications/senseplay/platform_admin/keymap/controllers/KeymapController.php:52
+Stack trace:
+#0 [internal function]: app\controllers\KeymapController->actionKeymap_list()
+#1 /Applications/senseplay/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Applications/senseplay/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('keymap_list', Array)
+#4 /Applications/senseplay/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('keymap/keymap_l...', Array)
+#5 /Applications/senseplay/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/senseplay/platform_admin/keymap/web/index.php(31): yii\base\Application->run()
+#7 {main}
+2019-01-21 07:14:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'keymap/keymap_list'
+]
+
+$_COOKIE = [
+    'global_access_token' => 'cbce38182919045460234a6e3bbbfb49c892d33e'
+]
+
+$_SESSION = [
+    'uid' => [
+        'uid' => '1'
+        'username' => '13952354147'
+        'client_id' => '523D3B1F64BE05AFD50DE46FCE34297A'
+        'real_name' => '系统管理员'
+        'id' => '1'
+        'work_number' => '1'
+        'position_id' => '0'
+        'img_path' => ''
+        'mobile' => '13952354147'
+        'birthday' => '93-12-26'
+        'sex' => '1'
+        'email' => ''
+        'des' => ''
+        'updated_at' => '0'
+    ]
+]
+
+$_SERVER = [
+    'USER' => 'localuser1'
+    'HOME' => '/Users/localuser1'
+    'HTTP_COOKIE' => 'global_access_token=cbce38182919045460234a6e3bbbfb49c892d33e'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://local.a2.senseplay.cn/rbac/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'local.a2.senseplay.cn'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'local.a2.senseplay.cn'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51989'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Applications/senseplay/platform_admin'
+    'DOCUMENT_URI' => '/keymap/web/index.php'
+    'REQUEST_URI' => '/keymap/web/index.php?r=keymap/keymap_list'
+    'SCRIPT_NAME' => '/keymap/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=keymap/keymap_list'
+    'SCRIPT_FILENAME' => '/Applications/senseplay/platform_admin/keymap/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/keymap/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1548054887.6408
+    'REQUEST_TIME' => 1548054887
+]
+2019-01-21 07:15:11 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\BaseCore' not found in /Applications/senseplay/platform_admin/keymap/views/layouts/nav.php:7
+Stack trace:
+#0 /Applications/senseplay/platform_admin/keymap/views/layouts/header.php(219): include_once()
+#1 /Applications/senseplay/platform_admin/keymap/views/keymap/keymap_list.php(11): include_once('/Applications/s...')
+#2 /Applications/senseplay/vendor/yiisoft/yii2/base/View.php(330): require('/Applications/s...')
+#3 /Applications/senseplay/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Applications/s...', Array)
+#4 /Applications/senseplay/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Applications/s...', Array, Object(app\controllers\KeymapController))
+#5 /Applications/senseplay/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('keymap_list', Array, Object(app\controllers\KeymapController))
+#6 /Applications/senseplay/platform_admin/keymap/controllers/KeymapController.php(72): yii\base\Controller->render('keymap_list', Array)
+#7 [internal function]: app\controllers\KeymapController->actionKeymap_list()
+#8 /Applications/senseplay/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /Applications/senseplay/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /Applications/senseplay/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('keymap_list', Array)
+#11 /Applications/senseplay/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('keymap/keymap_l...', Array)
+#12 /Applications/senseplay/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /Applications/senseplay/platform_admin/keymap/web/index.php(31): yii\base\Application->run()
+#14 {main}
+2019-01-21 07:15:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'keymap/keymap_list'
+]
+
+$_COOKIE = [
+    'global_access_token' => 'cbce38182919045460234a6e3bbbfb49c892d33e'
+]
+
+$_SESSION = [
+    'uid' => [
+        'uid' => '1'
+        'username' => '13952354147'
+        'client_id' => '523D3B1F64BE05AFD50DE46FCE34297A'
+        'real_name' => '系统管理员'
+        'id' => '1'
+        'work_number' => '1'
+        'position_id' => '0'
+        'img_path' => ''
+        'mobile' => '13952354147'
+        'birthday' => '93-12-26'
+        'sex' => '1'
+        'email' => ''
+        'des' => ''
+        'updated_at' => '0'
+    ]
+]
+
+$_SERVER = [
+    'USER' => 'localuser1'
+    'HOME' => '/Users/localuser1'
+    'HTTP_COOKIE' => 'global_access_token=cbce38182919045460234a6e3bbbfb49c892d33e'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://local.a2.senseplay.cn/rbac/web/index.php?r=index%2Findex'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'local.a2.senseplay.cn'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'local.a2.senseplay.cn'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51989'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.12.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Applications/senseplay/platform_admin'
+    'DOCUMENT_URI' => '/keymap/web/index.php'
+    'REQUEST_URI' => '/keymap/web/index.php?r=keymap/keymap_list'
+    'SCRIPT_NAME' => '/keymap/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=keymap/keymap_list'
+    'SCRIPT_FILENAME' => '/Applications/senseplay/platform_admin/keymap/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/keymap/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1548054906.8727
+    'REQUEST_TIME' => 1548054906
+]

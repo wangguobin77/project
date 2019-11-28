@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+
+    <style>
+        input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
+
+/*----------用来移除叉叉按钮----------*/
+input[type="date"]::-webkit-clear-button{
+   display:none;
+}
+
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 560px;">
+            <!-- Main content -->
+            <section class="content container-fluid" style="padding-top:25px;">
+                 <!-- 内容区域-->
+                 <div class="row col-md-12">
+                    <form id="user_form">
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>用户名:</label>
+                                <input name='name' type="text" class="form-control name" autocomplete="off"  placeholder="请输入用户名" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>昵称:</label>
+                                <input type="text" class="form-control nickname" autocomplete="off" name="nickname" placeholder="请输入昵称" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>密码:</label>
+                                <input name="password"  type="password" class="form-control password" autocomplete="off"  placeholder="请输入密码" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>确认密码:</label>
+                                <input name="repeat_password" type="password" class="form-control repeat_password" autocomplete="off"  placeholder="请确认密码" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>手机号:</label>
+                                <input  name="linkman" type="text" class="form-control mobile" autocomplete="off"
+                                placeholder="请输入手机号" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>员工状态:</label>
+                                <select name="status" class="form-control select2 select2-hidden-accessible col-md-9" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option selected="selected">在职</option>
+                                    <option>离职</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>性别(选填):</label>
+                                <select name="sex"  class="form-control select2 select2-hidden-accessible col-md-9" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option value=1>男</option>
+                                    <option value=2>女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>邮箱(选填):</label>
+                                <input type="text" class="form-control my-colorpicker1 colorpicker-element bmmc" autocomplete="off" name="email" placeholder="请输入邮箱" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>生日(选填):</label>
+                                <input type="date" class="form-control pull-right" name='date'>
+                            </div>
+                        </div>
+                        <div class="row col-md-12">
+                            <!-- 提交 按钮 -->
+                           <div class="col-md-6 col-md-offset-1">
+                               <div class="form-group col-md-6 input-xx">
+                                   <button type="button" class="btn btn-block btn-primary submit-btn">提交</button>
+                               </div>
+                           </div>
+                       </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs"></div>
+            <!-- Default to the left -->
+            <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+        </footer>
+
+
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="ts-box" style="z-index:10000;display:block;">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small"></span>
+                <p>保存成功</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large'></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!-- Select2 -->
+    <script   src="../../web/js/public/select2.full.min.js"></script>
+</body>
+<script>
+    $('.select2').select2();
+    $('.submit-btn').unbind('click').click(function(){
+        var reg=/^\S{2,128}$/,
+            reg_space=/\S/;
+        //员工姓名
+        if($('.name').val()==''){
+            fail('用户名不能为空')
+            return false;
+        }
+        if(!reg.test($('.name').val())){
+            fail('用户名格式不正确')
+            return false;
+        }
+
+         if($('.nickname').val()==''){
+            fail('昵称不能为空')
+            return false;
+        }
+        if(!reg.test($('.nickname').val())){
+            fail('昵称格式不正确')
+            return false;
+        }
+         if($('.password').val()==''){
+            fail('密码格式不能为空')
+            return false;
+        }
+        if(!fun.pwd($('.password').val())){
+            fail('密码格式不正确')
+            return false;
+        }
+        if(!fun.repeatpwd($('.password').val(),$('.repeat_password').val())){
+            fail('两次密码不一致')
+            return false;
+        }
+        //手机号码
+        if($('.mobile').val()==''){
+            fail('手机号不能为空')
+            return false;
+        }
+        if(!fun.isMobile($('.mobile').val())){
+            fail('手机号格式不正确')
+            return false;
+        }
+
+    })
+
+</script>
+
+

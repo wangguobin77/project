@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+    <link rel="stylesheet" href="../../web/css/public/bootstrap-table-expandable.css">
+    <link rel="stylesheet" href="../../web/css/batch/list.css">
+    <style type="text/css">.select-input>
+        span.select2{
+         width:34% !important;
+        }
+        .btn{
+            min-width:80px;
+            margin-left:10px;
+            outline:none !important;
+            box-shadow:none !important;
+        }
+        .operate-zone{
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+         <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-width:870px;">
+           <!-- Main content -->
+            <section class="content container-fluid">
+          <!--       <form style="display:flex;flex-wrap:wrap;" class='operate-zone'>
+                    <div class="col-md-2">
+                        <div class="form-group col-md-12 input-xx">
+                            <input  type="text" class="form-control " autocomplete="off"  placeholder="核销码" name=" verification_code" >
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group col-md-12 input-xx">
+                            <input  type="text" class="form-control " autocomplete="off"  placeholder="品名" name="name" >
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group col-md-12 input-xx">
+                            <input  type="text" class="form-control " autocomplete="off"  placeholder="状态" name="status" >
+                        </div>
+                    </div>
+                    <div class="">
+                        <button type="button"  class="btn btn-primary">查询</button>
+                    </div>
+                    <div class="">
+                        <button type="button"  class="btn btn-primary">重置</button>
+                    </div>
+                    <div class="">
+                        <button type="button" class="btn ">添加</button>
+                    </div>
+                    <div class="">
+                        <button type="button"  class="btn">全部提交</button>
+                    </div>
+                     <div class="">
+                        <button type="button"  class="btn">导入</button>
+                    </div>
+                     <div class="">
+                        <button type="button"  class="btn">导出</button>
+                    </div>
+                </form> -->
+                 <div class="">
+                         <div class="operate-btn" style="margin-bottom:20px">
+                            <button type="button" class="btn btn-primary mid-button">批次创建</button>
+                            <button type="button" class="btn btn-default mid-button">批次下载</button>
+                            <button type="button" class="btn btn-default mid-button">全部审核</button>
+                        </div>
+                        <div class="table-con ">
+                            <table class="table table-expandable">
+                                <thead>
+                                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                                        <th width="200px"  class="sl">id </th>
+                                        <th width="320px"  class="sl">批次号</th>
+                                        <th width="270px"  class="sl">型号</th>
+                                        <th width="320px"  class="sl">批次数量</th>
+                                        <th width="320px"  class="sl">创建时间</th>
+                                        <th width="270px"  class="sl">审批时间</th>
+                                        <th width='120px'>批次状态</th>
+                                        <th width="300px"  class="sl" >操作</th>
+                                        <th width="80px"  class="sl" ></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td class='sl'>1</td>
+                                        <td class='sl'>306,939,000</td>
+                                        <td class='sl'>20190102</td>
+                                        <td class='sl'>1212121</td>
+                                        <td class='sl'>1212121</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl status-box"><span class='shenhe'></span>审核中</td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn' onclick='cache()'>刷缓存</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='creat_bin()'>生成bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="down_bin()">下载bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn'>审核</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn'  onclick='leapid()'>Leapid</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class='detail-info'>
+                                        <td colspan="11" >
+                                            <p class='detail'>
+                                                <span>
+                                                    <span class='detail-title'>是否删除：</span>
+                                                    <span class='detail-con'>
+                                                        可使用
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>批次日期：</span>
+                                                    <span class='detail-con'>201901112这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>备注信息:</span>
+                                                    <span class='detail-con'>
+                                                        这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                                                    </span>
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                        <td>306,939,000</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl status-box"><span class='caogao'></span>草稿</td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn' onclick='cache()'>刷缓存</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='creat_bin()'>生成bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="down_bin()">下载bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn'  onclick='leapid()'>Leapid</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class='detail-info'>
+                                        <td colspan="11" >
+                                            <p class='detail'>
+                                                <span>
+                                                    <span class='detail-title'>是否删除：</span>
+                                                    <span class='detail-con'>
+                                                        可使用
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>批次日期：</span>
+                                                    <span class='detail-con'>201901112这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>备注信息:</span>
+                                                    <span class='detail-con'>
+                                                        这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                                                    </span>
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                        <td>306,939,000</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl status-box"><span class='shanchu'></span>已删除</td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn' onclick='cache()'>刷缓存</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='creat_bin()'>生成bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="down_bin()">下载bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn'  onclick='leapid()'>Leapid</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class='detail-info'>
+                                        <td colspan="11" >
+                                            <p class='detail'>
+                                                <span>
+                                                    <span class='detail-title'>是否删除：</span>
+                                                    <span class='detail-con'>
+                                                        可使用
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>批次日期：</span>
+                                                    <span class='detail-con'>201901112这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>备注信息:</span>
+                                                    <span class='detail-con'>
+                                                        这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                                                    </span>
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                     <tr>
+                                        <td>1</td>
+                                        <td>306,939,000</td>
+                                        <td>9,826,630 km2</td>
+                                        <td>English</td>
+                                        <td>306,939,000</td>
+                                        <td class="sl"> 2018-10-15 10:27:44     </td>
+                                        <td class="sl status-box"><span class='shengxiao'></span>已生效</td>
+                                        <td class="sl opr-box" >
+                                            <div class="czuo-box" style='width:fit-content'>
+                                                <a  class='set-btn' onclick='cache()'>刷缓存</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn  del-btn' onclick='creat_bin()'>生成bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn' onclick="down_bin()">下载bin</a>
+                                                <div class='xian'></div>
+                                                <a  class='set-btn'  onclick='leapid()'>Leapid</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class='detail-info'>
+                                        <td colspan="11" >
+                                            <p class='detail'>
+                                                <span>
+                                                    <span class='detail-title'>是否删除：</span>
+                                                    <span class='detail-con'>
+                                                        可使用
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>批次日期：</span>
+                                                    <span class='detail-con'>201901112这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</span>
+                                                </span>
+                                                <span>
+                                                    <span class='detail-title'>备注信息:</span>
+                                                    <span class='detail-con'>
+                                                        这里显示具体的详细信息aaaaaaaaaaaaaaaaaaaaaaaaassadfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffeaaaaaaaaaaaaaaaaaaaaaaaaassadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                                                    </span>
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="box-footer clearfix">
+                                <ul class="pagination pagination-sm no-margin pull-right">
+                                    <li><a>«</a></li>
+                                    <li><a>1</a></li>
+                                    <li><a>2</a></li>
+                                    <li><a>3</a></li>
+                                    <li><a>»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        </div>
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+     <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <span class="font_family icon-close fa fa-close"></span>
+            <img src="../../web/images/warning-large.png" alt="">
+            <h6 class="del-title" '>是否确认删除?</h6>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default"> 取消</div>
+                <div class="cursor confirm  btn btn-primary">确认</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <script   src="../../web/js/public/select2.full.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!--  -->
+    <script src="../../web/js/public/bootstrap-table-expandable.js"></script>
+</body>
+
+<script>
+    $(document).ready(function(){
+        $('.select2').select2()
+    });
+    const creat_bin=()=>{
+        stopPropagation()
+    }
+    const down_bin=()=>{
+        stopPropagation()
+        tips_warning('确认要下载bin文件吗？')
+    }
+
+    const cache=()=>{
+        stopPropagation()
+    }
+    const leapid=()=>{
+        stopPropagation()
+    }
+</script>
+
+

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+     <!-- 日期控件 -->
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jedate.css">
+    <script type="text/javascript">
+        //引入该flexible.min.js
+        !function(e,t){function n(){var n=l.getBoundingClientRect().width;t=t||540,n>t&&(n=t);var i=100*n/e;r.innerHTML="html{font-size:"+i+"px;}"}var i,d=document,o=window,l=d.documentElement,r=document.createElement("style");if(l.firstElementChild)l.firstElementChild.appendChild(r);else{var a=d.createElement("div");a.appendChild(r),d.write(a.innerHTML),a=null}n(),o.addEventListener("resize",function(){clearTimeout(i),i=setTimeout(n,300)},!1),o.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(i),i=setTimeout(n,300))},!1),"complete"===d.readyState?d.body.style.fontSize="16px":d.addEventListener("DOMContentLoaded",function(e){d.body.style.fontSize="16px"},!1)}(750,750);
+    </script>
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+    <style>
+        input[type=date]::-webkit-inner-spin-button { visibility: hidden; }
+        input[readonly] {
+            background: #fff!important;
+        }
+        input[type="date"]::-webkit-clear-button{
+           display:none;
+        }.jeinpbox{margin-right:0;}.form-group{margin-bottom:20px;}.tishi{position: absolute;top:68%;color:red;left:25%;font-size: 8px;}
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 560px;">
+            <!-- Main content -->
+            <section class="content container-fluid" style="padding-top:25px;">
+                <form id="user_form">
+                     <!-- 内容区域-->
+                     <div class="row col-md-12">
+
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>批次id:</label>
+                                <input type="text" class="form-control batchid" autocomplete="off"   placeholder="请输入id" >
+                                <span class="ts-des tishi"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>芯片型号:</label>
+                                <input type="text" class="form-control chip_type" autocomplete="off"  placeholder="请输入芯片型号" >
+                                <span class="ts-des tishi" ></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=" form-group col-md-12 input-xx" style="width:100%;display:flex;">
+                                <label class="col-md-3 title">批次日期:</label>
+                                <input type="text" class="jeinput time form-control batchdate"  placeholder="请输入批次日期" style="height:32px;"  readonly timeattr='YYYY-MM-DD'>
+                                <span class="ts-des tishi"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>批次流水:</label>
+                                <input name="repeat_password" type="text" class="form-control batchno" autocomplete="off"  placeholder="请输入批次流水" >
+                                <span class="ts-des tishi"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>审核状态:</label>
+                                <select class="form-control select2 select2-hidden-accessible col-md-9 checkstatus" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option></option>}
+                                    <option>等待审核</option>
+                                    <option>审核不通过</option>
+                                    <option>通过</option>
+                                    <option>作废</option>
+                                </select>
+                                <span class="ts-des tishi"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>是否删除:</label>
+                                <select name="status" class="form-control select2 select2-hidden-accessible col-md-9" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option selected="selected">可使用状态</option>
+                                    <option>删除状态</option>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>生产数量:</label>
+                                <input  name="linkman" type="text" class="form-control batchnum" autocomplete="off"
+                                placeholder="请输入生产数量" >
+                                <span class="ts-des tishi"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>审批时间:</label>
+                                <div class="jeinpbox form-control" style="padding:0">
+                                    <input type="text" class="jeinput time form-control checktime"  placeholder="请输入审批时间" style="border:0;height:32px;"  readonly timeattr='YYYY-MM-DD'>
+                                     <span class="ts-des tishi" style='left:0;'></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>创建时间:</label>
+                                <div class="jeinpbox form-control" style="padding:0">
+                                    <input type="text" class="jeinput time form-control creattime"  placeholder="请输入创建时间" style="border:0;height:32px;"  readonly timeattr='YYYY-MM-DD'>
+                                    <span class="ts-des tishi" style='left:0;'></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class="col-md-3 title">备注(选填):</label>
+                                <textarea style="height:200px" type="text" name="scope" class="des form-control my-colorpicker1 colorpicker-element beizhu" autocomplete="off" placeholder="请输入备注信息"></textarea>
+                            </div>
+                        </div>
+                        <div class="row col-md-12">
+                            <div class="row col-md-12">
+                                <div class="col-md-6 col-md-offset-1">
+                                    <div class="form-group col-md-6 input-xx">
+                                        <button type="button" class="btn btn-block btn-primary submit-btn">提交</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs"></div>
+            <!-- Default to the left -->
+            <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+        </footer>
+      <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script src="../../web/js/public/common.js"></script>
+    <script src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <!-- Select2 -->
+    <script src="../../web/js/public/select2.full.min.js"></script>
+    <script src="../../web/js/batch/add.js"></script>
+</body>
+<script>
+    // $(function(){
+    //        $('.submit-btn').css('color','red')
+    // })
+    $(".jeinput").each(function(){
+        var mat = $(this).attr("timeattr");
+        jeDate(this,{
+            format: mat,
+        minDate: jeDate.nowDate({DD:0}), //0代表今天，-1代表昨天，-2代表前天，以此类推
+        donefun:function(obj) {
+            console.log(obj)
+        },
+        theme:{bgcolor:"#3C8DBC",pnColor:"#3C8DBC"},
+        });
+    });
+    $('.select2').select2({
+        placeholder: "Select a state"
+    });
+</script>
+
+

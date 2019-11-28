@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+       <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/login/register.css">
+    <link rel="stylesheet" href="../../web/css/advertising/setadvertising.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+                <!-- Logo -->
+                <a href="javascript:;" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    LeapFone
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+                </a>
+
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- User Account Menu -->
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span >用户名</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+
+                                    <!-- Menu Body -->
+                                  <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="../site/resetphone.html">修改手机</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="../user/rsetpwd.html">修改密码</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">退出登录</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                  <!-- Sidebar Menu -->
+                  <ul class="sidebar-menu" data-widget="tree">
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                    <li class="treeview">
+                      <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                      </a>
+                      <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+
+                <section class="content container-fluid">
+                    <div class="right-box p-b-20 row">
+                        <button type="button" class="btn  btn-default btn-back-call" onclick='javascript:history.back();'>
+                            返回
+                        </button>
+                    </div>
+
+                    <div class='row'>
+                        <div class="col-md-6 col-xs-12  col-sm-12">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>广告标题:</label>
+                                <input  type="text" class="form-control name" autocomplete="off"  placeholder="请输入描述广告标题" name='name'>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12  col-sm-12">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class='col-md-3 title'>状态:</label>
+                                <input  type="text" class="form-control" disabled autocomplete="off"  placeholder="草稿" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 富文本编辑器 -->
+                    <div id="div1" class="toolbar">
+                    </div>
+                    <div id="div2" class="text">
+
+                    </div>
+                    <div class="row operate-box">
+                        <div class="col-md-3 col-xs-3  col-sm-12">
+                            <div class="form-group col-md-12 input-xx" >
+                                <div class="col-md-1 col-xs-12">
+                                    <button class="btn btn-primary save_adver">
+                                        保存草稿
+                                    </button>
+                                </div>
+
+                                <div class="col-md-1 col-xs-12">
+                                    <button class="btn btn-primary submin" onclick="put()">
+                                        提交
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+
+          <!-- Main Footer -->
+          <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs"></div>
+            <!-- Default to the left -->
+             <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+          </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- 成功提示 -->
+        <div class="succ" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+            <div class="ts-box" style="z-index:10000;display:block;">
+                <div class="ts-xx ">
+                    <span class="font_family icon-judge_success_small"></span>
+                    <p>保存成功</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 失败提示 -->
+       <div class="fail" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+            <div class="fail-ts">
+                <div class="ts-xx">
+                    <span class='font_family icon-warning_large'></span>
+                    <p>保存失败，请重新尝试！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 删除提示框 -->
+        <div class="del-box delete">
+            <div class="dialog">
+                <span class="font_family icon-close cursor"></span>
+                <img src="../../web/images/warning-large.png" alt="">
+                <h6>是否确认删除?</h6>
+                <div class="operate-del">
+                    <div class="cursor cancel btn btn-default"> 取消</div>
+                    <div class="cursor btn btn-primary confirm">确认</div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--tishi-->
+
+
+        <!-- jQuery 3 -->
+        <script src="../../web/js/public/jquery.min.js"></script>
+        <script src="../../web/js/public/ts.js"></script>
+        <script src="../../web/js/public/common.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../web/js/public/bootstrap.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../web/js/public/adminlte.min.js"></script>
+        <script type="text/javascript" src="../../web/js/public/wangEditor.min.js"></script>
+
+
+</body>
+
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#div1', '#div2')  // 两个参数也可以传入 elem 对象，class 选择器
+
+    editor.customConfig.pasteTextHandle = function (content) {
+        // content 即粘贴过来的内容（html 或 纯文本），可进行自定义处理然后返回
+        return content + '<p>在粘贴内容后面追加一行</p>'
+    }
+    editor.create()
+    /**
+     * 提交
+     */
+    // const put = () =>{
+    //     var name=$('.name').val();
+    //     if(name==''){
+    //         fail('名称不能为空')
+    //         return false;
+    //     }
+    //     if(!fun.isMc(name)){
+    //         fail('长度不符合规范')
+    //         return false;
+    //     }
+    //     if(editor.txt.text()==''){
+    //         fail('请输入广告内容')
+    //         return false;
+    //     }
+    //     console.log(editor.txt.html());
+
+    //  };
+
+
+</script>
+
+
+
+
+
+

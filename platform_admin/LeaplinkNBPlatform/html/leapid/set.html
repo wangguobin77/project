@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+      <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <!-- <link rel="stylesheet" href="../../web/css/public/tongyong.css"> -->
+    <link rel="stylesheet" href="../../web/css/product/list.css">
+    <style type="text/css">.select-input>
+        span.select2{
+         width:34% !important;
+        }
+        .btn{
+            min-width:80px;
+            margin-left:10px;
+            outline:none !important;
+            box-shadow:none !important;
+        }
+        .operate-zone{
+            margin-bottom:15px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__placeholder{color:#d2d6de;}
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content container-fluid">
+                <form style="display:flex;flex-wrap:wrap;" class='operate-zone'>
+                    <div class="col-md-3">
+                        <div class="form-group col-md-12 input-xx">
+                            <label class='col-md-3 title' style="text-align:left;">批次:</label>
+                            <input  type="text" class="form-control " autocomplete="off" value="20191127" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group col-md-12 input-xx">
+                            <label class='col-md-3 title' style="text-align:left;">区间:</label>
+                            <input  type="text" class="form-control zone" autocomplete="off" disabled value="10-20">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group col-md-12 input-xx">
+                            <label class='col-md-3 title' style="text-align:left;">数量:</label>
+                            <input  type="text" class="form-control " autocomplete="off" disabled value="20条">
+                        </div>
+                    </div>
+                </form>
+                <form style="display:flex;flex-wrap:wrap;" class='operate-zone'>
+                    <div class="col-md-3">
+                        <div class="form-group col-md-12 input-xx">
+                            <input  type="text" class="form-control start_id" autocomplete="off"  placeholder="开始的leapid">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group col-md-12 input-xx">
+                            <input  type="text" class="form-control end_id" autocomplete="off"  placeholder="结束的leapid" >
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group col-md-12 input-xx">
+                             <select class="form-control select2 yyzz_selsct">
+                                <option value=""></option>}
+                                <option value="1">广告机</option>
+                                <option value="2">手机</option>}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button type="button"  class="btn btn-primary"  onclick="subfunc()">保存</button>
+                    </div>
+                </form>
+                <div class="">
+                    <table class="table">
+                         <thead>
+                            <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                                <th width="640px"  class="sl">开始 </th>
+                                <th width="640px"  class="sl">结束</th>
+                                <th width="640px"  class="sl">用途 </th>
+                                <th width="640px"  class="sl">数量</th>
+                                <th width="320px"  class="sl"> 操作</th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <tr>
+                                <td class="sl">10</td>
+                                <td class="sl">15</td>
+                                <td class="sl">oppo手机</td>
+                                <td class="sl">20000</td>
+                                <td class="sl opr-box" >
+                                    <div class="czuo-box" style='width:fit-content'>
+                                        <!-- 点击查看进入相应的leapid列表 -->
+                                        <a class='set-btn'>查看</a>
+                                    </div>
+                                </td>
+                            </tr>
+                         </tbody>
+                    </table>
+                </div>
+            </section>
+          </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+          <!-- To the right -->
+          <div class="pull-right hidden-xs"></div>
+          <!-- Default to the left -->
+           <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+       <!-- 成功提示 -->
+    <div class="succ">
+        <div class="ts-box">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small glyphicon glyphicon-ok-circle"></span>
+                <p>保存成功</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" >
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large glyphicon glyphicon-remove-circle' ></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <span class="font_family icon-close fa fa-close"></span>
+            <img src="../../web/images/warning-large.png" alt="">
+            <h6 class="del-title" '>是否确认删除?</h6>
+            <div class="operate-del">
+                <div class="cursor cancel btn btn-default"> 取消</div>
+                <div class="cursor confirm  btn btn-primary">确认</div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script src="../../web/js/public/select2.full.min.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <script src='../../web/js/leapid/bind.js'></script>
+</body>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.select2').select2({
+             placeholder: "请选择leapid用途",
+        });
+        // $(".select2").val(['0']).trigger('change')//设置默认的选中值
+    });
+    var glo={
+        'sub_flag':true,
+    }
+    // 保存设置
+    function subfunc(){
+        var start_id=$('.start_id').val(),
+            end_id=$('.end_id').val(),
+            zone=$('.zone').val(),
+            min=zone.split('-')[0],
+            use=$(".yyzz_selsct").find("option:selected").text(),
+            max=zone.split('-')[1];
+        if(start_id==''){
+            fail('请输入开始的leapid')
+            $('.start_id').focus();
+            return
+        }
+        if(!fun.isNum(start_id)){
+             fail('开始leapid格式不正确')
+            $('.start_id').focus();
+            return
+
+        }
+        if(min>start_id||max<start_id){
+            fail('开始的leapid不在该批次的区间内，请重新输入')
+            $('.start_id').focus();
+            return
+        }
+        if(end_id==''){
+            fail('请输入结束的leapid')
+            $('.end_id').focus();
+            return
+        }
+        if(!fun.isNum(end_id)){
+             fail('结束leapid格式不正确')
+            $('.end_id').focus();
+            return
+
+        }
+        if(end_id<start_id){
+            fail('结束leapid不能小于开始的leapid')
+            $('.end_id').focus();
+            return
+        }
+        if(min>end_id||max<end_id){
+            fail('结束的leapid不在该批次的区间内，请重新输入')
+            $('.end_id').focus();
+            return
+        }
+
+        if($(".yyzz_selsct").find("option:selected").text()==''){
+            fail('请选择leapid用途')
+            return
+        }
+        tips_warning('确认要保存设置吗？')
+        $('.delete').find('.confirm').click(function(){
+            hideconfirm()
+            clear()
+            var str='';
+            str+='<tr>'
+            str+='<td class="sl">'+start_id+'</td>'
+            str+='<td class="sl">'+end_id+'</td>'
+            str+=    '<td class="sl">'+use+'</td>'
+            str+=    '<td class="sl">'+'20000'+'</td>'
+            str+=    '<td class="sl opr-box" >'
+            str+=        '<div class="czuo-box" style="width:fit-content">'
+            str+=            '<a class="set-btn">查看</a>'
+            str+=        '</div>'
+            str+=    '</td>'
+            str+='</tr>'
+            $('.table').append(str);
+            succ('设置leapid保存成功！')
+        })
+
+
+     }
+
+
+</script>
+
+
+

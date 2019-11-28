@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LeapFone</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="Shortcut Icon" href="../../web/images/favicon.ico" />
+    <link rel="stylesheet" href="../../web/css/public/bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/font-awesome.min.css">
+    <link rel="stylesheet" href="../../web/css/public/ionicons.min.css">
+    <link rel="stylesheet" href="../../web/css/public/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../web/css/public/select2.min.css">
+    <link rel="stylesheet" href="../../web/css/public/admin.css">
+    <link rel="stylesheet" href="../../web/css/public/skin-blue.min.css">
+    <link rel="stylesheet" href="../../web/css/public/table.css">
+    <link rel="stylesheet" href="../../web/css/public/dialog.css">
+    <link rel="stylesheet" href="../../web/css/public/ts.css">
+    <link rel="stylesheet" href="../../web/css/login/register.css">
+    <link rel="stylesheet" href="../../web/css/public/tongyong.css">
+
+    <!-- 日期控件 -->
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../../web/css/public/jedate.css">
+    <script type="text/javascript" src="../../web/js/public/jedate.js"></script>
+    <style type="text/css">.select-input>span.select2{
+       width:34% !important;
+    }</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                LeapFone
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="../../web/images/logo_head.png"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="../../ota/web/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="../../ota/web/#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span >用户名</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+
+                                <!-- Menu Body -->
+                              <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../site/resetphone.html">修改手机</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../user/rsetpwd.html">修改密码</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">退出登录</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <!-- Optionally, you can add icons to the links -->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>设置</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">商户设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>广告</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-link"></i>
+                        <span>Link</span>
+                    </a>
+                </li>
+
+              </ul>
+              <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 560px;">
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+            <!-- 导航下标注 -->
+                <div class="right-box p-b-20 row">
+                    <button type="button" class="btn  btn-default">
+                        返回
+                    </button>
+                </div>
+                <form id="sub-form">
+                    <div class="row col-md-12">
+                        <!--            <form id="mymessage-form">-->
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class="col-md-3 title">商户名称:</label>
+                                <input type="text" class="form-control my-colorpicker1 colorpicker-element name" autocomplete="off" placeholder="请输入商户名称" name="name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group col-md-12 input-xx">
+                                <label class="col-md-3 title">商户类别:</label>
+                                <select class="form-control select2" style="width: 100%;" id='class' name="category">
+                                    <option selected="selected">Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx select-input">
+                                <label class='col-md-3 title'>所在地区:</label>
+                                <select name="code_p"  class="form-control select2 select2-hidden-accessible col-md-3" id="province" onchange="change_p(this)"  tabindex="-1" aria-hidden="true">
+                                    <option value="" >上海</option>
+                                </select>
+                                <select name="code_c" class="form-control select2 select2-hidden-accessible col-md-3" id="city" onchange="change_c(this)" tabindex="-1" aria-hidden="true">
+                                    <option value="" >请选择</option>
+
+                                </select>
+                                <select name="code_a"  class="form-control select2 select2-hidden-accessible col-md-3" id="area" tabindex="-1" aria-hidden="true">
+                                    <option value="" >请选择</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group col-md-12 input-xx">
+                                <label class="col-md-3 title">详细地址:</label>
+                                <input type="text" class="form-control detailaddress" autocomplete="off" placeholder="详细地址" name="address">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class=" form-group col-md-12 input-xx" style="width:100%;display:flex;">
+                                <label class="col-md-3 title">营业时间:</label>
+                                <div class="jeinpbox form-control" >
+                                    <input type="text" class="jeinput time" id="testblue" placeholder="开始时间至结束时间" style="border:0;" name='time' readonly>
+                                    <input type="hidden"  class="validity" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 店铺图片上传 -->
+                    <div class="row col-md-10 col-md-offset-1 " style="padding-left:24px;padding-right:24px; margin-bottom: 20px">
+                        <div class="row content-wrap">
+                            <div class="col-md-6 row-xx">
+                                <h4 class="col-md-3 T1RRTittle" style="line-height:88px;">店铺LOGO(选填):</h4>
+                                <div class="col-md-8 tpimg-b">
+                                    <div class="tpimg-box">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top">
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" id="flile'">
+                                            <input type="hidden" name="logo">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+                              <!--       <p class="img-des col-md-9">
+                                        上传的文件大小不能超过2M
+                                    </p> -->
+                                    <!-- 上传图片提示信息 -->
+                                    <p class="img-des col-md-9 img-ts" style="color:red;font-size:10px;display:none;white-space:nowrap;">
+                                        *请上传满足要求的图片
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row col-md-10 col-md-offset-1 " style="padding-left:24px;padding-right:24px; margin-bottom: 20px">
+                        <div class="row content-wrap">
+                            <div class="col-md-6 row-xx">
+                                <h4 class="col-md-3 T1RRTittle" style="line-height:88px;">店铺插图(选填):</h4>
+                                <div class="col-md-8 tpimg-b">
+                                    <div class="tpimg-box dianpu-img">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top">
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="plate">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="tpimg-box dianpu-img">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top">
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="plate">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="tpimg-box dianpu-img">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top">
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="plate">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="tpimg-box dianpu-img">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top">
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="plate">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- 上传图片提示信息 -->
+                                    <p class="img-des col-md-9 img-ts" style="color:red;font-size:10px;display:none;white-space:nowrap;">
+                                        *请上传满足要求的图片
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 营业执照 -->
+                    <div class="row col-md-10 col-md-offset-1 " style="padding-left:24px;padding-right:24px; margin-bottom: 20px">
+                        <div class="row content-wrap">
+                            <div class="col-md-6 row-xx">
+                                <h4 class="col-md-3 T1RRTittle" style="line-height:88px;">营业执照:</h4>
+                                <div class="col-md-8 tpimg-b">
+                                    <div class="tpimg-box">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top" class='license'>
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="license">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+                              <!--       <p class="img-des col-md-9">
+                                        上传的文件大小不能超过2M
+                                    </p> -->
+                                    <!-- 上传图片提示信息 -->
+                                    <p class="img-des col-md-9 img-ts" style="color:red;font-size:10px;display:none;white-space:nowrap;">
+                                        *请上传满足要求的图片
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 经营许可证 -->
+                    <div class="row col-md-10 col-md-offset-1 " style="padding-left:24px;padding-right:24px; margin-bottom: 20px">
+                        <div class="row content-wrap">
+                            <div class="col-md-6 row-xx">
+                                <h4 class="col-md-3 T1RRTittle" style="line-height:88px;">经营许可证:</h4>
+                                <div class="col-md-8 tpimg-b">
+                                    <div class="tpimg-box">
+                                        <div class="bg-icon">
+                                            <i style="display:none;">
+                                                <span class="close-icon"></span>
+                                                <img style="width:100px;height:100px" src="" align="top" class='certificate'>
+                                            </i>
+                                            <input type="file" name="picurl" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px" value="+">
+                                            <input type="hidden" name="certificate">
+                                            <img src="../../web/images/addicon_big.png" class='add-img' alt="">
+                                        </div>
+                                    </div>
+                              <!--       <p class="img-des col-md-9">
+                                        上传的文件大小不能超过2M
+                                    </p> -->
+                                    <!-- 上传图片提示信息 -->
+                                    <p class="img-des col-md-9 img-ts" style="color:red;font-size:10px;display:none;white-space:nowrap;">
+                                        *请上传满足要求的图片
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="row col-md-12">
+                    <div class="row col-md-12">
+                        <!-- 提交 按钮 -->
+                        <div class="col-md-6 col-md-offset-1">
+                            <div class="form-group col-md-6 input-xx">
+                                <button type="button" class="btn btn-block btn-primary submit-btn" onclick="put()">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs"></div>
+        <!-- Default to the left -->
+         <strong>Copyright ©  2017 上海感悟通信科技有限公司版权所有</strong> 沪ICP备17022468号
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- 成功提示 -->
+    <div class="succ" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="ts-box" style="z-index:10000;display:block;">
+            <div class="ts-xx ">
+                <span class="font_family icon-judge_success_small"></span>
+                <p>保存成功</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 失败提示 -->
+    <div class="fail" style="position:fixed;top:0;bottom:0;left:0;right:0;display: none;z-index:1000;">
+        <div class="fail-ts">
+            <div class="ts-xx">
+                <span class='font_family icon-warning_large'></span>
+                <p>保存失败，请重新尝试！</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery 3 -->
+    <script src="../../web/js/public/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../web/js/public/bootstrap.min.js"></script>
+    <script   src="../../web/js/public/common.js"></script>
+    <script   src="../../web/js/public/city.data.js"></script>
+    <script   src="../../web/js/public/ts.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../web/js/public/adminlte.min.js"></script>
+    <script   src="../../web/js/public/area.js"></script>
+
+    <!-- Select2 -->
+    <script   src="../../web/js/public/select2.full.min.js"></script>
+
+    <script   src="../../web/js/public/iCheck/icheck.min.js"></script>
+    <script   src="../../web/js/public/iCheck/icheck.min.js"></script>
+    <!-- upload js -->
+    <script   src="../../web/js/public/upload.js"></script>
+    <script   src="../../web/js/register/register.js"></script>
+    <script   src="../../web/js/metmerchants/set.js"></script>
+
+</body>
+<script>
+
+    $(document).ready(function(){
+        /**
+         * address初始化
+         */
+        var pr_str = '';//省选择
+        var default_p = '山西省';//显示省
+        var default_c = '太原市';//显示市
+        var default_a = '小店区';//显示区
+
+        pr_str = '<option value="140000">'+default_p+'</option>';
+        for(var v in area_info){
+            pr_str += '<option value="'+area_info[v].area_id+'">'+area_info[v].area_name+'</option>';
+        }
+        $('#province').html(pr_str);
+
+        $('#city').html('<option value="">'+default_c+'</option>');
+        $('#area').html('<option value="">'+default_a+'</option>');
+    })
+
+    /**
+     * 信息提交
+     */
+    var str='';
+    const put = () =>{
+        console.log(JSON.stringify(area_info))
+
+        reg();
+        if(reg_flag==false) return false
+        var data =JSON.stringify($('#sub-form').serializeObject());
+        console.log(data)
+        $.ajax({
+            url: './set.json',
+            type: 'POST',
+            dataType:'json',
+            data: data,
+            timeout:3000, //3000毫秒
+        })
+        .done(function(data) {
+            // 处理数据
+            $.each(data, function(index, val) {
+                console.log(index+val.name)
+                $.each(val.supports, function(index, val) {
+                    console.dir('description'+val.description)
+                 });
+            });
+
+        })
+        //失败处理
+        .fail(function() {
+            console.log("请求失败，请稍后重试");
+        })
+        .always(function() {
+            console.log("complete");
+            function(XHR,TextStatus){
+                if(TextStatus=='timeout'){ //超时执行的程序
+                    console.log("请求超时！");
+                }
+            }
+
+        });
+
+    };
+
+    /**
+     * object.values()
+     * 返回一个对象可枚举属性值的数组  值得顺序和 for...in 循环的数据一致
+     */
+    console.log(Object.values('foo')); // ['f', 'o', 'o']
+</script>
+
+

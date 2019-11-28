@@ -1,0 +1,119 @@
+#! /usr/bin/php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: dev
+ * Date: 19-1-15
+ * Time: 下午7:36
+ */
+
+/**
+ * node_id=3:21-0,
+ * node_id=5:33-1,44-0,
+ * node_id=8:55-0,
+ * node_id=4:66-0,77-0,
+ */
+/*$arr = [
+    [
+        'id' => 3,
+        'children' => [
+            [21,0],
+        ]
+    ],
+    [
+        'id' => 5,
+        'children' => [
+            [33,1],
+            [44,0],
+        ]
+    ],
+    [
+        'id' => 8,
+        'children' => [
+            [55,0],
+        ]
+    ],
+    [
+        'id' => 4,
+        'children' => [
+            [66,0],
+            [77,0],
+        ]
+    ],
+];
+
+file_put_contents('./data/info.txt', serialize($arr));
+die;*/
+$command = $argv[1];
+if(!$command) return;
+switch ($command){
+    case 'get_ipc_info':
+        $arr = getInfo();
+        echo arr2str($arr);
+        break;
+    default:
+        echo putInfo($command);
+        break;
+}
+
+
+
+function getInfo(){
+    $path = './data/info.txt';
+    $str = file_get_contents($path);
+    $arr = unserialize($str);
+    return $arr;
+}
+
+function putInfo($command){
+    list($a, $ip) = explode(':', $command);
+    $s = '';
+    $t = false;
+    switch ($a){
+        case 'open_ipc':
+            $s = 1;
+            break;
+        case 'close_ipc':
+            $s = 0;
+            break;
+    }
+
+    $arr = getInfo();
+    foreach ($arr as &$v){
+        foreach ($v['children'] as &$c){
+            if ($c[0] == $ip){
+                $c[1] = $s;
+                $t = true;
+            }
+        }
+    }
+    if ($t){
+        $path = './data/info.txt';
+        file_put_contents($path, serialize($arr));
+        return 'true';
+    }else{
+        return 'false';
+    }
+
+
+
+}
+
+/**
+ * node_id=3:21-0,
+ * node_id=5:33-1,44-0,
+ * node_id=8:55-0,
+ * node_id=4:66-0,77-0,
+ */
+function arr2str($arr){
+    $str = '';
+    foreach ($arr as $v){
+        $str .= 'node_id='.$v['id'].':';
+        foreach ($v['children'] as $c){
+            $str .= $c[0]. '-'. $c[1]. ',';
+        }
+        $str .= PHP_EOL;
+    }
+    return $str;
+}
+?>
